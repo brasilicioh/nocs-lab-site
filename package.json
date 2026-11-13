@@ -6,15 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "codegen": "node scripts/sync-plasmic.mjs"
   },
   "dependencies": {
-    "@plasmicapp/loader-nextjs": "^2.0.31",
+    "@plasmicapp/react-web": "^1.0.43",
+    "@plasmicpkgs/react-aria": "^0.0.202",
     "next": "16.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@plasmicapp/cli": "^0.1.385",
     "@types/node": "18.8.5",
     "@types/react": "18.2.27",
     "@types/react-dom": "18.2.12",

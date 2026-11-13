@@ -1,0 +1,97 @@
+.ariaDialogTrigger:global(.__wab_instance) {
+  position: relative;
+}
+.svg__eEm4J {
+  position: relative;
+  height: 1em;
+}
+.svg___3L4J4 {
+  position: relative;
+  height: 1em;
+}
+.ariaModal:global(.__wab_instance) {
+  background: var(--token-WTiJJg1ZokEM);
+  display: block;
+  color: var(--token--lED5rdjIn4J);
+  font-family: var(--token-YrOB4eN-aour);
+  font-size: var(--token-Od4nEYc3ic3h);
+  line-height: var(--token-gk4DmlWYgXHO);
+  outline-style: none;
+  box-shadow: 0px 24px 48px -12px #00000040;
+  border-radius: var(--token-TfGtM9SfFjMN);
+}
+.pcls_XSTnvqvFvjB0 {
+  background: var(--token-V0VziVvBAGE_);
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  outline: none;
+}
+.ariaDialog:global(.__wab_instance) {
+  max-width: 90vw;
+  object-fit: cover;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  outline-style: none;
+}
+.h3___0Aud {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-weight: 700;
+  font-size: var(--token-1UmPs3TxIeiy);
+  min-width: 0;
+  padding: var(--token-kj9vmQKRKy-V);
+}
+.scrollableContent {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: stretch;
+  justify-content: flex-start;
+  overflow: auto;
+  padding-left: var(--token-kj9vmQKRKy-V);
+  padding-right: var(--token-kj9vmQKRKy-V);
+}
+.freeBox__aslN {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+  row-gap: var(--token-zG0jbAWpefWJ);
+}
+.text___3JJ4N {
+  position: relative;
+}
+.freeBox__h6D1W {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  min-width: 0;
+  padding: var(--token-kj9vmQKRKy-V);
+}
+.svg__iDTj5 {
+  position: relative;
+  height: 1em;
+}
+.text__bpVo {
+  padding-left: 0px;
+}
+.svg__selUp {
+  position: relative;
+  height: 1em;
+}
