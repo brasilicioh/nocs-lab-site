@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node scripts/patch-exported-asset-paths.mjs",
     "start": "next start",
     "lint": "next lint",
     "codegen": "node scripts/sync-plasmic.mjs"
