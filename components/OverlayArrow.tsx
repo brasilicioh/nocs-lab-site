@@ -4,7 +4,7 @@ import * as React from "react";
 import {
   PlasmicOverlayArrow,
   DefaultOverlayArrowProps
-} from "./plasmic/imported_project/PlasmicOverlayArrow";
+} from "./plasmic/nocs_lab_site/PlasmicOverlayArrow";
 
 // Your component props start with props for variants and slots you defined
 // in Plasmic, but you can add more here, like event handlers that you can
