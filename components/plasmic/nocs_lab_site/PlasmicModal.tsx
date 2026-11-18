@@ -70,10 +70,10 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import sty from "./PlasmicModal.module.css"; // plasmic-import: v_JVIFTJlhKA/css
+import sty from "../imported_project/PlasmicModal.module.css"; // plasmic-import: v_JVIFTJlhKA/css
 
-import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: P_NPtHWeotKN/icon
-import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: hqr1pE6fhslV/icon
+import CircleIcon from "../imported_project/icons/PlasmicIcon__Circle"; // plasmic-import: P_NPtHWeotKN/icon
+import ChevronDownIcon from "../imported_project/icons/PlasmicIcon__ChevronDown"; // plasmic-import: hqr1pE6fhslV/icon
 
 createPlasmicElementProxy;
 
@@ -204,6 +204,7 @@ function PlasmicModal__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $q, $ctx }) => $props.noTrigger
       }
     ],
+
     [$props, $ctx, $refs]
   );
 
@@ -295,6 +296,7 @@ function PlasmicModal__RenderFunc(props: {
                   {"Heading"}
                 </h3>
               ),
+
               value: args.heading
             })}
             <div
@@ -327,6 +329,7 @@ function PlasmicModal__RenderFunc(props: {
                     </div>
                   </div>
                 ),
+
                 value: args.content
               })}
             </div>
@@ -390,6 +393,7 @@ function PlasmicModal__RenderFunc(props: {
                   />
                 </div>
               ),
+
               value: args.footer
             })}
           </BaseDialog>
@@ -422,6 +426,7 @@ const PlasmicDescendants = {
     "ariaDialog",
     "scrollableContent"
   ],
+
   ariaModal: ["ariaModal", "ariaDialog", "scrollableContent"],
   ariaDialog: ["ariaDialog", "scrollableContent"],
   scrollableContent: ["scrollableContent"]
@@ -441,6 +446,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicModal__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

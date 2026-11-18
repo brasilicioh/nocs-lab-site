@@ -4,7 +4,7 @@
   position: relative;
 }
 .svg {
-  color: var(--token-WTiJJg1ZokEM);
+  color: var(--token-bAyFQ_Q8CSoI);
   width: 10px;
   height: 10px;
   transform: translate3d(0px, 3px, 0px);
@@ -19,5 +19,5 @@
   transform: translate3d(3px, 0px, 0px) rotate3d(0, 0, 1, -90deg);
 }
 .svgdark {
-  color: var(--token-HuZf1HBy906c);
+  color: var(--token-IfSDX54OXCUS);
 }

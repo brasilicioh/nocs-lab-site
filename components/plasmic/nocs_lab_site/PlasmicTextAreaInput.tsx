@@ -68,7 +68,7 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import sty from "./PlasmicTextAreaInput.module.css"; // plasmic-import: eCO-JadlOoja/css
+import sty from "../imported_project/PlasmicTextAreaInput.module.css"; // plasmic-import: eCO-JadlOoja/css
 
 createPlasmicElementProxy;
 
@@ -216,6 +216,7 @@ function PlasmicTextAreaInput__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $q, $ctx }) => $props.padded
       }
     ],
+
     [$props, $ctx, $refs]
   );
 
@@ -294,6 +295,7 @@ function PlasmicTextAreaInput__RenderFunc(props: {
           plasmicStateName: "ariaTextArea.value"
         }
       ],
+
       [],
       BaseTextArea_Helpers ?? {},
       child$Props
@@ -326,6 +328,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicTextAreaInput__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

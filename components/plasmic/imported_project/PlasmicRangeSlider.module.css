@@ -2,44 +2,44 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  color: var(--token--lED5rdjIn4J);
-  font-family: var(--token-YrOB4eN-aour);
-  font-size: var(--token-Od4nEYc3ic3h);
-  line-height: var(--token-gk4DmlWYgXHO);
+  color: var(--token-RCIfzm6O3q7i);
+  font-family: var(--token-KOeQn9VuBnZt);
+  font-size: var(--token-AwqwfF6oCrvu);
+  line-height: var(--token-u9X_SBaSHnVF);
   min-width: 200px;
-  row-gap: var(--token-zG0jbAWpefWJ);
+  row-gap: var(--token-OCQgwlpuQ78l);
 }
 .ariaRangeSlider[data-disabled][data-disabled]:global(.__wab_instance) {
   opacity: 0.5;
 }
-.freeBox__ipz8 {
+.freeBox___2Uyzk {
   display: flex;
   flex-direction: row;
   position: relative;
   justify-content: space-between;
-  column-gap: var(--token-1q-tKno0Co-6);
+  column-gap: var(--token-Bz8aWo4C_8R8);
 }
-.text___3XJag {
+.text__k9I59 {
   position: relative;
 }
 .text {
   position: relative;
 }
-.freeBox__y6Grl {
+.freeBox__nPxf {
   display: flex;
   flex-direction: row;
   position: relative;
   align-items: stretch;
   justify-content: flex-start;
-  padding-top: var(--token-IfEyJbEhldHs);
-  padding-bottom: var(--token-IfEyJbEhldHs);
+  padding-top: var(--token-GRIy_xAuauSm);
+  padding-bottom: var(--token-GRIy_xAuauSm);
   width: 100%;
   min-width: 0;
 }
 .background {
   display: flex;
-  background: var(--token-y8T97tpY74fV);
-  height: var(--token-1q-tKno0Co-6);
+  background: var(--token-N9Gt28oZyg9u);
+  height: var(--token-Bz8aWo4C_8R8);
   width: 100%;
   min-width: 0;
   border-radius: 99px;
@@ -49,18 +49,18 @@
   opacity: 1;
   box-sizing: border-box;
   background: none;
-  height: var(--token-1q-tKno0Co-6);
+  height: var(--token-Bz8aWo4C_8R8);
   width: 100%;
   min-width: 0;
 }
-.sliderThumb__mAnJr:global(.__wab_instance):global(.__wab_instance) {
+.sliderThumb__zuPc4:global(.__wab_instance):global(.__wab_instance) {
   position: relative;
-  margin-top: var(--token-hE_nqhUpdNog);
+  margin-top: var(--token-6ydSieiLYTio);
 }
 .foreground {
   display: block;
-  background: var(--token-ga-LivTmOMsT);
-  height: var(--token-1q-tKno0Co-6);
+  background: var(--token-Cw5JD24WaNWg);
+  height: var(--token-Bz8aWo4C_8R8);
   border-radius: 99px 0rem 0rem 99px;
 }
 .description:global(.__wab_instance):global(.__wab_instance) {

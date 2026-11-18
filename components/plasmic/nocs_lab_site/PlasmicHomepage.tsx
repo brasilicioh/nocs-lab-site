@@ -61,7 +61,10 @@ import {
   useGlobalActions
 } from "@plasmicapp/host";
 
-import { generateDynamicMetadata, PageCtx } from "./PlasmicHomepageServer"; // plasmic-import: ipyk0ahIlWrs/rscServer
+import {
+  generateDynamicMetadata,
+  PageCtx
+} from "../imported_project/PlasmicHomepageServer"; // plasmic-import: ipyk0ahIlWrs/rscServer
 
 import Button from "../../Button"; // plasmic-import: nLv5iPrIWwBE/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: mtEUaQuwBpAFAb2iovN16n/projectModule
@@ -69,10 +72,10 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import sty from "./PlasmicHomepage.module.css"; // plasmic-import: ipyk0ahIlWrs/css
+import sty from "../imported_project/PlasmicHomepage.module.css"; // plasmic-import: ipyk0ahIlWrs/css
 
-import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: hqr1pE6fhslV/icon
-import Frame427324142Icon from "./icons/PlasmicIcon__Frame427324142"; // plasmic-import: Vmov-TyfsKpX/icon
+import ChevronDownIcon from "../imported_project/icons/PlasmicIcon__ChevronDown"; // plasmic-import: hqr1pE6fhslV/icon
+import Frame427324142Icon from "../imported_project/icons/PlasmicIcon__Frame427324142"; // plasmic-import: Vmov-TyfsKpX/icon
 
 const emptyProxy: any = new Proxy(() => "", {
   get(_, prop) {
@@ -169,6 +172,7 @@ function PlasmicHomepage__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $q, $ctx }) => false
       }
     ],
+
     [$props, $ctx, $refs]
   );
 
@@ -857,6 +861,7 @@ const PlasmicDescendants = {
     "openMenu",
     "closeMobileMenu"
   ],
+
   header: [
     "header",
     "nocsLogo",
@@ -873,6 +878,7 @@ const PlasmicDescendants = {
     "button",
     "openMenu"
   ],
+
   nocsLogo: ["nocsLogo"],
   navigation: [
     "navigation",
@@ -887,6 +893,7 @@ const PlasmicDescendants = {
     "inicio3",
     "button"
   ],
+
   item: ["item"],
   item2: ["item2", "svg"],
   svg: ["svg"],
@@ -927,6 +934,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicHomepage__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

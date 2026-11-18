@@ -4,12 +4,12 @@
   color: #ffffff;
 }
 .slotTargetTrigger {
-  color: var(--token--lED5rdjIn4J);
-  font-family: var(--token-YrOB4eN-aour);
-  font-size: var(--token-Od4nEYc3ic3h);
-  line-height: var(--token-gk4DmlWYgXHO);
+  color: var(--token-RCIfzm6O3q7i);
+  font-family: var(--token-KOeQn9VuBnZt);
+  font-size: var(--token-AwqwfF6oCrvu);
+  line-height: var(--token-u9X_SBaSHnVF);
 }
-.text__svTcO {
+.text__arfBp {
   position: relative;
 }
 .overlayArrow:global(.__wab_instance):global(.__wab_instance) {
@@ -18,18 +18,18 @@
 .freeBox {
   display: flex;
   position: relative;
-  background: var(--token-HuZf1HBy906c);
+  background: var(--token-IfSDX54OXCUS);
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   width: auto;
-  row-gap: var(--token-hE_nqhUpdNog);
-  border-radius: var(--token-1q-tKno0Co-6);
-  padding: var(--token-zG0jbAWpefWJ);
+  row-gap: var(--token-6ydSieiLYTio);
+  border-radius: var(--token-Bz8aWo4C_8R8);
+  padding: var(--token-OCQgwlpuQ78l);
 }
 .slotTargetContent {
-  color: var(--token-MJwP-9WMdl8p);
-  font-family: var(--token-YrOB4eN-aour);
-  font-size: var(--token-Od4nEYc3ic3h);
-  line-height: var(--token-gk4DmlWYgXHO);
+  color: var(--token-GwFjeftFV6LQ);
+  font-family: var(--token-KOeQn9VuBnZt);
+  font-size: var(--token-AwqwfF6oCrvu);
+  line-height: var(--token-u9X_SBaSHnVF);
 }

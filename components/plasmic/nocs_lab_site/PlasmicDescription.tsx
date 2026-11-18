@@ -67,7 +67,7 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import sty from "./PlasmicDescription.module.css"; // plasmic-import: VoNz5h-Y6Kgd/css
+import sty from "../imported_project/PlasmicDescription.module.css"; // plasmic-import: VoNz5h-Y6Kgd/css
 
 createPlasmicElementProxy;
 
@@ -178,6 +178,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicDescription__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

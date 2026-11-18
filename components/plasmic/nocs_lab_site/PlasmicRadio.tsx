@@ -67,7 +67,7 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import sty from "./PlasmicRadio.module.css"; // plasmic-import: MHuvd5rVtpip/css
+import sty from "../imported_project/PlasmicRadio.module.css"; // plasmic-import: MHuvd5rVtpip/css
 
 createPlasmicElementProxy;
 
@@ -215,6 +215,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicRadio__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

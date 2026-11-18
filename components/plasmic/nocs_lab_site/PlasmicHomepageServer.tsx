@@ -8,7 +8,7 @@
 // Component: ipyk0ahIlWrs
 
 import * as React from "react";
-import { DefaultHomepageProps } from "./PlasmicHomepage"; // plasmic-import: ipyk0ahIlWrs/render
+import { DefaultHomepageProps } from "../imported_project/PlasmicHomepage"; // plasmic-import: ipyk0ahIlWrs/render
 
 import { ClientHomepage } from "../../../app/page-client"; // plasmic-import: ipyk0ahIlWrs/rscClient
 

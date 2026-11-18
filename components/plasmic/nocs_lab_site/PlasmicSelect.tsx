@@ -74,9 +74,9 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import sty from "./PlasmicSelect.module.css"; // plasmic-import: qPWpcnvbiwxe/css
+import sty from "../imported_project/PlasmicSelect.module.css"; // plasmic-import: qPWpcnvbiwxe/css
 
-import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: hqr1pE6fhslV/icon
+import ChevronDownIcon from "../imported_project/icons/PlasmicIcon__ChevronDown"; // plasmic-import: hqr1pE6fhslV/icon
 
 createPlasmicElementProxy;
 
@@ -216,6 +216,7 @@ function PlasmicSelect__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $q, $ctx }) => $props.type
       }
     ],
+
     [$props, $ctx, $refs]
   );
 
@@ -403,6 +404,7 @@ function PlasmicSelect__RenderFunc(props: {
               />
             </React.Fragment>
           ),
+
           value: args.items
         })}
         offset={2}
@@ -423,6 +425,7 @@ const PlasmicDescendants = {
     "description",
     "menuPopover"
   ],
+
   label: ["label"],
   ariaButton: ["ariaButton", "ariaSelectedValue", "text", "freeBox", "svg"],
   ariaSelectedValue: ["ariaSelectedValue", "text"],
@@ -452,6 +455,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicSelect__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

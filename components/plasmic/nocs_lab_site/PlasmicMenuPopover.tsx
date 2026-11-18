@@ -71,7 +71,7 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import sty from "./PlasmicMenuPopover.module.css"; // plasmic-import: DOupWStvAs4m/css
+import sty from "../imported_project/PlasmicMenuPopover.module.css"; // plasmic-import: DOupWStvAs4m/css
 
 createPlasmicElementProxy;
 
@@ -157,6 +157,7 @@ function PlasmicMenuPopover__RenderFunc(props: {
         onMutate: generateOnMutateForSpec("selectedValue", BaseListBox_Helpers)
       }
     ],
+
     [$props, $ctx, $refs]
   );
 
@@ -221,6 +222,7 @@ function PlasmicMenuPopover__RenderFunc(props: {
               plasmicStateName: "ariaListBox.selectedValue"
             }
           ],
+
           [],
           BaseListBox_Helpers ?? {},
           child$Props
@@ -287,6 +289,7 @@ function PlasmicMenuPopover__RenderFunc(props: {
                   />
                 </React.Fragment>
               ),
+
               value: args.menuItems
             })}
           </BaseListBox>
@@ -313,6 +316,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicMenuPopover__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

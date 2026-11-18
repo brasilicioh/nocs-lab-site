@@ -75,9 +75,9 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import sty from "./PlasmicCombobox.module.css"; // plasmic-import: QfsMOf9hNYt6/css
+import sty from "../imported_project/PlasmicCombobox.module.css"; // plasmic-import: QfsMOf9hNYt6/css
 
-import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: hqr1pE6fhslV/icon
+import ChevronDownIcon from "../imported_project/icons/PlasmicIcon__ChevronDown"; // plasmic-import: hqr1pE6fhslV/icon
 
 createPlasmicElementProxy;
 
@@ -233,6 +233,7 @@ function PlasmicCombobox__RenderFunc(props: {
         onMutate: generateOnMutateForSpec("value", BaseInput_Helpers)
       }
     ],
+
     [$props, $ctx, $refs]
   );
 
@@ -341,6 +342,7 @@ function PlasmicCombobox__RenderFunc(props: {
                 plasmicStateName: "ariaInput.value"
               }
             ],
+
             [],
             BaseInput_Helpers ?? {},
             child$Props
@@ -420,6 +422,7 @@ function PlasmicCombobox__RenderFunc(props: {
               />
             </React.Fragment>
           ),
+
           value: args.items
         })}
         offset={2}
@@ -439,6 +442,7 @@ const PlasmicDescendants = {
     "description",
     "menuPopover"
   ],
+
   label: ["label"],
   freeBox: ["freeBox", "ariaInput", "ariaButton", "svg"],
   ariaInput: ["ariaInput"],
@@ -466,6 +470,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicCombobox__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

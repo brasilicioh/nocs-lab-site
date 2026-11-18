@@ -71,9 +71,9 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import sty from "./PlasmicTextField.module.css"; // plasmic-import: 7wduDjawbbri/css
+import sty from "../imported_project/PlasmicTextField.module.css"; // plasmic-import: 7wduDjawbbri/css
 
-import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: P_NPtHWeotKN/icon
+import CircleIcon from "../imported_project/icons/PlasmicIcon__Circle"; // plasmic-import: P_NPtHWeotKN/icon
 
 createPlasmicElementProxy;
 
@@ -382,6 +382,7 @@ function PlasmicTextField__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $q, $ctx }) => undefined
       }
     ],
+
     [$props, $ctx, $refs]
   );
 
@@ -647,6 +648,7 @@ const PlasmicDescendants = {
     "textAreaInput",
     "description"
   ],
+
   label: ["label"],
   textInput: ["textInput"],
   textAreaInput: ["textAreaInput"],
@@ -668,6 +670,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicTextField__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

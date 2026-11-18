@@ -68,7 +68,7 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import sty from "./PlasmicTooltip.module.css"; // plasmic-import: kRxdEjt1bXK_/css
+import sty from "../imported_project/PlasmicTooltip.module.css"; // plasmic-import: kRxdEjt1bXK_/css
 
 createPlasmicElementProxy;
 
@@ -182,6 +182,7 @@ function PlasmicTooltip__RenderFunc(props: {
         onChangeProp: "onOpenChange"
       }
     ],
+
     [$props, $ctx, $refs]
   );
 
@@ -270,6 +271,7 @@ function PlasmicTooltip__RenderFunc(props: {
                   </div>
                 </React.Fragment>
               ),
+
               value: args.content,
               className: classNames(sty.slotTargetContent)
             })}
@@ -284,6 +286,7 @@ function PlasmicTooltip__RenderFunc(props: {
             {"Hover me!"}
           </div>
         ),
+
         value: args.trigger,
         className: classNames(sty.slotTargetTrigger)
       })}
@@ -310,6 +313,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicTooltip__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

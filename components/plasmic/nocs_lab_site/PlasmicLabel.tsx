@@ -67,7 +67,7 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import sty from "./PlasmicLabel.module.css"; // plasmic-import: lJaMvrOw0fAV/css
+import sty from "../imported_project/PlasmicLabel.module.css"; // plasmic-import: lJaMvrOw0fAV/css
 
 createPlasmicElementProxy;
 
@@ -157,6 +157,7 @@ function PlasmicLabel__RenderFunc(props: {
           $props.requirementIndicator
       }
     ],
+
     [$props, $ctx, $refs]
   );
 
@@ -274,6 +275,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicLabel__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

@@ -8,7 +8,7 @@
 // Component: hyNFprDIanWK
 
 import * as React from "react";
-import { DefaultBlankComponentsProps } from "./PlasmicBlankComponents"; // plasmic-import: hyNFprDIanWK/render
+import { DefaultBlankComponentsProps } from "../imported_project/PlasmicBlankComponents"; // plasmic-import: hyNFprDIanWK/render
 
 import { ClientBlankComponents } from "../../../app/components/page-client"; // plasmic-import: hyNFprDIanWK/rscClient
 

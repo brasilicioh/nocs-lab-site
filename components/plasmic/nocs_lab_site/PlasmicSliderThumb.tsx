@@ -67,7 +67,7 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import sty from "./PlasmicSliderThumb.module.css"; // plasmic-import: dj3_3OcKJOlK/css
+import sty from "../imported_project/PlasmicSliderThumb.module.css"; // plasmic-import: dj3_3OcKJOlK/css
 
 createPlasmicElementProxy;
 
@@ -196,6 +196,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicSliderThumb__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

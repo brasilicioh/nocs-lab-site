@@ -71,10 +71,10 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import sty from "./PlasmicPopover.module.css"; // plasmic-import: by5LzlX1NJmH/css
+import sty from "../imported_project/PlasmicPopover.module.css"; // plasmic-import: by5LzlX1NJmH/css
 
-import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: P_NPtHWeotKN/icon
-import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: hqr1pE6fhslV/icon
+import CircleIcon from "../imported_project/icons/PlasmicIcon__Circle"; // plasmic-import: P_NPtHWeotKN/icon
+import ChevronDownIcon from "../imported_project/icons/PlasmicIcon__ChevronDown"; // plasmic-import: hqr1pE6fhslV/icon
 
 createPlasmicElementProxy;
 
@@ -178,6 +178,7 @@ function PlasmicPopover__RenderFunc(props: {
         onChangeProp: "onOpenChange"
       }
     ],
+
     [$props, $ctx, $refs]
   );
 
@@ -259,6 +260,7 @@ function PlasmicPopover__RenderFunc(props: {
                   </div>
                 </div>
               ),
+
               value: args.content
             })}
           </BaseDialog>
@@ -292,6 +294,7 @@ const PlasmicDescendants = {
     "overlayArrow",
     "ariaDialog"
   ],
+
   ariaPopover: ["ariaPopover", "overlayArrow", "ariaDialog"],
   overlayArrow: ["overlayArrow"],
   ariaDialog: ["ariaDialog"]
@@ -311,6 +314,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicPopover__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

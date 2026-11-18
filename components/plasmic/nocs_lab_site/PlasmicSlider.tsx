@@ -72,7 +72,7 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import sty from "./PlasmicSlider.module.css"; // plasmic-import: 7gahSasEwEH_/css
+import sty from "../imported_project/PlasmicSlider.module.css"; // plasmic-import: 7gahSasEwEH_/css
 
 createPlasmicElementProxy;
 
@@ -198,6 +198,7 @@ function PlasmicSlider__RenderFunc(props: {
         onChangeProp: "onChange"
       }
     ],
+
     [$props, $ctx, $refs]
   );
 
@@ -278,6 +279,7 @@ function PlasmicSlider__RenderFunc(props: {
                     {"Label"}
                   </div>
                 ),
+
                 value: args.label
               })}
             </Label>
@@ -363,6 +365,7 @@ const PlasmicDescendants = {
     "foreground",
     "description"
   ],
+
   label: ["label"],
   ariaSliderOutput: ["ariaSliderOutput"],
   background: ["background", "ariaSliderTrack", "foreground"],
@@ -388,6 +391,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicSlider__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

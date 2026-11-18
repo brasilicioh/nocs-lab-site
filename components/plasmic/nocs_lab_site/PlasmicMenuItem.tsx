@@ -69,7 +69,7 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import sty from "./PlasmicMenuItem.module.css"; // plasmic-import: t3cRytk4j7tQ/css
+import sty from "../imported_project/PlasmicMenuItem.module.css"; // plasmic-import: t3cRytk4j7tQ/css
 
 createPlasmicElementProxy;
 
@@ -262,6 +262,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicMenuItem__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

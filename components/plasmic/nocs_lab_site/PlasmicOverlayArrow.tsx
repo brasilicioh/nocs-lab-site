@@ -67,9 +67,9 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import sty from "./PlasmicOverlayArrow.module.css"; // plasmic-import: r0p5VH6aETWw/css
+import sty from "../imported_project/PlasmicOverlayArrow.module.css"; // plasmic-import: r0p5VH6aETWw/css
 
-import TriangleFilledIcon from "./icons/PlasmicIcon__TriangleFilled"; // plasmic-import: -EjY7y0CLF0b/icon
+import TriangleFilledIcon from "../imported_project/icons/PlasmicIcon__TriangleFilled"; // plasmic-import: -EjY7y0CLF0b/icon
 
 createPlasmicElementProxy;
 
@@ -146,6 +146,7 @@ function PlasmicOverlayArrow__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $q, $ctx }) => $props.dark
       }
     ],
+
     [$props, $ctx, $refs]
   );
 
@@ -224,6 +225,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicOverlayArrow__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

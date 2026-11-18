@@ -68,7 +68,7 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import sty from "./PlasmicSwitch.module.css"; // plasmic-import: tIncRyd9gmif/css
+import sty from "../imported_project/PlasmicSwitch.module.css"; // plasmic-import: tIncRyd9gmif/css
 
 createPlasmicElementProxy;
 
@@ -177,6 +177,7 @@ function PlasmicSwitch__RenderFunc(props: {
         onChangeProp: "onChange"
       }
     ],
+
     [$props, $ctx, $refs]
   );
 
@@ -282,6 +283,7 @@ const PlasmicDescendants = {
     "thumb",
     "description"
   ],
+
   freeBox: ["freeBox", "switchIndicator", "thumb"],
   switchIndicator: ["switchIndicator", "thumb"],
   thumb: ["thumb"],
@@ -303,6 +305,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicSwitch__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

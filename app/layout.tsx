@@ -1,3 +1,4 @@
+import "../components/plasmic/imported_project/plasmic.css"; // plasmic-import: j2drmhCFcBPFjhgcVEyYEZ/projectcss
 import "../components/plasmic/nocs_lab_site/plasmic.css"; // plasmic-import: mtEUaQuwBpAFAb2iovN16n/projectcss
 import "../components/plasmic/imported_project/plasmic.css"; // plasmic-import: fW8ySBRpgbQN1cYrDk9PsP/projectcss
 import "@/styles/globals.css";

@@ -67,10 +67,10 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import sty from "./PlasmicCheckbox.module.css"; // plasmic-import: a7Akel70hLjO/css
+import sty from "../imported_project/PlasmicCheckbox.module.css"; // plasmic-import: a7Akel70hLjO/css
 
-import CheckIcon from "./icons/PlasmicIcon__Check"; // plasmic-import: AuCZhl215orQ/icon
-import MinusIcon from "./icons/PlasmicIcon__Minus"; // plasmic-import: _QWf2d0AmLmp/icon
+import CheckIcon from "../imported_project/icons/PlasmicIcon__Check"; // plasmic-import: AuCZhl215orQ/icon
+import MinusIcon from "../imported_project/icons/PlasmicIcon__Minus"; // plasmic-import: _QWf2d0AmLmp/icon
 
 createPlasmicElementProxy;
 
@@ -167,6 +167,7 @@ function PlasmicCheckbox__RenderFunc(props: {
         onChangeProp: "onChange"
       }
     ],
+
     [$props, $ctx, $refs]
   );
 
@@ -285,6 +286,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicCheckbox__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

@@ -70,7 +70,7 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import sty from "./PlasmicCheckboxGroup.module.css"; // plasmic-import: 6qimUAeE50TV/css
+import sty from "../imported_project/PlasmicCheckboxGroup.module.css"; // plasmic-import: 6qimUAeE50TV/css
 
 createPlasmicElementProxy;
 
@@ -178,6 +178,7 @@ function PlasmicCheckboxGroup__RenderFunc(props: {
         onChangeProp: "onChange"
       }
     ],
+
     [$props, $ctx, $refs]
   );
 
@@ -269,6 +270,7 @@ function PlasmicCheckboxGroup__RenderFunc(props: {
             />
           </div>
         ),
+
         value: args.options
       })}
       {$props.showDescription ? (
@@ -306,6 +308,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicCheckboxGroup__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

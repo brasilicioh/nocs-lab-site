@@ -4,7 +4,7 @@
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
-  row-gap: var(--token-hE_nqhUpdNog);
+  row-gap: var(--token-6ydSieiLYTio);
   min-width: 0;
 }
 .ariaCheckboxGroup[data-disabled][data-disabled]:global(.__wab_instance) {
@@ -19,20 +19,20 @@
 .label:global(.__wab_instance):global(.__wab_instance) {
   position: relative;
 }
-.freeBox__yaXf {
+.freeBox__jNud {
   position: relative;
   display: flex;
   flex-direction: column;
-  row-gap: var(--token-hE_nqhUpdNog);
+  row-gap: var(--token-6ydSieiLYTio);
 }
-.checkbox__txrBe:global(.__wab_instance):global(.__wab_instance) {
+.checkbox__vt5Qx:global(.__wab_instance):global(.__wab_instance) {
   max-width: 100%;
 }
-.checkbox__hqWsQ:global(.__wab_instance):global(.__wab_instance) {
+.checkbox__qbTuv:global(.__wab_instance):global(.__wab_instance) {
   max-width: 100%;
   position: relative;
 }
-.checkbox__jTmoO:global(.__wab_instance):global(.__wab_instance) {
+.checkbox__qwnTp:global(.__wab_instance):global(.__wab_instance) {
   max-width: 100%;
   position: relative;
 }

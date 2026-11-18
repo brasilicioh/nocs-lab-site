@@ -68,7 +68,7 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import sty from "./PlasmicTextInput.module.css"; // plasmic-import: 8Amo2B0Jzj6U/css
+import sty from "../imported_project/PlasmicTextInput.module.css"; // plasmic-import: 8Amo2B0Jzj6U/css
 
 createPlasmicElementProxy;
 
@@ -340,6 +340,7 @@ function PlasmicTextInput__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $q, $ctx }) => $props.padded
       }
     ],
+
     [$props, $ctx, $refs]
   );
 
@@ -420,6 +421,7 @@ function PlasmicTextInput__RenderFunc(props: {
           plasmicStateName: "ariaInput.value"
         }
       ],
+
       [],
       BaseInput_Helpers ?? {},
       child$Props
@@ -452,6 +454,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicTextInput__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

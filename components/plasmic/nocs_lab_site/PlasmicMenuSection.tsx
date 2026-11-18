@@ -68,7 +68,7 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import sty from "./PlasmicMenuSection.module.css"; // plasmic-import: r9VHySz8UPzp/css
+import sty from "../imported_project/PlasmicMenuSection.module.css"; // plasmic-import: r9VHySz8UPzp/css
 
 createPlasmicElementProxy;
 
@@ -176,6 +176,7 @@ function PlasmicMenuSection__RenderFunc(props: {
             <MenuItem label={"Section Item 3"} value={"section-item-3"} />
           </React.Fragment>
         ),
+
         value: args.items
       })}
     />
@@ -199,6 +200,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicMenuSection__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

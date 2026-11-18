@@ -1,16 +1,16 @@
 .ariaInput:global(.__wab_instance) {
   box-sizing: border-box;
-  box-shadow: inset 0px 0px 0px 1px var(--token-4vYPiP56x06X);
-  color: var(--token--lED5rdjIn4J);
-  font-family: var(--token-YrOB4eN-aour);
-  font-size: var(--token-Od4nEYc3ic3h);
-  line-height: var(--token-gk4DmlWYgXHO);
+  box-shadow: inset 0px 0px 0px 1px var(--token-gPTqc7WH8V_1);
+  color: var(--token-RCIfzm6O3q7i);
+  font-family: var(--token-KOeQn9VuBnZt);
+  font-size: var(--token-AwqwfF6oCrvu);
+  line-height: var(--token-u9X_SBaSHnVF);
   width: 100%;
   position: relative;
   outline-style: none;
   min-width: 0;
-  border-radius: var(--token-IfEyJbEhldHs);
-  padding: var(--token-IfEyJbEhldHs) var(--token-Q4xafqaYUU60);
+  border-radius: var(--token-GRIy_xAuauSm);
+  padding: var(--token-GRIy_xAuauSm) var(--token-0-j-KfByTrYw);
   border-style: none;
 }
 .ariaInput[data-disabled][data-disabled]:global(.__wab_instance) {
@@ -18,22 +18,22 @@
 }
 .ariaInput[data-focused][data-focused]:global(.__wab_instance) {
   outline-style: solid;
-  outline-width: var(--token-j1SWHZgKbQEq);
+  outline-width: var(--token-WIxxwzut2BO6);
   outline-offset: 1px;
-  outline-color: var(--token-ga-LivTmOMsT);
+  outline-color: var(--token-Cw5JD24WaNWg);
 }
 .ariaInputtype_soft:global(.__wab_instance) {
-  background: var(--token--YwZs3r1Qivo);
+  background: var(--token-nVIzOGoZWyK_);
   box-shadow: none;
 }
 .ariaInputtype_soft[data-hovered][data-hovered]:global(.__wab_instance) {
-  background: var(--token-4LLCu2sXPq4u);
+  background: var(--token-fIm4X4Z0NLDT);
 }
 .ariaInputtype_plain:global(.__wab_instance) {
   box-shadow: none;
 }
 .ariaInputtype_plain[data-hovered][data-hovered]:global(.__wab_instance) {
-  background: var(--token--YwZs3r1Qivo);
+  background: var(--token-nVIzOGoZWyK_);
 }
 .ariaInputflat_top:global(.__wab_instance) {
   border-top-left-radius: 0rem;
@@ -52,8 +52,8 @@
   border-bottom-left-radius: 0rem;
 }
 .ariaInputpadded_left:global(.__wab_instance) {
-  padding-left: var(--token-yTld5Ae65zRw);
+  padding-left: var(--token-DlUAhdvTYMt-);
 }
 .ariaInputpadded_right:global(.__wab_instance) {
-  padding-right: var(--token-yTld5Ae65zRw);
+  padding-right: var(--token-DlUAhdvTYMt-);
 }
