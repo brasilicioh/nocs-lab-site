@@ -7,7 +7,7 @@ import {
   PlasmicBlankComponentsServer,
   makeAppRouterPageCtx,
   generateDynamicMetadata
-} from "../../components/plasmic/imported_project/PlasmicBlankComponentsServer";
+} from "../../components/plasmic/nocs_lab_site/PlasmicBlankComponentsServer";
 import type { Metadata, ResolvingMetadata } from "next";
 import type { PlasmicPageProps } from "@plasmicapp/react-web";
 

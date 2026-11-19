@@ -1,0 +1,76 @@
+.root {
+  background: #ffffff;
+  box-shadow: inset 0px 0px 0px 1px rgba(199, 199, 199, 1);
+  display: flex;
+  flex-grow: 0;
+  flex-direction: column;
+  row-gap: 8px;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 200px;
+  flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
+  transition-property: all;
+  transition-duration: 0.5s;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  border-radius: 4px;
+  padding: 6px;
+}
+.root:hover:hover {
+  animation: none;
+  background: #004d9c;
+}
+.consultor1 {
+  width: auto;
+  height: 79px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  flex-direction: row;
+  column-gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  padding: 2px;
+}
+.freeBox {
+  display: block;
+  position: relative;
+  width: 67px;
+  height: 67px;
+  flex-shrink: 0;
+}
+.svg {
+  object-fit: cover;
+  max-width: 100%;
+  color: #004d9c;
+  transform: scale(1, -1);
+  width: 66.57331085205078px;
+  height: 66.7750015258789px;
+  display: block;
+  transform-origin: top left;
+  position: absolute;
+  left: 0px;
+  top: 67px;
+}
+.root:hover .svg {
+  color: var(--token-bAyFQ_Q8CSoI);
+}
+.text {
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 27px;
+  color: rgba(0, 77, 156, 1);
+  align-self: stretch;
+  position: relative;
+}
+.root:hover .text {
+  color: var(--token-bAyFQ_Q8CSoI);
+}

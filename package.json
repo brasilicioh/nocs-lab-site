@@ -10,7 +10,7 @@
     "codegen": "node scripts/sync-plasmic.mjs"
   },
   "dependencies": {
-    "@plasmicapp/react-web": "^1.0.44",
+    "@plasmicapp/react-web": "^1.0.45",
     "@plasmicpkgs/react-aria": "^0.0.202",
     "next": "16.2.1",
     "react": "18.2.0",
