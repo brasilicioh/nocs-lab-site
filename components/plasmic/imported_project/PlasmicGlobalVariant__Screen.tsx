@@ -24,7 +24,7 @@ export function ScreenContextProvider(
 
 export const useScreenVariants = createUseScreenVariants(true, {
   mobileOnly: "(min-width:0px) and (max-width:430px)",
-  tablet: "(max-width:834px)"
+  tablet: "(max-width:1024px)"
 });
 
 export default ScreenContext;
