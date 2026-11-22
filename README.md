@@ -85,7 +85,20 @@ Antes de enviar:
 npm run build
 ```
 
-O build estático será criado em `out/`.
+O Next.js exporta o site estático para `out/`; o script de build ajusta os caminhos dos assets nessa pasta. Ela contém HTML, CSS, JavaScript e imagens, sem precisar de um servidor Next.js em produção.
+
+## Executar com Docker
+
+O `Dockerfile` faz o build e monta uma imagem pequena com Nginx para servir os arquivos estáticos. Na pasta `nocs-lab-site`:
+
+```bash
+docker build -t nocs-lab-site .
+docker run --rm -p 9999:80 nocs-lab-site
+```
+
+Abra `http://localhost:9999`. A porta `9999` da sua máquina é encaminhada para a porta `80` do Nginx dentro do contêiner. Para parar, pressione `Ctrl+C`.
+
+Também é possível gerar `out/` diretamente na máquina com `npm run build`. Não é necessário usar Docker Compose para este site sozinho: o Dockerfile e os comandos acima bastam. Compose é útil quando a aplicação precisa subir junto com outros serviços, como uma API ou um banco de dados.
 
 Os arquivos `Plasmic*.tsx` e CSS gerados são controlados pelo Codegen e não
 devem ser editados manualmente. Comportamentos próprios devem ficar em
