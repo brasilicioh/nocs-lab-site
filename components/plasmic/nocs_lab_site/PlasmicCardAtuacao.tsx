@@ -132,6 +132,20 @@ function PlasmicCardAtuacao__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  const [isRootFocusWithin, triggerRootFocusWithinProps] = useTrigger(
+    "useFocusedWithin",
+    {}
+  );
+  const [isRootActive, triggerRootActiveProps] = useTrigger("usePressed", {});
+  const [isRootFocusVisibleWithin, triggerRootFocusVisibleWithinProps] =
+    useTrigger("useFocusVisibleWithin", {
+      isTextInput: false
+    });
+  const triggers = {
+    focusWithinActiveFocusVisibleWithin_root:
+      isRootFocusWithin && isRootActive && isRootFocusVisibleWithin
+  };
+
   const styleTokensClassNames = _useStyleTokens();
 
   return (
@@ -146,8 +160,17 @@ function PlasmicCardAtuacao__RenderFunc(props: {
         "plasmic_default_styles",
         "plasmic_mixins",
         styleTokensClassNames,
-        sty.root
+        sty.root,
+        {
+          [sty.root___focusWithin__active__focusVisibleWithin]:
+            triggers.focusWithinActiveFocusVisibleWithin_root
+        }
       )}
+      data-plasmic-trigger-props={[
+        triggerRootFocusWithinProps,
+        triggerRootActiveProps,
+        triggerRootFocusVisibleWithinProps
+      ]}
     >
       <div
         data-plasmic-name={"computador1"}
@@ -162,7 +185,10 @@ function PlasmicCardAtuacao__RenderFunc(props: {
           <Group10Icon
             data-plasmic-name={"svg"}
             data-plasmic-override={overrides.svg}
-            className={classNames("all", sty.svg)}
+            className={classNames("all", sty.svg, {
+              [sty.svg___focusWithin__active__focusVisibleWithin]:
+                triggers.focusWithinActiveFocusVisibleWithin_root
+            })}
             role={"img"}
           />
         </div>
@@ -170,7 +196,10 @@ function PlasmicCardAtuacao__RenderFunc(props: {
       <div
         data-plasmic-name={"text"}
         data-plasmic-override={overrides.text}
-        className={classNames("all", "__wab_text", sty.text)}
+        className={classNames("all", "__wab_text", sty.text, {
+          [sty.text___focusWithin__active__focusVisibleWithin]:
+            triggers.focusWithinActiveFocusVisibleWithin_root
+        })}
       >
         {"Desenvolvimento de Software"}
       </div>

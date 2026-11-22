@@ -64,6 +64,8 @@ import {
 import { generateDynamicMetadata, PageCtx } from "./PlasmicHomepageServer"; // plasmic-import: ipyk0ahIlWrs/rscServer
 
 import Button from "../../Button"; // plasmic-import: nLv5iPrIWwBE/component
+import { SliderWrapper } from "@plasmicpkgs/react-slick";
+import { sliderHelpers as SliderWrapper_Helpers } from "@plasmicpkgs/react-slick";
 import CardAtuacao from "../../CardAtuacao"; // plasmic-import: bA2T_ooYnbt1/component
 import CardAtuacao2 from "../../CardAtuacao2"; // plasmic-import: -prMcyIwKmY2/component
 import CardAtuacao3 from "../../CardAtuacao3"; // plasmic-import: nBViqYSIw1Sb/component
@@ -85,6 +87,7 @@ import LightbulbIcon from "./icons/PlasmicIcon__Lightbulb"; // plasmic-import: b
 import LaptopCodeIcon from "./icons/PlasmicIcon__LaptopCode"; // plasmic-import: h4Nh0qcHnFU0/icon
 import GroupIcon from "./icons/PlasmicIcon__Group"; // plasmic-import: wpJg5WsQF3JT/icon
 import Line1Icon from "./icons/PlasmicIcon__Line1"; // plasmic-import: gTp3bHF0pHdU/icon
+import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: P_NPtHWeotKN/icon
 
 const emptyProxy: any = new Proxy(() => "", {
   get(_, prop) {
@@ -146,12 +149,18 @@ export type PlasmicHomepage__OverridesType = {
   frame427321636?: Flex__<"div">;
   areaDeAtuacao?: Flex__<"div">;
   descubra?: Flex__<"div">;
+  sliderCarousel?: Flex__<typeof SliderWrapper>;
   cardAtuacao?: Flex__<typeof CardAtuacao>;
   cardAtuacao2?: Flex__<typeof CardAtuacao2>;
   cardAtuacao3?: Flex__<typeof CardAtuacao3>;
   cardAtuacao4?: Flex__<typeof CardAtuacao4>;
   cardAtuacao5?: Flex__<typeof CardAtuacao5>;
   cardAtuacao6?: Flex__<typeof CardAtuacao6>;
+  conheca?: Flex__<"div">;
+  projetosInovadores?: Flex__<"div">;
+  projetosInovadoresTitle?: Flex__<"div">;
+  titleExploreNossos?: Flex__<"div">;
+  projetos?: Flex__<"div">;
 };
 
 export interface DefaultHomepageProps {}
@@ -202,6 +211,21 @@ function PlasmicHomepage__RenderFunc(props: {
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $q, $ctx }) => false
+      },
+      {
+        path: "areaCardsOffset",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => 0
+      },
+      {
+        path: "sliderCarousel.currentSlide",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => 0,
+
+        refName: "sliderCarousel",
+        onMutate: generateOnMutateForSpec("currentSlide", SliderWrapper_Helpers)
       }
     ],
     [$props, $ctx, $refs]
@@ -1177,41 +1201,1028 @@ function PlasmicHomepage__RenderFunc(props: {
                 </div>
               </div>
               <div className={classNames("all", sty.freeBox__ndYsY)}>
-                <CardAtuacao
-                  data-plasmic-name={"cardAtuacao"}
-                  data-plasmic-override={overrides.cardAtuacao}
-                  className={classNames("__wab_instance", sty.cardAtuacao)}
+                {(() => {
+                  const child$Props = {
+                    arrows: true,
+                    autoplay: false,
+                    beforeChange: async (...eventArgs: any) => {
+                      generateStateOnChangePropForCodeComponents(
+                        $state,
+                        "currentSlide",
+                        ["sliderCarousel", "currentSlide"],
+                        SliderWrapper_Helpers
+                      ).apply(null, eventArgs);
+                    },
+                    className: classNames("__wab_instance", sty.sliderCarousel),
+                    initialSlide: generateStateValueProp($state, [
+                      "sliderCarousel",
+                      "currentSlide"
+                    ]),
+                    pauseOnFocus: true,
+                    ref: ref => {
+                      $refs["sliderCarousel"] = ref;
+                    },
+                    sliderScopeClassName: sty["sliderCarousel__slider"],
+                    slidesToScroll: 1,
+                    variableWidth: true
+                  };
+                  initializeCodeComponentStates(
+                    $state,
+                    [
+                      {
+                        name: "currentSlide",
+                        plasmicStateName: "sliderCarousel.currentSlide"
+                      }
+                    ],
+                    [],
+                    SliderWrapper_Helpers ?? {},
+                    child$Props
+                  );
+
+                  return (
+                    <SliderWrapper
+                      data-plasmic-name={"sliderCarousel"}
+                      data-plasmic-override={overrides.sliderCarousel}
+                      {...child$Props}
+                    >
+                      <div className={classNames("all", sty.freeBox__xSCmZ)}>
+                        {$state.areaCardsOffset <= 0 ? (
+                          <CardAtuacao
+                            data-plasmic-name={"cardAtuacao"}
+                            data-plasmic-override={overrides.cardAtuacao}
+                            className={classNames(
+                              "__wab_instance",
+                              sty.cardAtuacao
+                            )}
+                          />
+                        ) : null}
+                      </div>
+                      <div className={classNames("all", sty.freeBox__bnn7S)}>
+                        {$state.areaCardsOffset <= 1 &&
+                        $state.areaCardsOffset + 3 >= 1 ? (
+                          <CardAtuacao2
+                            data-plasmic-name={"cardAtuacao2"}
+                            data-plasmic-override={overrides.cardAtuacao2}
+                            className={classNames(
+                              "__wab_instance",
+                              sty.cardAtuacao2
+                            )}
+                          />
+                        ) : null}
+                      </div>
+                      <div className={classNames("all", sty.freeBox__r2WoQ)}>
+                        {$state.areaCardsOffset <= 2 &&
+                        $state.areaCardsOffset + 3 >= 2 ? (
+                          <CardAtuacao3
+                            data-plasmic-name={"cardAtuacao3"}
+                            data-plasmic-override={overrides.cardAtuacao3}
+                            className={classNames(
+                              "__wab_instance",
+                              sty.cardAtuacao3
+                            )}
+                          />
+                        ) : null}
+                      </div>
+                      <div className={classNames("all", sty.freeBox__z0SlQ)}>
+                        {$state.areaCardsOffset <= 3 &&
+                        $state.areaCardsOffset + 3 >= 3 ? (
+                          <CardAtuacao4
+                            data-plasmic-name={"cardAtuacao4"}
+                            data-plasmic-override={overrides.cardAtuacao4}
+                            className={classNames(
+                              "__wab_instance",
+                              sty.cardAtuacao4
+                            )}
+                          />
+                        ) : null}
+                      </div>
+                      <div className={classNames("all", sty.freeBox__vZkB9)}>
+                        <CardAtuacao5
+                          data-plasmic-name={"cardAtuacao5"}
+                          data-plasmic-override={overrides.cardAtuacao5}
+                          className={classNames(
+                            "__wab_instance",
+                            sty.cardAtuacao5
+                          )}
+                        />
+                      </div>
+                      <div className={classNames("all", sty.freeBox__aX07J)}>
+                        <CardAtuacao6
+                          data-plasmic-name={"cardAtuacao6"}
+                          data-plasmic-override={overrides.cardAtuacao6}
+                          className={classNames(
+                            "__wab_instance",
+                            sty.cardAtuacao6
+                          )}
+                        />
+                      </div>
+                    </SliderWrapper>
+                  );
+                })()}
+              </div>
+            </div>
+            <div
+              data-plasmic-name={"conheca"}
+              data-plasmic-override={overrides.conheca}
+              className={classNames("all", sty.conheca)}
+            >
+              <Line1Icon
+                className={classNames("all", sty.svg__zxM9)}
+                role={"img"}
+              />
+
+              <div
+                className={classNames("all", "__wab_text", sty.text___3Ig59)}
+              >
+                {"Conhe\u00e7a nossas \u00c1reas de Atua\u00e7\u00e3o"}
+              </div>
+              <Line1Icon
+                className={classNames("all", sty.svg__vXyVb)}
+                role={"img"}
+              />
+            </div>
+          </div>
+          <div
+            data-plasmic-name={"projetosInovadores"}
+            data-plasmic-override={overrides.projetosInovadores}
+            className={classNames("all", sty.projetosInovadores)}
+          >
+            <div
+              data-plasmic-name={"projetosInovadoresTitle"}
+              data-plasmic-override={overrides.projetosInovadoresTitle}
+              className={classNames("all", sty.projetosInovadoresTitle)}
+            >
+              <div
+                data-plasmic-name={"titleExploreNossos"}
+                data-plasmic-override={overrides.titleExploreNossos}
+                className={classNames("all", sty.titleExploreNossos)}
+              >
+                <Line1Icon
+                  className={classNames("all", sty.svg__fv0Pv)}
+                  role={"img"}
                 />
 
-                <CardAtuacao2
-                  data-plasmic-name={"cardAtuacao2"}
-                  data-plasmic-override={overrides.cardAtuacao2}
-                  className={classNames("__wab_instance", sty.cardAtuacao2)}
+                <div
+                  className={classNames("all", "__wab_text", sty.text__kjrcb)}
+                >
+                  {"EXPLORE NOSSOS"}
+                </div>
+                <Line1Icon
+                  className={classNames("all", sty.svg___9Wq1S)}
+                  role={"img"}
                 />
+              </div>
+              <div className={classNames("all", "__wab_text", sty.text__zSBgk)}>
+                {"Projetos Inovadores"}
+              </div>
+            </div>
+            <div
+              data-plasmic-name={"projetos"}
+              data-plasmic-override={overrides.projetos}
+              className={classNames("all", sty.projetos)}
+            >
+              <div className={classNames("all", sty.freeBox__y9IfL)}>
+                {(
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? true
+                    : false
+                ) ? (
+                  <div className={classNames("all", sty.freeBox__pk9Ij)}>
+                    <div className={classNames("all", sty.freeBox__jg0Ys)}>
+                      <PlasmicImg__
+                        alt={""}
+                        className={classNames(sty.img__yEXb)}
+                        displayHeight={
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? "120px"
+                            : hasVariant(globalVariants, "screen", "tablet")
+                              ? "150px"
+                              : "150px"
+                        }
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? "30%"
+                            : "100%"
+                        }
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? "30%"
+                            : hasVariant(globalVariants, "screen", "tablet")
+                              ? "150px"
+                              : "140px"
+                        }
+                        loading={"lazy"}
+                        src={{
+                          src: "/plasmic/nocs_lab_site/images/vector14.svg",
+                          fullWidth: 207,
+                          fullHeight: 210,
+                          aspectRatio: undefined
+                        }}
+                      />
 
-                <CardAtuacao3
-                  data-plasmic-name={"cardAtuacao3"}
-                  data-plasmic-override={overrides.cardAtuacao3}
-                  className={classNames("__wab_instance", sty.cardAtuacao3)}
-                />
+                      <div className={classNames("all", sty.freeBox__geLaB)}>
+                        <div className={classNames("all", sty.freeBox___0Uizp)}>
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__qq2Ov
+                            )}
+                          >
+                            {"Vis\u00e3o Computacional"}
+                          </div>
+                        </div>
+                        <div className={classNames("all", sty.freeBox__yoMti)}>
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__v2JOi
+                            )}
+                          >
+                            {"Monitoramento Inteligente"}
+                          </div>
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__bbVle
+                            )}
+                          >
+                            {
+                              "Solu\u00e7\u00e3o de an\u00e1lise de imagens para monitoramento em tempo real."
+                            }
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className={classNames("all", sty.freeBox___4FWv)}>
+                      <Button
+                        className={classNames(
+                          "__wab_instance",
+                          sty.button__esmZo
+                        )}
+                        color={"nocsColor"}
+                        end={
+                          <ArrowRightIcon
+                            className={classNames("all", sty.svg___7KwzC)}
+                            role={"img"}
+                          />
+                        }
+                        iconEnd={true}
+                        label={
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__tW89W
+                            )}
+                          >
+                            {"Conhe\u00e7a o projeto"}
+                          </div>
+                        }
+                      />
+                    </div>
+                  </div>
+                ) : null}
+                {(
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? true
+                    : false
+                ) ? (
+                  <div className={classNames("all", sty.freeBox__suuj)}>
+                    <div className={classNames("all", sty.freeBox__cLdPa)}>
+                      <PlasmicImg__
+                        alt={""}
+                        className={classNames(sty.img___05Vrv)}
+                        displayHeight={
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? "120px"
+                            : hasVariant(globalVariants, "screen", "tablet")
+                              ? "150px"
+                              : "150px"
+                        }
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? "30%"
+                            : "100%"
+                        }
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? "30%"
+                            : hasVariant(globalVariants, "screen", "tablet")
+                              ? "150px"
+                              : "140px"
+                        }
+                        loading={"lazy"}
+                        src={
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? {
+                                src: "/plasmic/nocs_lab_site/images/vector19.png",
+                                fullWidth: 224,
+                                fullHeight: 182,
+                                aspectRatio: undefined
+                              }
+                            : {
+                                src: "/plasmic/nocs_lab_site/images/vector14.svg",
+                                fullWidth: 207,
+                                fullHeight: 210,
+                                aspectRatio: undefined
+                              }
+                        }
+                      />
 
-                <CardAtuacao4
-                  data-plasmic-name={"cardAtuacao4"}
-                  data-plasmic-override={overrides.cardAtuacao4}
-                  className={classNames("__wab_instance", sty.cardAtuacao4)}
-                />
+                      <div className={classNames("all", sty.freeBox__dz8Fh)}>
+                        <div className={classNames("all", sty.freeBox__k6LAj)}>
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__ekzzj
+                            )}
+                          >
+                            {"Ci\u00eancia de Dados"}
+                          </div>
+                        </div>
+                        <div className={classNames("all", sty.freeBox___7T7TQ)}>
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__hkbKm
+                            )}
+                          >
+                            {hasVariant(globalVariants, "screen", "mobileOnly")
+                              ? "Painel de Indicadores"
+                              : "Monitoramento Inteligente"}
+                          </div>
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__iTyRr
+                            )}
+                          >
+                            {
+                              "Solu\u00e7\u00e3o de an\u00e1lise de imagens para monitoramento em tempo real."
+                            }
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className={classNames("all", sty.freeBox__ocxBg)}>
+                      <Button
+                        className={classNames(
+                          "__wab_instance",
+                          sty.button__oaEpo
+                        )}
+                        color={"nocsColor"}
+                        end={
+                          <ArrowRightIcon
+                            className={classNames("all", sty.svg__yqWfg)}
+                            role={"img"}
+                          />
+                        }
+                        iconEnd={true}
+                        label={
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text___0Yes0
+                            )}
+                          >
+                            {"Conhe\u00e7a o projeto"}
+                          </div>
+                        }
+                      />
+                    </div>
+                  </div>
+                ) : null}
+                <div className={classNames("all", sty.freeBox__zu8F5)}>
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__pjAYe)}
+                    displayHeight={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "100px"
+                        : hasVariant(globalVariants, "screen", "tablet")
+                          ? "150px"
+                          : "150px"
+                    }
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "25%"
+                        : "100%"
+                    }
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "25%"
+                        : hasVariant(globalVariants, "screen", "tablet")
+                          ? "150px"
+                          : "140px"
+                    }
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/nocs_lab_site/images/vector14.svg",
+                      fullWidth: 207,
+                      fullHeight: 210,
+                      aspectRatio: undefined
+                    }}
+                  />
 
-                <CardAtuacao5
-                  data-plasmic-name={"cardAtuacao5"}
-                  data-plasmic-override={overrides.cardAtuacao5}
-                  className={classNames("__wab_instance", sty.cardAtuacao5)}
-                />
+                  <div className={classNames("all", sty.freeBox__a4Ma1)}>
+                    <div className={classNames("all", sty.freeBox__oLw)}>
+                      <div
+                        className={classNames(
+                          "all",
+                          "__wab_text",
+                          sty.text___3KzHm
+                        )}
+                      >
+                        {"Vis\u00e3o Computacional"}
+                      </div>
+                    </div>
+                    <div className={classNames("all", sty.freeBox__puqZy)}>
+                      <div
+                        className={classNames(
+                          "all",
+                          "__wab_text",
+                          sty.text__lUuE4
+                        )}
+                      >
+                        {"Monitoramento Inteligente"}
+                      </div>
+                      <div
+                        className={classNames(
+                          "all",
+                          "__wab_text",
+                          sty.text__sAjZf
+                        )}
+                      >
+                        {
+                          "Solu\u00e7\u00e3o de an\u00e1lise de imagens para monitoramento em tempo real."
+                        }
+                      </div>
+                    </div>
+                    <div className={classNames("all", sty.freeBox__wShVe)}>
+                      <Button
+                        className={classNames(
+                          "__wab_instance",
+                          sty.button___1Gx71
+                        )}
+                        color={"nocsColor"}
+                        end={
+                          <ArrowRightIcon
+                            className={classNames("all", sty.svg__w9EBa)}
+                            role={"img"}
+                          />
+                        }
+                        iconEnd={true}
+                        label={
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__hdg1N
+                            )}
+                          >
+                            {"Conhe\u00e7a o projeto"}
+                          </div>
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className={classNames("all", sty.freeBox___1Tf63)}>
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__bMKtO)}
+                    displayHeight={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "100px"
+                        : hasVariant(globalVariants, "screen", "tablet")
+                          ? "150px"
+                          : "150px"
+                    }
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "25%"
+                        : "100%"
+                    }
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "25%"
+                        : hasVariant(globalVariants, "screen", "tablet")
+                          ? "150px"
+                          : "140px"
+                    }
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/nocs_lab_site/images/vector15.svg",
+                      fullWidth: 207,
+                      fullHeight: 210,
+                      aspectRatio: undefined
+                    }}
+                  />
 
-                <CardAtuacao6
-                  data-plasmic-name={"cardAtuacao6"}
-                  data-plasmic-override={overrides.cardAtuacao6}
-                  className={classNames("__wab_instance", sty.cardAtuacao6)}
-                />
+                  <div className={classNames("all", sty.freeBox__dIcGw)}>
+                    <div className={classNames("all", sty.freeBox__yDgqF)}>
+                      <div
+                        className={classNames(
+                          "all",
+                          "__wab_text",
+                          sty.text__rCry
+                        )}
+                      >
+                        {"Ci\u00eancia de Dados"}
+                      </div>
+                    </div>
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text___4Mst9
+                      )}
+                    >
+                      {"Painel de Indicadores"}
+                    </div>
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text__iwFuB
+                      )}
+                    >
+                      {
+                        "Visualiza\u00e7\u00e3o de dados para apoio \u00e0 tomada de ecis\u00e3o"
+                      }
+                    </div>
+                    <div className={classNames("all", sty.freeBox__pudxc)}>
+                      <Button
+                        className={classNames(
+                          "__wab_instance",
+                          sty.button__iltFg
+                        )}
+                        color={"nocsColor"}
+                        end={
+                          <ArrowRightIcon
+                            className={classNames("all", sty.svg__dcwqH)}
+                            role={"img"}
+                          />
+                        }
+                        iconEnd={true}
+                        label={
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text___76GMc
+                            )}
+                          >
+                            {"Conhe\u00e7a o projeto"}
+                          </div>
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className={classNames("all", sty.freeBox__qreiK)}>
+                {(
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? true
+                    : false
+                ) ? (
+                  <div className={classNames("all", sty.freeBox__ghQl)}>
+                    <div className={classNames("all", sty.freeBox__rBFuV)}>
+                      <PlasmicImg__
+                        alt={""}
+                        className={classNames(sty.img__tM1Na)}
+                        displayHeight={
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? "120px"
+                            : hasVariant(globalVariants, "screen", "tablet")
+                              ? "150px"
+                              : "150px"
+                        }
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? "30%"
+                            : "100%"
+                        }
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? "30%"
+                            : hasVariant(globalVariants, "screen", "tablet")
+                              ? "150px"
+                              : "140px"
+                        }
+                        loading={"lazy"}
+                        src={
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? {
+                                src: "/plasmic/nocs_lab_site/images/vector20.png",
+                                fullWidth: 214,
+                                fullHeight: 182,
+                                aspectRatio: undefined
+                              }
+                            : {
+                                src: "/plasmic/nocs_lab_site/images/vector14.svg",
+                                fullWidth: 207,
+                                fullHeight: 210,
+                                aspectRatio: undefined
+                              }
+                        }
+                      />
+
+                      <div className={classNames("all", sty.freeBox__mEP1)}>
+                        <div className={classNames("all", sty.freeBox__u3Pes)}>
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__ooOcv
+                            )}
+                          >
+                            {"IoT"}
+                          </div>
+                        </div>
+                        <div className={classNames("all", sty.freeBox__wu7Uu)}>
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text___9YuIj
+                            )}
+                          >
+                            {hasVariant(globalVariants, "screen", "mobileOnly")
+                              ? "Rede de Sensores"
+                              : "Monitoramento Inteligente"}
+                          </div>
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__fbv9F
+                            )}
+                          >
+                            {
+                              "Solu\u00e7\u00e3o de an\u00e1lise de imagens para monitoramento em tempo real."
+                            }
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className={classNames("all", sty.freeBox__pu84S)}>
+                      <Button
+                        className={classNames(
+                          "__wab_instance",
+                          sty.button__xj0On
+                        )}
+                        color={"nocsColor"}
+                        end={
+                          <ArrowRightIcon
+                            className={classNames("all", sty.svg___3Pyg6)}
+                            role={"img"}
+                          />
+                        }
+                        iconEnd={true}
+                        label={
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__kJjw
+                            )}
+                          >
+                            {"Conhe\u00e7a o projeto"}
+                          </div>
+                        }
+                      />
+                    </div>
+                  </div>
+                ) : null}
+                {(
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? true
+                    : false
+                ) ? (
+                  <div className={classNames("all", sty.freeBox__hVvao)}>
+                    <div className={classNames("all", sty.freeBox__qp7Up)}>
+                      <PlasmicImg__
+                        alt={""}
+                        className={classNames(sty.img__ddlMy)}
+                        displayHeight={
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? "120px"
+                            : hasVariant(globalVariants, "screen", "tablet")
+                              ? "150px"
+                              : "150px"
+                        }
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? "30%"
+                            : "100%"
+                        }
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? "30%"
+                            : hasVariant(globalVariants, "screen", "tablet")
+                              ? "150px"
+                              : "140px"
+                        }
+                        loading={"lazy"}
+                        src={
+                          hasVariant(globalVariants, "screen", "mobileOnly")
+                            ? {
+                                src: "/plasmic/nocs_lab_site/images/vector21.png",
+                                fullWidth: 214,
+                                fullHeight: 182,
+                                aspectRatio: undefined
+                              }
+                            : {
+                                src: "/plasmic/nocs_lab_site/images/vector14.svg",
+                                fullWidth: 207,
+                                fullHeight: 210,
+                                aspectRatio: undefined
+                              }
+                        }
+                      />
+
+                      <div className={classNames("all", sty.freeBox__o5Ad7)}>
+                        <div className={classNames("all", sty.freeBox__gH1OY)}>
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__vmzap
+                            )}
+                          >
+                            {"Redes e Sistemas"}
+                          </div>
+                        </div>
+                        <div className={classNames("all", sty.freeBox__agTyb)}>
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__zEoDd
+                            )}
+                          >
+                            {hasVariant(globalVariants, "screen", "mobileOnly")
+                              ? "Infraestrutura e Conectividade"
+                              : "Monitoramento Inteligente"}
+                          </div>
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text___1Sun
+                            )}
+                          >
+                            {
+                              "Solu\u00e7\u00e3o de an\u00e1lise de imagens para monitoramento em tempo real."
+                            }
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className={classNames("all", sty.freeBox__bgLJn)}>
+                      <Button
+                        className={classNames(
+                          "__wab_instance",
+                          sty.button__mWeBl
+                        )}
+                        color={"nocsColor"}
+                        end={
+                          <ArrowRightIcon
+                            className={classNames("all", sty.svg__zt0Tq)}
+                            role={"img"}
+                          />
+                        }
+                        iconEnd={true}
+                        label={
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__sgwq5
+                            )}
+                          >
+                            {"Conhe\u00e7a o projeto"}
+                          </div>
+                        }
+                      />
+                    </div>
+                  </div>
+                ) : null}
+                <div className={classNames("all", sty.freeBox__kAQ)}>
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__kkGg0)}
+                    displayHeight={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "100px"
+                        : hasVariant(globalVariants, "screen", "tablet")
+                          ? "150px"
+                          : "150px"
+                    }
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "25%"
+                        : "100%"
+                    }
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "25%"
+                        : hasVariant(globalVariants, "screen", "tablet")
+                          ? "150px"
+                          : "140px"
+                    }
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/nocs_lab_site/images/vector16.svg",
+                      fullWidth: 207,
+                      fullHeight: 210,
+                      aspectRatio: undefined
+                    }}
+                  />
+
+                  <div className={classNames("all", sty.freeBox__frTpf)}>
+                    <div className={classNames("all", sty.freeBox__dvi)}>
+                      <div
+                        className={classNames(
+                          "all",
+                          "__wab_text",
+                          sty.text__aPfAk
+                        )}
+                      >
+                        {"IoT"}
+                      </div>
+                    </div>
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text__vCPxB
+                      )}
+                    >
+                      {"Rede de Sensores"}
+                    </div>
+                    <div
+                      className={classNames("all", "__wab_text", sty.text__koL)}
+                    >
+                      {
+                        "Plataforma para coleta e envio de dados em dispositivos conectados."
+                      }
+                    </div>
+                    <div className={classNames("all", sty.freeBox___2FPb7)}>
+                      <Button
+                        className={classNames(
+                          "__wab_instance",
+                          sty.button__sINkh
+                        )}
+                        color={"nocsColor"}
+                        end={
+                          <ArrowRightIcon
+                            className={classNames("all", sty.svg__yn7Fe)}
+                            role={"img"}
+                          />
+                        }
+                        iconEnd={true}
+                        label={
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__ftoQ
+                            )}
+                          >
+                            {"Conhe\u00e7a o projeto"}
+                          </div>
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className={classNames("all", sty.freeBox___0MNtb)}>
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__lsFxA)}
+                    displayHeight={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "100px"
+                        : hasVariant(globalVariants, "screen", "tablet")
+                          ? "150px"
+                          : "150px"
+                    }
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "25%"
+                        : "100%"
+                    }
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "25%"
+                        : hasVariant(globalVariants, "screen", "tablet")
+                          ? "150px"
+                          : "140px"
+                    }
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/nocs_lab_site/images/vector17.svg",
+                      fullWidth: 207,
+                      fullHeight: 210,
+                      aspectRatio: undefined
+                    }}
+                  />
+
+                  <div className={classNames("all", sty.freeBox__k1SBt)}>
+                    <div className={classNames("all", sty.freeBox__rnCh)}>
+                      <div
+                        className={classNames(
+                          "all",
+                          "__wab_text",
+                          sty.text__mhq2A
+                        )}
+                      >
+                        {"Redes e Sistemas"}
+                      </div>
+                    </div>
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text__g9S4N
+                      )}
+                    >
+                      {"Infraestrutura e Conectividade"}
+                    </div>
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text___8Yhgw
+                      )}
+                    >
+                      {
+                        "Solu\u00e7\u00f5es para integra\u00e7\u00e3o e comunica\u00e7\u00e3o entre sistemas."
+                      }
+                    </div>
+                    <div className={classNames("all", sty.freeBox__bF6)}>
+                      <Button
+                        className={classNames(
+                          "__wab_instance",
+                          sty.button___2GmLq
+                        )}
+                        color={"nocsColor"}
+                        end={
+                          <ArrowRightIcon
+                            className={classNames("all", sty.svg__hgxMj)}
+                            role={"img"}
+                          />
+                        }
+                        iconEnd={true}
+                        label={
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__ixx56
+                            )}
+                          >
+                            {"Conhe\u00e7a o projeto"}
+                          </div>
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1256,12 +2267,18 @@ const PlasmicDescendants = {
     "frame427321636",
     "areaDeAtuacao",
     "descubra",
+    "sliderCarousel",
     "cardAtuacao",
     "cardAtuacao2",
     "cardAtuacao3",
     "cardAtuacao4",
     "cardAtuacao5",
-    "cardAtuacao6"
+    "cardAtuacao6",
+    "conheca",
+    "projetosInovadores",
+    "projetosInovadoresTitle",
+    "titleExploreNossos",
+    "projetos"
   ],
   header: [
     "header",
@@ -1338,6 +2355,18 @@ const PlasmicDescendants = {
   areaDeAtuacao: [
     "areaDeAtuacao",
     "descubra",
+    "sliderCarousel",
+    "cardAtuacao",
+    "cardAtuacao2",
+    "cardAtuacao3",
+    "cardAtuacao4",
+    "cardAtuacao5",
+    "cardAtuacao6",
+    "conheca"
+  ],
+  descubra: [
+    "descubra",
+    "sliderCarousel",
     "cardAtuacao",
     "cardAtuacao2",
     "cardAtuacao3",
@@ -1345,8 +2374,8 @@ const PlasmicDescendants = {
     "cardAtuacao5",
     "cardAtuacao6"
   ],
-  descubra: [
-    "descubra",
+  sliderCarousel: [
+    "sliderCarousel",
     "cardAtuacao",
     "cardAtuacao2",
     "cardAtuacao3",
@@ -1359,7 +2388,17 @@ const PlasmicDescendants = {
   cardAtuacao3: ["cardAtuacao3"],
   cardAtuacao4: ["cardAtuacao4"],
   cardAtuacao5: ["cardAtuacao5"],
-  cardAtuacao6: ["cardAtuacao6"]
+  cardAtuacao6: ["cardAtuacao6"],
+  conheca: ["conheca"],
+  projetosInovadores: [
+    "projetosInovadores",
+    "projetosInovadoresTitle",
+    "titleExploreNossos",
+    "projetos"
+  ],
+  projetosInovadoresTitle: ["projetosInovadoresTitle", "titleExploreNossos"],
+  titleExploreNossos: ["titleExploreNossos"],
+  projetos: ["projetos"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -1398,12 +2437,18 @@ type NodeDefaultElementType = {
   frame427321636: "div";
   areaDeAtuacao: "div";
   descubra: "div";
+  sliderCarousel: typeof SliderWrapper;
   cardAtuacao: typeof CardAtuacao;
   cardAtuacao2: typeof CardAtuacao2;
   cardAtuacao3: typeof CardAtuacao3;
   cardAtuacao4: typeof CardAtuacao4;
   cardAtuacao5: typeof CardAtuacao5;
   cardAtuacao6: typeof CardAtuacao6;
+  conheca: "div";
+  projetosInovadores: "div";
+  projetosInovadoresTitle: "div";
+  titleExploreNossos: "div";
+  projetos: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -1502,12 +2547,18 @@ export const PlasmicHomepage = Object.assign(
     frame427321636: makeNodeComponent("frame427321636"),
     areaDeAtuacao: makeNodeComponent("areaDeAtuacao"),
     descubra: makeNodeComponent("descubra"),
+    sliderCarousel: makeNodeComponent("sliderCarousel"),
     cardAtuacao: makeNodeComponent("cardAtuacao"),
     cardAtuacao2: makeNodeComponent("cardAtuacao2"),
     cardAtuacao3: makeNodeComponent("cardAtuacao3"),
     cardAtuacao4: makeNodeComponent("cardAtuacao4"),
     cardAtuacao5: makeNodeComponent("cardAtuacao5"),
     cardAtuacao6: makeNodeComponent("cardAtuacao6"),
+    conheca: makeNodeComponent("conheca"),
+    projetosInovadores: makeNodeComponent("projetosInovadores"),
+    projetosInovadoresTitle: makeNodeComponent("projetosInovadoresTitle"),
+    titleExploreNossos: makeNodeComponent("titleExploreNossos"),
+    projetos: makeNodeComponent("projetos"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

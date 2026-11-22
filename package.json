@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --webpack",
     "build": "next build && node scripts/patch-exported-asset-paths.mjs",
     "start": "next start",
     "lint": "next lint",
@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@plasmicapp/react-web": "^1.0.45",
+    "@plasmicpkgs/plasmic-embed-css": "^0.1.248",
     "@plasmicpkgs/react-aria": "^0.0.202",
+    "@plasmicpkgs/react-slick": "^0.0.288",
     "next": "16.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"

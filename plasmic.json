@@ -26885,6 +26885,19 @@
           "cssFilePath": "plasmic/nocs_lab_site/PlasmicCardAtuacao6.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "-BrPI_zIa63k",
+          "name": "ArrowButton",
+          "type": "managed",
+          "projectId": "q2bNAsKkbiT6rYXpuB7PPG",
+          "renderModuleFilePath": "plasmic/nocs_lab_site/PlasmicArrowButton.tsx",
+          "importSpec": {
+            "modulePath": "ArrowButton.tsx"
+          },
+          "cssFilePath": "plasmic/nocs_lab_site/PlasmicArrowButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -27136,24 +27149,9 @@
       ],
       "images": [
         {
-          "id": "QeF2O5gANobE",
-          "name": "Rectangle 2",
-          "filePath": "../public/plasmic/nocs_lab_site/images/rectangle2.png"
-        },
-        {
-          "id": "I40jiyP7hUjA",
-          "name": "Rectangle",
-          "filePath": "../public/plasmic/nocs_lab_site/images/rectangle.png"
-        },
-        {
           "id": "-WHMYAA4497c",
           "name": "Nocs_logo.png",
           "filePath": "../public/plasmic/nocs_lab_site/images/nocsLogoPng.png"
-        },
-        {
-          "id": "PTjLteKgzGpG",
-          "name": "Banner Corporativo Azul com Tecnologia 1",
-          "filePath": "../public/plasmic/nocs_lab_site/images/bannerCorporativoAzulComTecnologia1.png"
         },
         {
           "id": "88cW6fBlhDAE",
@@ -27161,178 +27159,63 @@
           "filePath": "../public/plasmic/nocs_lab_site/images/bannerCorporativoPng.png"
         },
         {
-          "id": "GXf_x2MwD4xY",
-          "name": "GOVDATA (24) 3",
-          "filePath": "../public/plasmic/nocs_lab_site/images/govdata243.png"
-        },
-        {
-          "id": "ESSCFn60_J1O",
-          "name": "Fundo Corporativo de Tecnologia em Azul e Laranja 1",
-          "filePath": "../public/plasmic/nocs_lab_site/images/fundoCorporativoDeTecnologiaEmAzulELaranja1.png"
-        },
-        {
-          "id": "XS8Vm_7oSSec",
-          "name": "image 33",
-          "filePath": "../public/plasmic/nocs_lab_site/images/image33.png"
-        },
-        {
-          "id": "f42NAnRM7SUj",
-          "name": "mockuuups-google-pixel-6-mockup-in-entrepreneurs-hand",
-          "filePath": "../public/plasmic/nocs_lab_site/images/mockuuupsGooglePixel6MockupInEntrepreneursHand.png"
-        },
-        {
-          "id": "AAiJHawulE32",
-          "name": "image 5",
-          "filePath": "../public/plasmic/nocs_lab_site/images/image5.png"
-        },
-        {
-          "id": "PoNfYVIchi1P",
-          "name": "image 11",
-          "filePath": "../public/plasmic/nocs_lab_site/images/image11.png"
-        },
-        {
-          "id": "HoHi-0lL-tas",
-          "name": "image 12",
-          "filePath": "../public/plasmic/nocs_lab_site/images/image12.png"
-        },
-        {
-          "id": "DycefuPEAn0a",
-          "name": "image 13",
-          "filePath": "../public/plasmic/nocs_lab_site/images/image13.png"
-        },
-        {
-          "id": "O3ICooaj8aek",
-          "name": "image 14",
-          "filePath": "../public/plasmic/nocs_lab_site/images/image14.png"
-        },
-        {
-          "id": "Qo4lpcWyFFHF",
-          "name": "image 15",
-          "filePath": "../public/plasmic/nocs_lab_site/images/image15.png"
-        },
-        {
-          "id": "gvm4ZVaDJJHV",
-          "name": "image 16",
-          "filePath": "../public/plasmic/nocs_lab_site/images/image16.png"
-        },
-        {
-          "id": "Qtj5y2hq9Daa",
-          "name": "image 17",
-          "filePath": "../public/plasmic/nocs_lab_site/images/image17.png"
-        },
-        {
-          "id": "tuYVqe5hm_F8",
-          "name": "image 18",
-          "filePath": "../public/plasmic/nocs_lab_site/images/image18.png"
-        },
-        {
-          "id": "FAj_HO67DdgG",
-          "name": "image 19",
-          "filePath": "../public/plasmic/nocs_lab_site/images/image19.png"
-        },
-        {
-          "id": "d-R8KI7gCLj0",
-          "name": "image 20",
-          "filePath": "../public/plasmic/nocs_lab_site/images/image20.png"
-        },
-        {
-          "id": "6DpbQ4peg7TO",
-          "name": "image 21",
-          "filePath": "../public/plasmic/nocs_lab_site/images/image21.png"
-        },
-        {
-          "id": "rENJok6XJKx7",
-          "name": "Ellipse 26",
-          "filePath": "../public/plasmic/nocs_lab_site/images/ellipse26.jpg"
-        },
-        {
-          "id": "pbFutd0TT29c",
-          "name": "Vector 22",
-          "filePath": "../public/plasmic/nocs_lab_site/images/vector22.png"
-        },
-        {
-          "id": "MGwrkZcq1Rpj",
-          "name": "Vector 18",
-          "filePath": "../public/plasmic/nocs_lab_site/images/vector18.png"
-        },
-        {
-          "id": "uZnLbFqPvEeK",
-          "name": "Vector 19",
-          "filePath": "../public/plasmic/nocs_lab_site/images/vector19.png"
-        },
-        {
-          "id": "7hnGOYJdpI6d",
-          "name": "Vector 20",
-          "filePath": "../public/plasmic/nocs_lab_site/images/vector20.png"
-        },
-        {
-          "id": "8WGsPWpIRpga",
-          "name": "image 6",
-          "filePath": "../public/plasmic/nocs_lab_site/images/image6.png"
-        },
-        {
-          "id": "rv5n4eIHHld6",
-          "name": "image 7",
-          "filePath": "../public/plasmic/nocs_lab_site/images/image7.png"
-        },
-        {
-          "id": "3SbMZfu6mqDb",
-          "name": "image 8",
-          "filePath": "../public/plasmic/nocs_lab_site/images/image8.png"
-        },
-        {
-          "id": "k8ZlyjZF08kp",
-          "name": "image 9",
-          "filePath": "../public/plasmic/nocs_lab_site/images/image9.png"
-        },
-        {
-          "id": "uo9GGH-Pgyxx",
-          "name": "image 10",
-          "filePath": "../public/plasmic/nocs_lab_site/images/image10.png"
-        },
-        {
-          "id": "RRsu6SYlDKgI",
-          "name": "Ellipse 24",
-          "filePath": "../public/plasmic/nocs_lab_site/images/ellipse24.svg"
-        },
-        {
           "id": "T7Xi1hO_iOqH",
           "name": "Ellipse 1",
           "filePath": "../public/plasmic/nocs_lab_site/images/ellipse1.svg"
         },
         {
-          "id": "vrQPMLZeuRGM",
-          "name": "Vector 38",
-          "filePath": "../public/plasmic/nocs_lab_site/images/vector38.svg"
+          "id": "F17RZp8HEw1k",
+          "name": "Ellipse 3",
+          "filePath": "../public/plasmic/nocs_lab_site/images/ellipse3.svg"
         },
         {
-          "id": "hsqoyWxSwSBj",
-          "name": "Vector 39",
-          "filePath": "../public/plasmic/nocs_lab_site/images/vector39.svg"
+          "id": "C-7fMn8_-Amc",
+          "name": "Frame 427321649.png",
+          "filePath": "../public/plasmic/nocs_lab_site/images/frame427321649Png.png"
         },
         {
-          "id": "gI_Do0J2tLH5",
+          "id": "m2GmJ-V-WL27",
+          "name": "Vector 18",
+          "filePath": "../public/plasmic/nocs_lab_site/images/vector18.png"
+        },
+        {
+          "id": "v1A_lhbfQE_V",
+          "name": "Vector 19",
+          "filePath": "../public/plasmic/nocs_lab_site/images/vector19.png"
+        },
+        {
+          "id": "8hLk3vjP5ePw",
+          "name": "Vector 20",
+          "filePath": "../public/plasmic/nocs_lab_site/images/vector20.png"
+        },
+        {
+          "id": "YSSilmqL6uAO",
+          "name": "Vector 21",
+          "filePath": "../public/plasmic/nocs_lab_site/images/vector21.png"
+        },
+        {
+          "id": "-ZaOr6HXj9Cb",
           "name": "Vector 14",
           "filePath": "../public/plasmic/nocs_lab_site/images/vector14.svg"
         },
         {
-          "id": "hXltj0Wv5-9q",
+          "id": "hb9TehK4A6BX",
           "name": "Vector 15",
           "filePath": "../public/plasmic/nocs_lab_site/images/vector15.svg"
         },
         {
-          "id": "bNYKIWNuX8cV",
+          "id": "4E31uv6UngnE",
           "name": "Vector 16",
           "filePath": "../public/plasmic/nocs_lab_site/images/vector16.svg"
         },
         {
-          "id": "bGBedDOcqmhj",
+          "id": "DSF2q6Q8a_wn",
           "name": "Vector 17",
           "filePath": "../public/plasmic/nocs_lab_site/images/vector17.svg"
         }
       ],
       "indirect": false,
-      "globalContextsFilePath": "",
+      "globalContextsFilePath": "plasmic/nocs_lab_site/PlasmicGlobalContextsProvider.tsx",
       "splitsProviderFilePath": "",
       "styleTokensProviderFilePath": "plasmic/nocs_lab_site/PlasmicStyleTokensProvider.tsx",
       "dataTokensFilePath": "plasmic/nocs_lab_site/plasmic-data-tokens.ts",
@@ -27349,6 +27232,60 @@
           "name": "Fetcher",
           "displayName": "plasmic-data-source-fetcher",
           "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
+        }
+      ],
+      "customFunctions": []
+    },
+    {
+      "projectId": "r3ASNrnyvLLLAtDvzUioQ",
+      "projectApiToken": "lqKnujVHLNoTIAThs8ZqkfNcjqrRhhldaDwPElnRsGIyf54HkBnSyfYLFtQ3QMwrpRA0YeS9lBJf7jjiUkA",
+      "projectName": "react-slick",
+      "version": ">0.0.0",
+      "cssFilePath": "plasmic/react_slick/plasmic.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "splitsProviderFilePath": "",
+      "styleTokensProviderFilePath": "plasmic/react_slick/PlasmicStyleTokensProvider.tsx",
+      "dataTokensFilePath": "",
+      "projectModuleFilePath": "plasmic/react_slick/plasmic.tsx",
+      "codeComponents": [
+        {
+          "id": "HOQUyOpClJ",
+          "name": "SliderWrapper",
+          "displayName": "hostless-slider",
+          "componentImportPath": "@plasmicpkgs/react-slick",
+          "helper": {
+            "name": "sliderHelpers",
+            "importPath": "@plasmicpkgs/react-slick"
+          }
+        }
+      ],
+      "customFunctions": []
+    },
+    {
+      "projectId": "8PtdGodUbexNYgkuyBUcWu",
+      "projectApiToken": "uCJ1Bea3Nni3wTpLvP3csoU6rR1ATNTWNqI7gDU1NfnPIlhOElyOXkAIWELH9LwGyZmhY1kpHlZArdzSQ",
+      "projectName": "plasmic-embed-css",
+      "version": ">0.0.0",
+      "cssFilePath": "plasmic/plasmic_embed_css/plasmic.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "plasmic/plasmic_embed_css/PlasmicGlobalContextsProvider.tsx",
+      "splitsProviderFilePath": "",
+      "styleTokensProviderFilePath": "plasmic/plasmic_embed_css/PlasmicStyleTokensProvider.tsx",
+      "dataTokensFilePath": "",
+      "projectModuleFilePath": "plasmic/plasmic_embed_css/plasmic.tsx",
+      "codeComponents": [
+        {
+          "id": "qF0uJxFztB",
+          "name": "EmbedCss",
+          "displayName": "global-embed-css",
+          "componentImportPath": "@plasmicpkgs/plasmic-embed-css"
         }
       ],
       "customFunctions": []

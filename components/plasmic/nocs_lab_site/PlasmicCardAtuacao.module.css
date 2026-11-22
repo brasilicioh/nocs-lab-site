@@ -24,6 +24,10 @@
   background: #004d9c;
   transform: none;
 }
+.root___focusWithin__active__focusVisibleWithin:focus-within:active:focus-within:active {
+  background: #004d9c;
+  outline: none;
+}
 .computador1 {
   width: auto;
   height: 79px;
@@ -60,6 +64,10 @@
 .root:hover .svg {
   color: var(--token-bAyFQ_Q8CSoI);
 }
+.root:focus-within:active .svg___focusWithin__active__focusVisibleWithin {
+  color: var(--token-bAyFQ_Q8CSoI);
+  outline: none;
+}
 .text {
   display: block;
   font-size: 20px;
@@ -74,4 +82,8 @@
 }
 .root:hover .text {
   color: var(--token-bAyFQ_Q8CSoI);
+}
+.root:focus-within:active .text___focusWithin__active__focusVisibleWithin {
+  color: var(--token-bAyFQ_Q8CSoI);
+  outline: none;
 }

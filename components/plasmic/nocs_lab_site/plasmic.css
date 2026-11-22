@@ -3,6 +3,8 @@
 @import "../library_tailwind_3_4_colors/plasmic.css"; /* plasmic-import: 5ZtnypMovRHeeP3YTdPCYL/projectcss */
 @import "../library_tailwind_3_4_number_tokens/plasmic.css"; /* plasmic-import: 4vjRXvnb4XuY6J15w9oRcQ/projectcss */
 @import "../plasmic_kit_animations/plasmic.css"; /* plasmic-import: axVArpcqgHCPMKB2yUGsW3/projectcss */
+@import "../plasmic_embed_css/plasmic.css"; /* plasmic-import: 8PtdGodUbexNYgkuyBUcWu/projectcss */
+@import "../react_slick/plasmic.css"; /* plasmic-import: r3ASNrnyvLLLAtDvzUioQ/projectcss */
 @import url("https://fonts.googleapis.com/css2?family=Inter%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700&family=Inconsolata%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700&display=swap");
 
 .plasmic_tokens_q2bNAsKkbiT6rYXpuB7PPG {
