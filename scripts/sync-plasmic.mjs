@@ -1,5 +1,14 @@
 import { spawnSync } from "node:child_process";
+import { createRequire } from "node:module";
+import { dirname, join } from "node:path";
 import { existsSync, readFileSync } from "node:fs";
+
+const require = createRequire(import.meta.url);
+const plasmicCli = join(
+  dirname(require.resolve("@plasmicapp/cli/package.json")),
+  "dist",
+  "index.js"
+);
 
 function loadLocalEnvironment() {
   const file = ".env.local";
@@ -26,10 +35,9 @@ if (!projectId) {
 }
 
 const result = spawnSync(
-  process.platform === "win32" ? "npx.cmd" : "npx",
+  process.execPath,
   [
-    "--yes",
-    "plasmic",
+    plasmicCli,
     "sync",
     "--yes",
     "--skip-upgrade-check",
