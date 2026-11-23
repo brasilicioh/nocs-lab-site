@@ -1,0 +1,86 @@
+.root {
+  background: #ffffff;
+  display: flex;
+  flex-grow: 0;
+  flex-direction: column;
+  row-gap: 8px;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 200px;
+  flex-shrink: 0;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #c7c7c7;
+  position: relative;
+  transition-property: all;
+  transition-duration: 0.5s;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  border-radius: 4px;
+  padding: 6px;
+}
+.root:hover:hover {
+  animation: none;
+  background: #004d9c;
+  transform: none;
+}
+.root:active:active {
+  background: #003871;
+}
+.computador1 {
+  width: auto;
+  height: 79px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  padding: 2px;
+}
+.freeBox {
+  display: block;
+  position: relative;
+  width: 66px;
+  height: 66px;
+  flex-shrink: 0;
+}
+.svg {
+  object-fit: cover;
+  max-width: 100%;
+  color: #004d9c;
+  transform: scale(1, -1);
+  width: 65.5577392578125px;
+  height: 65.55670166015625px;
+  display: block;
+  transform-origin: top left;
+  position: absolute;
+  left: 0px;
+  top: 66px;
+}
+.root:hover .svg {
+  color: var(--token-bAyFQ_Q8CSoI);
+}
+.root:active .svg {
+  color: var(--token-bAyFQ_Q8CSoI);
+}
+.text {
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 27px;
+  color: #004d9c;
+  align-self: stretch;
+  position: relative;
+}
+.root:hover .text {
+  color: var(--token-bAyFQ_Q8CSoI);
+}
+.root:active .text {
+  color: var(--token-bAyFQ_Q8CSoI);
+}

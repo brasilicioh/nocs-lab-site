@@ -1,0 +1,20 @@
+.root:global(.__wab_instance) {
+  position: relative;
+  background: var(--token-bAyFQ_Q8CSoI);
+  cursor: pointer;
+  box-sizing: border-box;
+  display: flex;
+  height: var(--token-FTk8MW-IZmA_);
+  width: var(--token-FTk8MW-IZmA_);
+  border-radius: 99px;
+  border: 1px solid var(--token-Cw5JD24WaNWg);
+}
+.root[data-hovered][data-hovered]:global(.__wab_instance) {
+  border-width: 2px;
+}
+.root[data-focus-visible][data-focus-visible]:global(.__wab_instance) {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: var(--token-Cw5JD24WaNWg);
+  outline-offset: 1px;
+}
