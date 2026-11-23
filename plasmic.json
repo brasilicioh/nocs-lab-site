@@ -27212,6 +27212,11 @@
           "id": "DSF2q6Q8a_wn",
           "name": "Vector 17",
           "filePath": "../public/plasmic/nocs_lab_site/images/vector17.svg"
+        },
+        {
+          "id": "vhOYLWRg3lJ4",
+          "name": "foto_circuito_nocs",
+          "filePath": "../public/plasmic/nocs_lab_site/images/fotoCircuitoNocs.png"
         }
       ],
       "indirect": false,

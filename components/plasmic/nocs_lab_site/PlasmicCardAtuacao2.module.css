@@ -23,6 +23,9 @@
   animation: none;
   background: #004d9c;
 }
+.root:active:active {
+  background: #003871;
+}
 .freeBox {
   display: block;
   position: relative;
@@ -46,6 +49,9 @@
 .root:hover .svg {
   color: var(--token-bAyFQ_Q8CSoI);
 }
+.root:active .svg {
+  color: var(--token-bAyFQ_Q8CSoI);
+}
 .text {
   display: block;
   font-size: 20px;
@@ -59,5 +65,8 @@
   position: relative;
 }
 .root:hover .text {
+  color: var(--token-bAyFQ_Q8CSoI);
+}
+.root:active .text {
   color: var(--token-bAyFQ_Q8CSoI);
 }

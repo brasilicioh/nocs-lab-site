@@ -77,9 +77,9 @@ export type PlasmicCardAtuacao4__VariantsArgs = {};
 type VariantPropType = keyof PlasmicCardAtuacao4__VariantsArgs;
 export const PlasmicCardAtuacao4__VariantProps = new Array<VariantPropType>();
 
-export type PlasmicCardAtuacao4__ArgsType = {};
+export type PlasmicCardAtuacao4__ArgsType = { onClick?: (event: any) => void };
 type ArgPropType = keyof PlasmicCardAtuacao4__ArgsType;
-export const PlasmicCardAtuacao4__ArgProps = new Array<ArgPropType>();
+export const PlasmicCardAtuacao4__ArgProps = new Array<ArgPropType>("onClick");
 
 export type PlasmicCardAtuacao4__OverridesType = {
   root?: Flex__<"div">;
@@ -90,6 +90,7 @@ export type PlasmicCardAtuacao4__OverridesType = {
 };
 
 export interface DefaultCardAtuacao4Props {
+  onClick?: (event: any) => void;
   className?: string;
 }
 
@@ -148,6 +149,7 @@ function PlasmicCardAtuacao4__RenderFunc(props: {
         styleTokensClassNames,
         sty.root
       )}
+      onClick={args.onClick}
     >
       <div
         data-plasmic-name={"internet1"}

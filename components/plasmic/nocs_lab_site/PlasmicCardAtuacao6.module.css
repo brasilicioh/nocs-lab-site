@@ -23,6 +23,9 @@
   animation: none;
   background: #004d9c;
 }
+.root:active:active {
+  background: #003871;
+}
 .consultor1 {
   width: auto;
   height: 79px;
@@ -59,6 +62,9 @@
 .root:hover .svg {
   color: var(--token-bAyFQ_Q8CSoI);
 }
+.root:active .svg {
+  color: var(--token-bAyFQ_Q8CSoI);
+}
 .text {
   display: block;
   font-size: 20px;
@@ -72,5 +78,8 @@
   position: relative;
 }
 .root:hover .text {
+  color: var(--token-bAyFQ_Q8CSoI);
+}
+.root:active .text {
   color: var(--token-bAyFQ_Q8CSoI);
 }

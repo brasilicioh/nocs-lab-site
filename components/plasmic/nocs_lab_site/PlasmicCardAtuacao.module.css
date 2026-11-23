@@ -24,9 +24,8 @@
   background: #004d9c;
   transform: none;
 }
-.root___focusWithin__active__focusVisibleWithin:focus-within:active:focus-within:active {
-  background: #004d9c;
-  outline: none;
+.root:active:active {
+  background: #003871;
 }
 .computador1 {
   width: auto;
@@ -64,9 +63,8 @@
 .root:hover .svg {
   color: var(--token-bAyFQ_Q8CSoI);
 }
-.root:focus-within:active .svg___focusWithin__active__focusVisibleWithin {
+.root:active .svg {
   color: var(--token-bAyFQ_Q8CSoI);
-  outline: none;
 }
 .text {
   display: block;
@@ -83,7 +81,6 @@
 .root:hover .text {
   color: var(--token-bAyFQ_Q8CSoI);
 }
-.root:focus-within:active .text___focusWithin__active__focusVisibleWithin {
+.root:active .text {
   color: var(--token-bAyFQ_Q8CSoI);
-  outline: none;
 }

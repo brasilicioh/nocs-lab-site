@@ -77,9 +77,9 @@ export type PlasmicCardAtuacao2__VariantsArgs = {};
 type VariantPropType = keyof PlasmicCardAtuacao2__VariantsArgs;
 export const PlasmicCardAtuacao2__VariantProps = new Array<VariantPropType>();
 
-export type PlasmicCardAtuacao2__ArgsType = {};
+export type PlasmicCardAtuacao2__ArgsType = { onClick?: (event: any) => void };
 type ArgPropType = keyof PlasmicCardAtuacao2__ArgsType;
-export const PlasmicCardAtuacao2__ArgProps = new Array<ArgPropType>();
+export const PlasmicCardAtuacao2__ArgProps = new Array<ArgPropType>("onClick");
 
 export type PlasmicCardAtuacao2__OverridesType = {
   root?: Flex__<"div">;
@@ -89,6 +89,7 @@ export type PlasmicCardAtuacao2__OverridesType = {
 };
 
 export interface DefaultCardAtuacao2Props {
+  onClick?: (event: any) => void;
   className?: string;
 }
 
@@ -147,6 +148,7 @@ function PlasmicCardAtuacao2__RenderFunc(props: {
         styleTokensClassNames,
         sty.root
       )}
+      onClick={args.onClick}
     >
       <div
         data-plasmic-name={"freeBox"}

@@ -77,9 +77,9 @@ export type PlasmicCardAtuacao5__VariantsArgs = {};
 type VariantPropType = keyof PlasmicCardAtuacao5__VariantsArgs;
 export const PlasmicCardAtuacao5__VariantProps = new Array<VariantPropType>();
 
-export type PlasmicCardAtuacao5__ArgsType = {};
+export type PlasmicCardAtuacao5__ArgsType = { onClick?: (event: any) => void };
 type ArgPropType = keyof PlasmicCardAtuacao5__ArgsType;
-export const PlasmicCardAtuacao5__ArgProps = new Array<ArgPropType>();
+export const PlasmicCardAtuacao5__ArgProps = new Array<ArgPropType>("onClick");
 
 export type PlasmicCardAtuacao5__OverridesType = {
   root?: Flex__<"div">;
@@ -90,6 +90,7 @@ export type PlasmicCardAtuacao5__OverridesType = {
 };
 
 export interface DefaultCardAtuacao5Props {
+  onClick?: (event: any) => void;
   className?: string;
 }
 
@@ -148,6 +149,7 @@ function PlasmicCardAtuacao5__RenderFunc(props: {
         styleTokensClassNames,
         sty.root
       )}
+      onClick={args.onClick}
     >
       <div
         data-plasmic-name={"inteligenciaArtificial1"}

@@ -77,9 +77,9 @@ export type PlasmicCardAtuacao__VariantsArgs = {};
 type VariantPropType = keyof PlasmicCardAtuacao__VariantsArgs;
 export const PlasmicCardAtuacao__VariantProps = new Array<VariantPropType>();
 
-export type PlasmicCardAtuacao__ArgsType = {};
+export type PlasmicCardAtuacao__ArgsType = { onClick?: (event: any) => void };
 type ArgPropType = keyof PlasmicCardAtuacao__ArgsType;
-export const PlasmicCardAtuacao__ArgProps = new Array<ArgPropType>();
+export const PlasmicCardAtuacao__ArgProps = new Array<ArgPropType>("onClick");
 
 export type PlasmicCardAtuacao__OverridesType = {
   root?: Flex__<"div">;
@@ -90,6 +90,7 @@ export type PlasmicCardAtuacao__OverridesType = {
 };
 
 export interface DefaultCardAtuacaoProps {
+  onClick?: (event: any) => void;
   className?: string;
 }
 
@@ -132,19 +133,25 @@ function PlasmicCardAtuacao__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const [isRootFocusWithin, triggerRootFocusWithinProps] = useTrigger(
-    "useFocusedWithin",
-    {}
+  const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
+    () => [
+      {
+        path: "variable",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => ""
+      }
+    ],
+    [$props, $ctx, $refs]
   );
-  const [isRootActive, triggerRootActiveProps] = useTrigger("usePressed", {});
-  const [isRootFocusVisibleWithin, triggerRootFocusVisibleWithinProps] =
-    useTrigger("useFocusVisibleWithin", {
-      isTextInput: false
-    });
-  const triggers = {
-    focusWithinActiveFocusVisibleWithin_root:
-      isRootFocusWithin && isRootActive && isRootFocusVisibleWithin
-  };
+
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: {},
+    $q: {},
+    $refs
+  });
 
   const styleTokensClassNames = _useStyleTokens();
 
@@ -160,17 +167,9 @@ function PlasmicCardAtuacao__RenderFunc(props: {
         "plasmic_default_styles",
         "plasmic_mixins",
         styleTokensClassNames,
-        sty.root,
-        {
-          [sty.root___focusWithin__active__focusVisibleWithin]:
-            triggers.focusWithinActiveFocusVisibleWithin_root
-        }
+        sty.root
       )}
-      data-plasmic-trigger-props={[
-        triggerRootFocusWithinProps,
-        triggerRootActiveProps,
-        triggerRootFocusVisibleWithinProps
-      ]}
+      onClick={args.onClick}
     >
       <div
         data-plasmic-name={"computador1"}
@@ -185,10 +184,7 @@ function PlasmicCardAtuacao__RenderFunc(props: {
           <Group10Icon
             data-plasmic-name={"svg"}
             data-plasmic-override={overrides.svg}
-            className={classNames("all", sty.svg, {
-              [sty.svg___focusWithin__active__focusVisibleWithin]:
-                triggers.focusWithinActiveFocusVisibleWithin_root
-            })}
+            className={classNames("all", sty.svg)}
             role={"img"}
           />
         </div>
@@ -196,10 +192,7 @@ function PlasmicCardAtuacao__RenderFunc(props: {
       <div
         data-plasmic-name={"text"}
         data-plasmic-override={overrides.text}
-        className={classNames("all", "__wab_text", sty.text, {
-          [sty.text___focusWithin__active__focusVisibleWithin]:
-            triggers.focusWithinActiveFocusVisibleWithin_root
-        })}
+        className={classNames("all", "__wab_text", sty.text)}
       >
         {"Desenvolvimento de Software"}
       </div>

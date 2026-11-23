@@ -77,9 +77,9 @@ export type PlasmicCardAtuacao3__VariantsArgs = {};
 type VariantPropType = keyof PlasmicCardAtuacao3__VariantsArgs;
 export const PlasmicCardAtuacao3__VariantProps = new Array<VariantPropType>();
 
-export type PlasmicCardAtuacao3__ArgsType = {};
+export type PlasmicCardAtuacao3__ArgsType = { onClick?: (event: any) => void };
 type ArgPropType = keyof PlasmicCardAtuacao3__ArgsType;
-export const PlasmicCardAtuacao3__ArgProps = new Array<ArgPropType>();
+export const PlasmicCardAtuacao3__ArgProps = new Array<ArgPropType>("onClick");
 
 export type PlasmicCardAtuacao3__OverridesType = {
   root?: Flex__<"div">;
@@ -90,6 +90,7 @@ export type PlasmicCardAtuacao3__OverridesType = {
 };
 
 export interface DefaultCardAtuacao3Props {
+  onClick?: (event: any) => void;
   className?: string;
 }
 
@@ -148,6 +149,7 @@ function PlasmicCardAtuacao3__RenderFunc(props: {
         styleTokensClassNames,
         sty.root
       )}
+      onClick={args.onClick}
     >
       <div
         data-plasmic-name={"segurancaCibernetica1"}
