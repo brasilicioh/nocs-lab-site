@@ -92,8 +92,7 @@ O Next.js exporta o site estático para `out/`; o script de build ajusta os cami
 O `Dockerfile` faz o build e monta uma imagem pequena com Nginx para servir os arquivos estáticos. Na pasta `nocs-lab-site`:
 
 ```bash
-docker build -t nocs-lab-site .
-docker run --rm -p 9999:80 nocs-lab-site
+docker build -t nocs-lab-site . --no-cahce && docker run -d -p 9999:80 nocs-lab-site
 ```
 
 Abra `http://localhost:9999`. A porta `9999` da sua máquina é encaminhada para a porta `80` do Nginx dentro do contêiner. Para parar, pressione `Ctrl+C`.

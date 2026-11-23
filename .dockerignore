@@ -2,6 +2,14 @@ node_modules
 .next
 out
 .git
-.env*
-.plasmic.auth
+.gitignore
+
+README.md
+
+Dockerfile
+docker-compose.yml
+
+.env.local
+.env.*.local
+
 npm-debug.log*
