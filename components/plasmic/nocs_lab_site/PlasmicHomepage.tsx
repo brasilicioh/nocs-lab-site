@@ -88,6 +88,10 @@ import LaptopCodeIcon from "./icons/PlasmicIcon__LaptopCode"; // plasmic-import:
 import GroupIcon from "./icons/PlasmicIcon__Group"; // plasmic-import: wpJg5WsQF3JT/icon
 import Line1Icon from "./icons/PlasmicIcon__Line1"; // plasmic-import: gTp3bHF0pHdU/icon
 import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: P_NPtHWeotKN/icon
+import SchoolFlagIcon from "./icons/PlasmicIcon__SchoolFlag"; // plasmic-import: TBl04-ahlqOB/icon
+import UsersGroup2Icon from "./icons/PlasmicIcon__UsersGroup2"; // plasmic-import: H0cN-L9nZy4w/icon
+import GraduationCapIcon from "./icons/PlasmicIcon__GraduationCap"; // plasmic-import: YvLCDHIAAqvN/icon
+import ArrowLeftIcon from "./icons/PlasmicIcon__ArrowLeft"; // plasmic-import: HMQIZtk55_Ey/icon
 
 const emptyProxy: any = new Proxy(() => "", {
   get(_, prop) {
@@ -163,6 +167,36 @@ export type PlasmicHomepage__OverridesType = {
   projetosInovadoresTitle?: Flex__<"div">;
   titleExploreNossos?: Flex__<"div">;
   projetos?: Flex__<"div">;
+  equipePessoas?: Flex__<"div">;
+  rectangle61?: Flex__<"div">;
+  buttonEquipeMobile?: Flex__<typeof Button>;
+  rectangle62?: Flex__<"div">;
+  govdata241?: Flex__<"div">;
+  govdata242?: Flex__<"div">;
+  frame427321657?: Flex__<"div">;
+  frame427321637?: Flex__<"div">;
+  recursosE?: Flex__<"div">;
+  frame427321659?: Flex__<"div">;
+  frame427321658?: Flex__<"div">;
+  group2?: Flex__<"div">;
+  image6?: Flex__<"div">;
+  rectangle58?: Flex__<"div">;
+  group3?: Flex__<"div">;
+  image7?: Flex__<"div">;
+  rectangle59?: Flex__<"div">;
+  group4?: Flex__<"div">;
+  image8?: Flex__<"div">;
+  rectangle60?: Flex__<"div">;
+  group5?: Flex__<"div">;
+  image9?: Flex__<"div">;
+  rectangle63?: Flex__<"div">;
+  button4?: Flex__<"div">;
+  text?: Flex__<"div">;
+  frame427321712?: Flex__<"div">;
+  loremIpsumDolorSitAmetConsecteturAdipiscingElitDonecNecPulvinarNuncQuisFringillaEstProinPulvina?: Flex__<"div">;
+  button3?: Flex__<typeof Button>;
+  button5?: Flex__<"div">;
+  text2?: Flex__<"div">;
 };
 
 export interface DefaultHomepageProps {}
@@ -2530,6 +2564,502 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
             </div>
           </div>
+          <div
+            data-plasmic-name={"equipePessoas"}
+            data-plasmic-override={overrides.equipePessoas}
+            className={classNames("all", sty.equipePessoas)}
+          >
+            <div
+              data-plasmic-name={"rectangle61"}
+              data-plasmic-override={overrides.rectangle61}
+              className={classNames("all", sty.rectangle61)}
+            />
+
+            <div
+              className={classNames("all", sty.freeBox__khU0V)}
+              style={
+                hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? { order: "1" }
+                  : undefined
+              }
+            >
+              <div
+                className={classNames("all", sty.freeBox__iVmJ)}
+                style={
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? { order: "1" }
+                    : undefined
+                }
+              >
+                <Line1Icon
+                  className={classNames("all", sty.svg__z8S1K)}
+                  role={"img"}
+                />
+
+                <div
+                  className={classNames("all", "__wab_text", sty.text___3ClHg)}
+                >
+                  {"NOSSA EQUIPE"}
+                </div>
+              </div>
+              <div
+                className={classNames("all", "__wab_text", sty.text__m1IdN)}
+                style={
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? { order: "2" }
+                    : undefined
+                }
+              >
+                <React.Fragment>
+                  <span
+                    className={
+                      "plasmic_default__all plasmic_default__span plasmic_default__span__q2bNA"
+                    }
+                    style={{ color: "#004D9C" }}
+                  >
+                    {"Pessoas que movem o "}
+                  </span>
+                  <React.Fragment>{""}</React.Fragment>
+                  <span
+                    className={
+                      "plasmic_default__all plasmic_default__span plasmic_default__span__q2bNA"
+                    }
+                    style={{ color: "#FD6601" }}
+                  >
+                    {"NOCS"}
+                  </span>
+                </React.Fragment>
+              </div>
+              <div
+                className={classNames("all", "__wab_text", sty.text___9TZov)}
+                style={
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? { order: "3" }
+                    : undefined
+                }
+              >
+                {
+                  "Conhe\u00e7a os pesquisadores, profissionais e estudantes que transformam ideias em solu\u00e7\u00f5es inovadoras todos os dias."
+                }
+              </div>
+              <Button
+                className={classNames("__wab_instance", sty.button__gjTW)}
+                color={"nocsColor"}
+                end={
+                  <ArrowRightIcon
+                    className={classNames("all", sty.svg__fIsXu)}
+                    role={"img"}
+                  />
+                }
+                iconEnd={true}
+                label={
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__hc4YM)}
+                  >
+                    <React.Fragment>
+                      <span
+                        className={
+                          "plasmic_default__all plasmic_default__span plasmic_default__span__q2bNA"
+                        }
+                        style={{ fontWeight: 700 }}
+                      >
+                        {"Conhe\u00e7a nossa equipe"}
+                      </span>
+                    </React.Fragment>
+                  </div>
+                }
+                size={"large"}
+              />
+            </div>
+            <PlasmicImg__
+              alt={""}
+              className={classNames(sty.img__hacGc)}
+              displayHeight={
+                hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? "auto"
+                  : hasVariant(globalVariants, "screen", "tablet")
+                    ? "auto"
+                    : "auto"
+              }
+              displayMaxHeight={"none"}
+              displayMaxWidth={
+                hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? "100%"
+                  : hasVariant(globalVariants, "screen", "tablet")
+                    ? "none"
+                    : "100%"
+              }
+              displayMinHeight={"0"}
+              displayMinWidth={"0"}
+              displayWidth={
+                hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? "100%"
+                  : hasVariant(globalVariants, "screen", "tablet")
+                    ? "calc(58% - 16px)"
+                    : "min(42vw, 624px)"
+              }
+              loading={"lazy"}
+              src={{
+                src: "/plasmic/nocs_lab_site/images/image5.png",
+                fullWidth: 1024,
+                fullHeight: 738,
+                aspectRatio: undefined
+              }}
+              style={
+                hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? { order: "4" }
+                  : undefined
+              }
+            />
+
+            <Button
+              data-plasmic-name={"buttonEquipeMobile"}
+              data-plasmic-override={overrides.buttonEquipeMobile}
+              className={classNames("__wab_instance", sty.buttonEquipeMobile)}
+              color={"nocsColor"}
+              end={
+                <ArrowRightIcon
+                  className={classNames("all", sty.svg__nkyaL)}
+                  role={"img"}
+                />
+              }
+              iconEnd={true}
+              label={
+                <div className={classNames("all", sty.freeBox__wREeW)}>
+                  <span
+                    className={classNames(
+                      "all",
+                      "span",
+                      "span__q2bNA",
+                      "__wab_text",
+                      sty.span___44Kzk
+                    )}
+                  >
+                    {"Conhe\u00e7a nossa equipe"}
+                  </span>
+                </div>
+              }
+              size={"large"}
+              start={
+                <CircleIcon
+                  className={classNames("all", sty.svg___7FbCo)}
+                  role={"img"}
+                />
+              }
+            />
+
+            <div
+              className={classNames("all", sty.freeBox__fJt31)}
+              style={
+                hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? { order: "6" }
+                  : undefined
+              }
+            >
+              <div className={classNames("all", sty.freeBox__zU2RL)}>
+                <SchoolFlagIcon
+                  className={classNames("all", sty.svg___5Fzt)}
+                  role={"img"}
+                />
+
+                <div className={classNames("all", sty.freeBox__tLGjr)}>
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__wMrVg)}
+                  >
+                    {"+40"}
+                  </div>
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__pjx02)}
+                  >
+                    {"Membros"}
+                  </div>
+                </div>
+              </div>
+              <div className={classNames("all", sty.freeBox__oggfk)}>
+                <UsersGroup2Icon
+                  className={classNames("all", sty.svg__kmacI)}
+                  role={"img"}
+                />
+
+                <div className={classNames("all", sty.freeBox__udSFf)}>
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__cpMbt)}
+                  >
+                    {"08"}
+                  </div>
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__vyhRb)}
+                  >
+                    {"Pesquisadores"}
+                  </div>
+                </div>
+              </div>
+              <div className={classNames("all", sty.freeBox__wjzbn)}>
+                <GraduationCapIcon
+                  className={classNames("all", sty.svg__cBs9T)}
+                  role={"img"}
+                />
+
+                <div className={classNames("all", sty.freeBox__easgR)}>
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__bDicw)}
+                  >
+                    {"+30"}
+                  </div>
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__oYfXt)}
+                  >
+                    {"Estudantes"}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              data-plasmic-name={"rectangle62"}
+              data-plasmic-override={overrides.rectangle62}
+              className={classNames("all", sty.rectangle62)}
+            />
+
+            <div
+              data-plasmic-name={"govdata241"}
+              data-plasmic-override={overrides.govdata241}
+              className={classNames("all", sty.govdata241)}
+            />
+
+            <div
+              data-plasmic-name={"govdata242"}
+              data-plasmic-override={overrides.govdata242}
+              className={classNames("all", sty.govdata242)}
+            />
+          </div>
+          <div className={classNames("all", sty.freeBox__zsWrw)}>
+            <div
+              data-plasmic-name={"frame427321657"}
+              data-plasmic-override={overrides.frame427321657}
+              className={classNames("all", sty.frame427321657)}
+            >
+              <div
+                data-plasmic-name={"frame427321637"}
+                data-plasmic-override={overrides.frame427321637}
+                className={classNames("all", sty.frame427321637)}
+              >
+                <Line1Icon
+                  className={classNames("all", sty.svg__foBk)}
+                  role={"img"}
+                />
+
+                <div
+                  data-plasmic-name={"recursosE"}
+                  data-plasmic-override={overrides.recursosE}
+                  className={classNames("all", "__wab_text", sty.recursosE)}
+                >
+                  {"RECURSOS E "}
+                </div>
+                <Line1Icon
+                  className={classNames("all", sty.svg__oFHO)}
+                  role={"img"}
+                />
+              </div>
+              <div className={classNames("all", "__wab_text", sty.text__r9L9H)}>
+                {"Instala\u00e7\u00f5es"}
+              </div>
+              <div className={classNames("all", "__wab_text", sty.text__cqMOy)}>
+                {
+                  "Infraestrutura moderna e equipamentos de ponta para apoiar o desenvolvimento de pesquisas de alta qualidade."
+                }
+              </div>
+            </div>
+            <div
+              data-plasmic-name={"frame427321659"}
+              data-plasmic-override={overrides.frame427321659}
+              className={classNames("all", sty.frame427321659)}
+            >
+              <div
+                data-plasmic-name={"frame427321658"}
+                data-plasmic-override={overrides.frame427321658}
+                className={classNames("all", sty.frame427321658)}
+              >
+                <div
+                  data-plasmic-name={"group2"}
+                  data-plasmic-override={overrides.group2}
+                  className={classNames("all", sty.group2)}
+                >
+                  <div
+                    data-plasmic-name={"image6"}
+                    data-plasmic-override={overrides.image6}
+                    className={classNames("all", sty.image6)}
+                  />
+
+                  <div
+                    data-plasmic-name={"rectangle58"}
+                    data-plasmic-override={overrides.rectangle58}
+                    className={classNames("all", sty.rectangle58)}
+                  />
+
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__odZk)}
+                  >
+                    {"Laborat\u00f3rio Espa\u00e7o 4.0"}
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"group3"}
+                  data-plasmic-override={overrides.group3}
+                  className={classNames("all", sty.group3)}
+                >
+                  <div
+                    data-plasmic-name={"image7"}
+                    data-plasmic-override={overrides.image7}
+                    className={classNames("all", sty.image7)}
+                  />
+
+                  <div
+                    data-plasmic-name={"rectangle59"}
+                    data-plasmic-override={overrides.rectangle59}
+                    className={classNames("all", sty.rectangle59)}
+                  />
+
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__ecDVe)}
+                  >
+                    {"Laborat\u00f3rio de Sistemas Operacionais de Redes"}
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"group4"}
+                  data-plasmic-override={overrides.group4}
+                  className={classNames("all", sty.group4)}
+                >
+                  <div
+                    data-plasmic-name={"image8"}
+                    data-plasmic-override={overrides.image8}
+                    className={classNames("all", sty.image8)}
+                  />
+
+                  <div
+                    data-plasmic-name={"rectangle60"}
+                    data-plasmic-override={overrides.rectangle60}
+                    className={classNames("all", sty.rectangle60)}
+                  />
+
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__tZUl)}
+                  >
+                    {"Laborat\u00f3rio de Rob\u00f3tica"}
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"group5"}
+                  data-plasmic-override={overrides.group5}
+                  className={classNames("all", sty.group5)}
+                >
+                  <div
+                    data-plasmic-name={"image9"}
+                    data-plasmic-override={overrides.image9}
+                    className={classNames("all", sty.image9)}
+                  />
+
+                  <div
+                    data-plasmic-name={"rectangle63"}
+                    data-plasmic-override={overrides.rectangle63}
+                    className={classNames("all", sty.rectangle63)}
+                  />
+
+                  <div
+                    className={classNames("all", "__wab_text", sty.text__et0O0)}
+                  >
+                    {"Laborat\u00f3rio de Desenvolvimento de Software"}
+                  </div>
+                </div>
+              </div>
+              <div
+                data-plasmic-name={"button4"}
+                data-plasmic-override={overrides.button4}
+                className={classNames("all", sty.button4)}
+              >
+                {false ? (
+                  <ArrowLeftIcon
+                    className={classNames("all", sty.svg__d2PBi)}
+                    role={"img"}
+                  />
+                ) : null}
+                <div
+                  data-plasmic-name={"text"}
+                  data-plasmic-override={overrides.text}
+                  className={classNames("all", "__wab_text", sty.text)}
+                >
+                  {"Conhe\u00e7a as instala\u00e7\u00f5es"}
+                </div>
+                {false ? (
+                  <ArrowRightIcon
+                    className={classNames("all", sty.svg__geLVf)}
+                    role={"img"}
+                  />
+                ) : null}
+              </div>
+              <div
+                data-plasmic-name={"frame427321712"}
+                data-plasmic-override={overrides.frame427321712}
+                className={classNames("all", sty.frame427321712)}
+              >
+                <div
+                  className={classNames("all", "__wab_text", sty.text__ukl0L)}
+                >
+                  {
+                    "Quer transformar seu neg\u00f3cio? Podemos fazer muito mais juntos."
+                  }
+                </div>
+                {false ? (
+                  <div
+                    data-plasmic-name={
+                      "loremIpsumDolorSitAmetConsecteturAdipiscingElitDonecNecPulvinarNuncQuisFringillaEstProinPulvina"
+                    }
+                    data-plasmic-override={
+                      overrides.loremIpsumDolorSitAmetConsecteturAdipiscingElitDonecNecPulvinarNuncQuisFringillaEstProinPulvina
+                    }
+                    className={classNames(
+                      "all",
+                      "__wab_text",
+                      sty.loremIpsumDolorSitAmetConsecteturAdipiscingElitDonecNecPulvinarNuncQuisFringillaEstProinPulvina
+                    )}
+                  >
+                    {
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec pulvinar nunc, quis fringilla est. Proin pulvina "
+                    }
+                  </div>
+                ) : null}
+                <Button
+                  data-plasmic-name={"button3"}
+                  data-plasmic-override={overrides.button3}
+                  className={classNames("__wab_instance", sty.button3)}
+                />
+
+                <div
+                  data-plasmic-name={"button5"}
+                  data-plasmic-override={overrides.button5}
+                  className={classNames("all", sty.button5)}
+                >
+                  {false ? (
+                    <ArrowLeftIcon
+                      className={classNames("all", sty.svg__geICg)}
+                      role={"img"}
+                    />
+                  ) : null}
+                  <div
+                    data-plasmic-name={"text2"}
+                    data-plasmic-override={overrides.text2}
+                    className={classNames("all", "__wab_text", sty.text2)}
+                  >
+                    {"Vamos conversar?"}
+                  </div>
+                  <ArrowRightIcon
+                    className={classNames("all", sty.svg__purql)}
+                    role={"img"}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </React.Fragment>
@@ -2584,7 +3114,37 @@ const PlasmicDescendants = {
     "projetosInovadores",
     "projetosInovadoresTitle",
     "titleExploreNossos",
-    "projetos"
+    "projetos",
+    "equipePessoas",
+    "rectangle61",
+    "buttonEquipeMobile",
+    "rectangle62",
+    "govdata241",
+    "govdata242",
+    "frame427321657",
+    "frame427321637",
+    "recursosE",
+    "frame427321659",
+    "frame427321658",
+    "group2",
+    "image6",
+    "rectangle58",
+    "group3",
+    "image7",
+    "rectangle59",
+    "group4",
+    "image8",
+    "rectangle60",
+    "group5",
+    "image9",
+    "rectangle63",
+    "button4",
+    "text",
+    "frame427321712",
+    "loremIpsumDolorSitAmetConsecteturAdipiscingElitDonecNecPulvinarNuncQuisFringillaEstProinPulvina",
+    "button3",
+    "button5",
+    "text2"
   ],
   header: [
     "header",
@@ -2708,7 +3268,89 @@ const PlasmicDescendants = {
   ],
   projetosInovadoresTitle: ["projetosInovadoresTitle", "titleExploreNossos"],
   titleExploreNossos: ["titleExploreNossos"],
-  projetos: ["projetos"]
+  projetos: ["projetos"],
+  equipePessoas: [
+    "equipePessoas",
+    "rectangle61",
+    "buttonEquipeMobile",
+    "rectangle62",
+    "govdata241",
+    "govdata242"
+  ],
+  rectangle61: ["rectangle61"],
+  buttonEquipeMobile: ["buttonEquipeMobile"],
+  rectangle62: ["rectangle62"],
+  govdata241: ["govdata241"],
+  govdata242: ["govdata242"],
+  frame427321657: ["frame427321657", "frame427321637", "recursosE"],
+  frame427321637: ["frame427321637", "recursosE"],
+  recursosE: ["recursosE"],
+  frame427321659: [
+    "frame427321659",
+    "frame427321658",
+    "group2",
+    "image6",
+    "rectangle58",
+    "group3",
+    "image7",
+    "rectangle59",
+    "group4",
+    "image8",
+    "rectangle60",
+    "group5",
+    "image9",
+    "rectangle63",
+    "button4",
+    "text",
+    "frame427321712",
+    "loremIpsumDolorSitAmetConsecteturAdipiscingElitDonecNecPulvinarNuncQuisFringillaEstProinPulvina",
+    "button3",
+    "button5",
+    "text2"
+  ],
+  frame427321658: [
+    "frame427321658",
+    "group2",
+    "image6",
+    "rectangle58",
+    "group3",
+    "image7",
+    "rectangle59",
+    "group4",
+    "image8",
+    "rectangle60",
+    "group5",
+    "image9",
+    "rectangle63"
+  ],
+  group2: ["group2", "image6", "rectangle58"],
+  image6: ["image6"],
+  rectangle58: ["rectangle58"],
+  group3: ["group3", "image7", "rectangle59"],
+  image7: ["image7"],
+  rectangle59: ["rectangle59"],
+  group4: ["group4", "image8", "rectangle60"],
+  image8: ["image8"],
+  rectangle60: ["rectangle60"],
+  group5: ["group5", "image9", "rectangle63"],
+  image9: ["image9"],
+  rectangle63: ["rectangle63"],
+  button4: ["button4", "text"],
+  text: ["text"],
+  frame427321712: [
+    "frame427321712",
+    "loremIpsumDolorSitAmetConsecteturAdipiscingElitDonecNecPulvinarNuncQuisFringillaEstProinPulvina",
+    "button3",
+    "button5",
+    "text2"
+  ],
+  loremIpsumDolorSitAmetConsecteturAdipiscingElitDonecNecPulvinarNuncQuisFringillaEstProinPulvina:
+    [
+      "loremIpsumDolorSitAmetConsecteturAdipiscingElitDonecNecPulvinarNuncQuisFringillaEstProinPulvina"
+    ],
+  button3: ["button3"],
+  button5: ["button5", "text2"],
+  text2: ["text2"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -2761,6 +3403,36 @@ type NodeDefaultElementType = {
   projetosInovadoresTitle: "div";
   titleExploreNossos: "div";
   projetos: "div";
+  equipePessoas: "div";
+  rectangle61: "div";
+  buttonEquipeMobile: typeof Button;
+  rectangle62: "div";
+  govdata241: "div";
+  govdata242: "div";
+  frame427321657: "div";
+  frame427321637: "div";
+  recursosE: "div";
+  frame427321659: "div";
+  frame427321658: "div";
+  group2: "div";
+  image6: "div";
+  rectangle58: "div";
+  group3: "div";
+  image7: "div";
+  rectangle59: "div";
+  group4: "div";
+  image8: "div";
+  rectangle60: "div";
+  group5: "div";
+  image9: "div";
+  rectangle63: "div";
+  button4: "div";
+  text: "div";
+  frame427321712: "div";
+  loremIpsumDolorSitAmetConsecteturAdipiscingElitDonecNecPulvinarNuncQuisFringillaEstProinPulvina: "div";
+  button3: typeof Button;
+  button5: "div";
+  text2: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -2873,6 +3545,39 @@ export const PlasmicHomepage = Object.assign(
     projetosInovadoresTitle: makeNodeComponent("projetosInovadoresTitle"),
     titleExploreNossos: makeNodeComponent("titleExploreNossos"),
     projetos: makeNodeComponent("projetos"),
+    equipePessoas: makeNodeComponent("equipePessoas"),
+    rectangle61: makeNodeComponent("rectangle61"),
+    buttonEquipeMobile: makeNodeComponent("buttonEquipeMobile"),
+    rectangle62: makeNodeComponent("rectangle62"),
+    govdata241: makeNodeComponent("govdata241"),
+    govdata242: makeNodeComponent("govdata242"),
+    frame427321657: makeNodeComponent("frame427321657"),
+    frame427321637: makeNodeComponent("frame427321637"),
+    recursosE: makeNodeComponent("recursosE"),
+    frame427321659: makeNodeComponent("frame427321659"),
+    frame427321658: makeNodeComponent("frame427321658"),
+    group2: makeNodeComponent("group2"),
+    image6: makeNodeComponent("image6"),
+    rectangle58: makeNodeComponent("rectangle58"),
+    group3: makeNodeComponent("group3"),
+    image7: makeNodeComponent("image7"),
+    rectangle59: makeNodeComponent("rectangle59"),
+    group4: makeNodeComponent("group4"),
+    image8: makeNodeComponent("image8"),
+    rectangle60: makeNodeComponent("rectangle60"),
+    group5: makeNodeComponent("group5"),
+    image9: makeNodeComponent("image9"),
+    rectangle63: makeNodeComponent("rectangle63"),
+    button4: makeNodeComponent("button4"),
+    text: makeNodeComponent("text"),
+    frame427321712: makeNodeComponent("frame427321712"),
+    loremIpsumDolorSitAmetConsecteturAdipiscingElitDonecNecPulvinarNuncQuisFringillaEstProinPulvina:
+      makeNodeComponent(
+        "loremIpsumDolorSitAmetConsecteturAdipiscingElitDonecNecPulvinarNuncQuisFringillaEstProinPulvina"
+      ),
+    button3: makeNodeComponent("button3"),
+    button5: makeNodeComponent("button5"),
+    text2: makeNodeComponent("text2"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

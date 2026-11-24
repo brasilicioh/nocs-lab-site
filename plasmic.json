@@ -27217,6 +27217,41 @@
           "id": "vhOYLWRg3lJ4",
           "name": "foto_circuito_nocs",
           "filePath": "../public/plasmic/nocs_lab_site/images/fotoCircuitoNocs.png"
+        },
+        {
+          "id": "RRVU8X0HC6AO",
+          "name": "GOVDATA (24) 2",
+          "filePath": "../public/plasmic/nocs_lab_site/images/govdata242.png"
+        },
+        {
+          "id": "uaWWxMq5orYi",
+          "name": "image 5",
+          "filePath": "../public/plasmic/nocs_lab_site/images/image5.png"
+        },
+        {
+          "id": "teVz94d4Y0eH",
+          "name": "image 6",
+          "filePath": "../public/plasmic/nocs_lab_site/images/image6.png"
+        },
+        {
+          "id": "6S8jSJ3Wkb6T",
+          "name": "image 7",
+          "filePath": "../public/plasmic/nocs_lab_site/images/image7.png"
+        },
+        {
+          "id": "qZ6CLpAVBaRF",
+          "name": "image 8",
+          "filePath": "../public/plasmic/nocs_lab_site/images/image8.png"
+        },
+        {
+          "id": "aAI6910hbRe7",
+          "name": "image 9",
+          "filePath": "../public/plasmic/nocs_lab_site/images/image9.png"
+        },
+        {
+          "id": "vyS4T9WLNs67",
+          "name": "image 10",
+          "filePath": "../public/plasmic/nocs_lab_site/images/image10.png"
         }
       ],
       "indirect": false,
