@@ -81,7 +81,8 @@ export type PlasmicButton__VariantMembers = {
     | "success"
     | "warning"
     | "errorDestructive"
-    | "nocsColor";
+    | "nocsColor"
+    | "branco";
   type: "soft" | "bordered";
   size: "extraSmall" | "small" | "large" | "extraLarge";
   iconStart: "iconStart";
@@ -97,6 +98,7 @@ export type PlasmicButton__VariantsArgs = {
     | "warning"
     | "errorDestructive"
     | "nocsColor"
+    | "branco"
   >;
   type?: SingleChoiceArg<"soft" | "bordered">;
   size?: SingleChoiceArg<"extraSmall" | "small" | "large" | "extraLarge">;
@@ -167,6 +169,7 @@ export interface DefaultButtonProps {
     | "warning"
     | "errorDestructive"
     | "nocsColor"
+    | "branco"
   >;
   type?: SingleChoiceArg<"soft" | "bordered">;
   size?: SingleChoiceArg<"extraSmall" | "small" | "large" | "extraLarge">;
@@ -313,6 +316,7 @@ function PlasmicButton__RenderFunc(props: {
         styleTokensClassNames,
         sty.root,
         {
+          [sty.rootcolor_branco]: hasVariant($state, "color", "branco"),
           [sty.rootcolor_errorDestructive]: hasVariant(
             $state,
             "color",
@@ -485,6 +489,11 @@ function PlasmicButton__RenderFunc(props: {
         data-plasmic-name={"interactionEffect"}
         data-plasmic-override={overrides.interactionEffect}
         className={classNames("all", sty.interactionEffect, {
+          [sty.interactionEffectcolor_branco]: hasVariant(
+            $state,
+            "color",
+            "branco"
+          ),
           [sty.interactionEffectcolor_errorDestructive]: hasVariant(
             $state,
             "color",
@@ -549,6 +558,11 @@ function PlasmicButton__RenderFunc(props: {
 
       <div
         className={classNames("all", sty.freeBox__qcfAe, {
+          [sty.freeBoxcolor_branco__qcfAeMmrX]: hasVariant(
+            $state,
+            "color",
+            "branco"
+          ),
           [sty.freeBoxcolor_neutral__qcfAeBz3H7]: hasVariant(
             $state,
             "color",
@@ -658,6 +672,11 @@ function PlasmicButton__RenderFunc(props: {
 
             value: args.start,
             className: classNames(sty.slotTargetStart, {
+              [sty.slotTargetStartcolor_branco]: hasVariant(
+                $state,
+                "color",
+                "branco"
+              ),
               [sty.slotTargetStartcolor_errorDestructive]: hasVariant(
                 $state,
                 "color",
@@ -755,6 +774,11 @@ function PlasmicButton__RenderFunc(props: {
           ),
           value: args.label,
           className: classNames(sty.slotTargetLabel, {
+            [sty.slotTargetLabelcolor_branco]: hasVariant(
+              $state,
+              "color",
+              "branco"
+            ),
             [sty.slotTargetLabelcolor_errorDestructive]: hasVariant(
               $state,
               "color",
@@ -855,6 +879,11 @@ function PlasmicButton__RenderFunc(props: {
         })}
         <div
           className={classNames("all", sty.freeBox__zTrmC, {
+            [sty.freeBoxcolor_branco__zTrmCMmrX]: hasVariant(
+              $state,
+              "color",
+              "branco"
+            ),
             [sty.freeBoxiconEnd__zTrmCi6Tr]: hasVariant(
               $state,
               "iconEnd",
@@ -887,6 +916,11 @@ function PlasmicButton__RenderFunc(props: {
 
             value: args.end,
             className: classNames(sty.slotTargetEnd, {
+              [sty.slotTargetEndcolor_branco]: hasVariant(
+                $state,
+                "color",
+                "branco"
+              ),
               [sty.slotTargetEndcolor_errorDestructive]: hasVariant(
                 $state,
                 "color",

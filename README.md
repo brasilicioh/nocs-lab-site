@@ -1,76 +1,114 @@
 # NOCS Lab Site
 
-Este é o protótipo de criação do site do NOCS usando
-[Plasmic](https://www.plasmic.app/), executado localmente e integrado ao
-React por Codegen.
+Aplicacao Next.js gerada com [Plasmic](https://www.plasmic.app/) Codegen. O projeto visual fica em um Studio Plasmic local; este repositorio contem a aplicacao React gerada, os assets e os workflows de deploy.
 
-O site é publicado como HTML estático no GitHub Pages. O Plasmic Studio não é
-acessado pelo GitHub: o código é gerado localmente, versionado neste
-repositório e depois compilado pelo GitHub Actions.
-
-## Repositórios e responsabilidades
-
-- `../plasmic-local`: Studio Plasmic self-hosted, PostgreSQL, projeto visual e
-  backups. Consulte o [guia do Studio local](../plasmic-local/README-MY.md).
-- `nocs-lab-site`: código React gerado, aplicação Next.js e deploy.
-
-Fluxo:
+## Fluxo
 
 ```text
-Plasmic local → npm run codegen → React versionado → push → GitHub Pages
+Studio local -> npm run codegen -> Next.js -> GitHub Actions -> Pages ou Docker
 ```
 
-O código gerado não reconstrói o projeto visual. Para trabalhar em outro
-computador, restaure também o backup do Studio/PostgreSQL descrito no
-[guia de backups](../plasmic-local/backups/README.md).
+O Codegen gera ou atualiza os arquivos em `components/plasmic/`, `public/plasmic/` e `plasmic.json`. Ele nao cria ou restaura o projeto visual nem o banco PostgreSQL.
 
 ## Pré-requisitos
 
 - Node.js 20 ou superior;
 - Docker;
 - Git;
-- Studio local funcionando em `http://localhost:3003`.
+- acesso ao Studio local em `http://localhost:3003` ou ao Plasmic SaaS em `https://studio.plasmic.app`.
 
-## Configuração local
+## Estrutura dos repositorios
 
-Inicie o Studio no repositório separado:
+Esta pasta esta organizada ao lado do repositorio do Studio:
+
+```text
+nocs/
+├── plasmic-local/          # Studio, Docker Compose, PostgreSQL e backups
+└── nocs-lab-site/    # esta aplicacao
+```
+
+Os detalhes do Studio estao em [`../plasmic-local/README-MY.md`](../plasmic-local/README-MY.md). Os procedimentos de backup e restauracao estao em [`../plasmic-local/backups/README.md`](../plasmic-local/backups/README.md).
+
+## Preparar o Studio local
+
+Na pasta `plasmic-local`, configure e inicie os servicos:
 
 ```bash
 cd ../plasmic-local
-docker compose up -d
+docker compose up -d --build
+docker compose ps
 ```
 
-Depois, neste repositório:
+Abra `http://localhost:3003`. Em uma inicializacao nova do banco, o seed pode ser necessario apenas uma vez:
 
 ```bash
-npm install
+docker compose exec plasmic-wab pnpm seed
+```
+
+Consulte os arquivos locais citados no README do Studio para as credenciais administrativas. Nunca copie senhas ou dumps para este repositorio.
+
+## Configurar esta aplicacao
+
+Na pasta `nocs-lab-site`:
+
+```bash
+npm ci
+```
+
+Copie o modelo de ambiente:
+
+```powershell
 cp .env.example .env.local
 ```
 
-Confira o `.env.local`:
+Variaveis:
+
+- `PLASMIC_PROJECT_ID`: ID do projeto principal usado pelo Codegen;
+- `PLASMIC_HOST`: URL do Studio local ou SaaS;
+- `NEXT_PUBLIC_BASE_PATH`: prefixo opcional para uma publicacao em subpasta. Deixe vazio para raiz ou use `/nocs-lab-site` no GitHub Pages.
+
+Mantenha `.env.local` apenas na maquina local.
+
+## Autenticar o Codegen
+
+O host usado para autenticar e gerar o codigo vem de `PLASMIC_HOST` no `.env.local`. Autentique com o mesmo host configurado:
+
+```bash
+npm run plasmic:auth
+```
+
+### Studio local
+
+Com o Studio aberto em `http://localhost:3003`, configure:
 
 ```dotenv
-PLASMIC_PROJECT_ID=
 PLASMIC_HOST=http://localhost:3003
 ```
 
-Esse arquivo é local e não deve ser commitado.
+Autorize a URL que comeca com
+`http://localhost:3003/auth/plasmic-init/`.
 
-## Autenticar o Codegen no Studio local
+### Plasmic SaaS
 
-Use o host local, não o Plasmic SaaS:
+Para gerar diretamente do SaaS, use exatamente o origin do Studio:
 
-```bash
-npx plasmic auth --host http://localhost:3003
+```dotenv
+PLASMIC_HOST=https://studio.plasmic.app
+PLASMIC_PROJECT_ID=
 ```
 
-Autorize a URL que começa com
-`http://localhost:3003/auth/plasmic-init/`. A autenticação fica na máquina
-local, normalmente em `~/.plasmic.auth`.
+Depois execute:
 
-## Gerar e testar o site
+```bash
+npm run plasmic:auth
+npm run codegen
+```
 
-Após editar e publicar o projeto visual no Studio:
+Nao inclua o caminho de um projeto ou workspace em `PLASMIC_HOST`; use apenas `https://studio.plasmic.app`. O projeto continua sendo selecionado por `PLASMIC_PROJECT_ID`.
+
+## Gerar e executar
+
+Apos publicar as alteracoes no Studio:
 
 ```bash
 npm run codegen
@@ -79,34 +117,42 @@ npm run dev
 
 Abra `http://localhost:3000`.
 
-Antes de enviar:
+Para confirmar o build estatico:
 
 ```bash
 npm run build
 ```
 
-O Next.js exporta o site estático para `out/`; o script de build ajusta os caminhos dos assets nessa pasta. Ela contém HTML, CSS, JavaScript e imagens, sem precisar de um servidor Next.js em produção.
+O Next.js gera `out/`. Os comandos validam o resultado e o script `patch-exported-asset-paths.mjs` ajusta o prefixo dos assets do Plasmic. Arquivos gerados como `Plasmic*.tsx`, os CSS gerados e `plasmic.json` nao devem ser editados manualmente.
 
 ## Executar com Docker
 
-O `Dockerfile` faz o build e monta uma imagem pequena com Nginx para servir os arquivos estáticos. Na pasta `nocs-lab-site`:
+Crie e execute o contêiner na raiz desta aplicacao:
 
 ```bash
-docker build -t nocs-lab-site . --no-cahce && docker run -d -p 9999:80 nocs-lab-site
+docker build -t nocs-lab-site .
+docker run --rm -d --name nocs-lab-site -p 9999:80 nocs-lab-site
 ```
 
-Abra `http://localhost:9999`. A porta `9999` da sua máquina é encaminhada para a porta `80` do Nginx dentro do contêiner. Para parar, pressione `Ctrl+C`.
+Abra `http://localhost:9999`.
 
-Também é possível gerar `out/` diretamente na máquina com `npm run build`. Não é necessário usar Docker Compose para este site sozinho: o Dockerfile e os comandos acima bastam. Compose é útil quando a aplicação precisa subir junto com outros serviços, como uma API ou um banco de dados.
+Para substituir ou parar o contêiner:
 
-Os arquivos `Plasmic*.tsx` e CSS gerados são controlados pelo Codegen e não
-devem ser editados manualmente. Comportamentos próprios devem ficar em
-wrappers ou arquivos da aplicação fora da área gerenciada pelo Plasmic.
+```bash
+docker rm -f nocs-lab-site
+```
+
+Para publicar em uma subpasta dentro do Docker, passe o prefixo no build:
+
+```bash
+docker build --build-arg NEXT_PUBLIC_BASE_PATH=/nocs-lab-site -t nocs-lab-site .
+```
 
 ## Publicar no GitHub Pages
 
-Envie alterações para o repositório
-[`brasilicioh/nocs-lab-site`](https://github.com/brasilicioh/nocs-lab-site):
+O workflow [`.github/workflows/deploy-pages.yml`](./.github/workflows/deploy-pages.yml) executa `npm ci` e `npm run build` com o prefixo baseado no nome do repositorio. Ele nao executa o Codegen e nao precisa de credenciais do Plasmic: os arquivos React ja devem estar commitados.
+
+Depois de confirmar as alteracoes:
 
 ```bash
 git add .
@@ -114,48 +160,33 @@ git commit -m "..."
 git push origin main
 ```
 
-No GitHub:
-
-1. Abra **Settings > Pages**.
-2. Selecione **GitHub Actions** como fonte.
-3. Aguarde o workflow
-   [.github/workflows/deploy-pages.yml](./.github/workflows/deploy-pages.yml).
-
-O workflow instala dependências, executa `npm run build` e publica `out/`. Ele
-não precisa de token do Plasmic.
-
-A URL esperada é:
+No GitHub, em **Settings > Pages**, selecione **GitHub Actions**. A URL
+esperada para este repositorio e:
 
 ```text
 https://brasilicioh.github.io/nocs-lab-site/
 ```
 
-## Atualizar o site
+## Publicar uma imagem Docker
 
-Depois de fazer alterações no Studio local:
+O workflow [`.github/workflows/deploy-docker.yml`](./.github/workflows/deploy-docker.yml) publica no GitHub Container Registry em pushes para `main`.
 
-```bash
-npm run codegen
-npm run build
-git add .
-git commit -m "Update NOCS site"
-git push
-```
+## Atualizar o projeto visual
 
-O push dispara o deploy automaticamente.
+1. Inicie o Studio local;
+2. edite e publique o projeto no Studio;
+3. execute `npm run codegen`;
+4. revise os arquivos gerados;
+5. execute `npm run build`;
+6. faca commit e push.
 
-## Outro computador ou colaborador
+## Configurar em outro computador
 
-1. Clone `plasmic-local` e restaure um backup do PostgreSQL.
-2. Inicie o Studio local.
-3. Clone este repositório.
-4. Execute `npm install`.
-5. Autentique o CLI com `npx plasmic auth --host http://localhost:3003`.
-6. Execute `npm run codegen`.
-7. Teste com `npm run dev` e `npm run build`.
-8. Faça commit e push.
-
-## Segurança
-
-Nunca versione `.env.local`, `.plasmic.auth`, tokens, senhas, dumps ou exports
-JSON. Revogue qualquer token que tenha sido exposto.
+1. Clone os repositorios `plasmic-local` e `nocs-lab-site`;
+2. restaure o banco ou importe o backup do Studio;
+3. execute `docker compose up -d --build` em `plasmic-local`;
+4. execute `npm ci` em `nocs-lab-site`;
+5. copie `.env.example` para `.env.local`;
+6. autentique com `npm run plasmic:auth`, usando o host configurado em `.env.local`;
+7. execute `npm run codegen`;
+8. valide com `npm run dev` e `npm run build`.

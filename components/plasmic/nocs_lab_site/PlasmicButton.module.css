@@ -9,7 +9,6 @@
   font-size: var(--token-AwqwfF6oCrvu);
   line-height: var(--token-u9X_SBaSHnVF);
   outline-style: none;
-  text-decoration-line: none;
   transition-property: all;
   transition-duration: 0.5s;
   -webkit-transition-property: all;
@@ -44,6 +43,10 @@
 }
 .rootcolor_nocsColor:global(.__wab_instance) {
   background: #fd6601;
+}
+.rootcolor_branco:global(.__wab_instance) {
+  background: var(--token-bAyFQ_Q8CSoI);
+  color: #000000;
 }
 .roottype_soft:global(.__wab_instance) {
   background: none;
@@ -273,6 +276,9 @@
 .slotTargetStartcolor_errorDestructive {
   color: var(--token-3D5MmZVgyhdc);
 }
+.slotTargetStartcolor_branco {
+  color: #004d9c;
+}
 .slotTargetStarttype_soft {
   color: var(--token-tp9KiM5c4ejH);
 }
@@ -366,6 +372,9 @@
 .slotTargetLabelcolor_errorDestructive {
   color: var(--token-3D5MmZVgyhdc);
 }
+.slotTargetLabelcolor_branco {
+  color: #004d9c;
+}
 .slotTargetLabeltype_soft {
   color: var(--token-tp9KiM5c4ejH);
 }
@@ -404,6 +413,7 @@
 }
 .text__s5WXv {
   white-space: pre;
+  color: #eff6ff;
 }
 .freeBox__zTrmC {
   flex-direction: column;
@@ -430,6 +440,9 @@
 }
 .slotTargetEndcolor_errorDestructive {
   color: var(--token-3D5MmZVgyhdc);
+}
+.slotTargetEndcolor_branco {
+  color: #004d9c;
 }
 .slotTargetEndtype_soft {
   color: var(--token-tp9KiM5c4ejH);

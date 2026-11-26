@@ -7,6 +7,7 @@
     "build": "next build && node scripts/patch-exported-asset-paths.mjs",
     "start": "next start",
     "lint": "next lint",
+    "plasmic:auth": "node scripts/auth-plasmic.mjs",
     "codegen": "node scripts/sync-plasmic.mjs"
   },
   "dependencies": {

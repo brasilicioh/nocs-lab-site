@@ -87,11 +87,13 @@ import LightbulbIcon from "./icons/PlasmicIcon__Lightbulb"; // plasmic-import: b
 import LaptopCodeIcon from "./icons/PlasmicIcon__LaptopCode"; // plasmic-import: h4Nh0qcHnFU0/icon
 import GroupIcon from "./icons/PlasmicIcon__Group"; // plasmic-import: wpJg5WsQF3JT/icon
 import Line1Icon from "./icons/PlasmicIcon__Line1"; // plasmic-import: gTp3bHF0pHdU/icon
+import Ellipse28Icon from "./icons/PlasmicIcon__Ellipse28"; // plasmic-import: cdjbGQduyAdk/icon
 import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: P_NPtHWeotKN/icon
 import SchoolFlagIcon from "./icons/PlasmicIcon__SchoolFlag"; // plasmic-import: TBl04-ahlqOB/icon
 import UsersGroup2Icon from "./icons/PlasmicIcon__UsersGroup2"; // plasmic-import: H0cN-L9nZy4w/icon
 import GraduationCapIcon from "./icons/PlasmicIcon__GraduationCap"; // plasmic-import: YvLCDHIAAqvN/icon
-import ArrowLeftIcon from "./icons/PlasmicIcon__ArrowLeft"; // plasmic-import: HMQIZtk55_Ey/icon
+import Ellipse11Icon from "./icons/PlasmicIcon__Ellipse11"; // plasmic-import: Khsm8x3T-vW3/icon
+import Ellipse12Icon from "./icons/PlasmicIcon__Ellipse12"; // plasmic-import: XwLB9Dos8UEw/icon
 
 const emptyProxy: any = new Proxy(() => "", {
   get(_, prop) {
@@ -169,34 +171,22 @@ export type PlasmicHomepage__OverridesType = {
   projetos?: Flex__<"div">;
   equipePessoas?: Flex__<"div">;
   rectangle61?: Flex__<"div">;
+  textoEFoto?: Flex__<"div">;
   buttonEquipeMobile?: Flex__<typeof Button>;
+  instalacoes?: Flex__<"section">;
   rectangle62?: Flex__<"div">;
-  govdata241?: Flex__<"div">;
-  govdata242?: Flex__<"div">;
-  frame427321657?: Flex__<"div">;
-  frame427321637?: Flex__<"div">;
   recursosE?: Flex__<"div">;
-  frame427321659?: Flex__<"div">;
-  frame427321658?: Flex__<"div">;
-  group2?: Flex__<"div">;
-  image6?: Flex__<"div">;
-  rectangle58?: Flex__<"div">;
-  group3?: Flex__<"div">;
-  image7?: Flex__<"div">;
-  rectangle59?: Flex__<"div">;
-  group4?: Flex__<"div">;
-  image8?: Flex__<"div">;
-  rectangle60?: Flex__<"div">;
-  group5?: Flex__<"div">;
-  image9?: Flex__<"div">;
-  rectangle63?: Flex__<"div">;
-  button4?: Flex__<"div">;
-  text?: Flex__<"div">;
-  frame427321712?: Flex__<"div">;
-  loremIpsumDolorSitAmetConsecteturAdipiscingElitDonecNecPulvinarNuncQuisFringillaEstProinPulvina?: Flex__<"div">;
-  button3?: Flex__<typeof Button>;
-  button5?: Flex__<"div">;
-  text2?: Flex__<"div">;
+  sliderCarousel2?: Flex__<typeof SliderWrapper>;
+  image11?: Flex__<"div">;
+  rectangle64?: Flex__<"div">;
+  image12?: Flex__<"div">;
+  rectangle65?: Flex__<"div">;
+  image13?: Flex__<"div">;
+  rectangle66?: Flex__<"div">;
+  image14?: Flex__<"div">;
+  rectangle67?: Flex__<"div">;
+  image10?: Flex__<"div">;
+  rectangle68?: Flex__<"div">;
 };
 
 export interface DefaultHomepageProps {}
@@ -299,6 +289,15 @@ function PlasmicHomepage__RenderFunc(props: {
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $q, $ctx }) => "0"
+      },
+      {
+        path: "sliderCarousel2.currentSlide",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => 0,
+
+        refName: "sliderCarousel2",
+        onMutate: generateOnMutateForSpec("currentSlide", SliderWrapper_Helpers)
       }
     ],
     [$props, $ctx, $refs]
@@ -614,11 +613,110 @@ function PlasmicHomepage__RenderFunc(props: {
               data-plasmic-name={"menuOpened"}
               data-plasmic-override={overrides.menuOpened}
               className={classNames("all", sty.menuOpened)}
+              onClick={async event => {
+                const $steps = {};
+
+                $steps["fecharMenuAoClicarNoBackdrop"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        variable: {
+                          objRoot: $state,
+                          variablePath: ["mobileMenuOpen"]
+                        },
+                        operation: 0,
+                        value: "false"
+                      };
+                      return (({
+                        variable,
+                        value,
+                        startIndex,
+                        deleteCount
+                      }) => {
+                        if (!variable) {
+                          return;
+                        }
+                        const { objRoot, variablePath } = variable;
+
+                        $stateSet(objRoot, variablePath, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["fecharMenuAoClicarNoBackdrop"] != null &&
+                  typeof $steps["fecharMenuAoClicarNoBackdrop"] === "object" &&
+                  typeof $steps["fecharMenuAoClicarNoBackdrop"].then ===
+                    "function"
+                ) {
+                  $steps["fecharMenuAoClicarNoBackdrop"] =
+                    await $steps["fecharMenuAoClicarNoBackdrop"];
+                }
+              }}
+              onKeyDown={async event => {
+                const $steps = {};
+
+                $steps["fecharMenuComEscape"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        customFunction: async () => {
+                          return (() => {
+                            if (event.key === "Escape") {
+                              return ($state.mobileMenuOpen = false);
+                            }
+                          })();
+                        }
+                      };
+                      return (({ customFunction }) => {
+                        return customFunction();
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["fecharMenuComEscape"] != null &&
+                  typeof $steps["fecharMenuComEscape"] === "object" &&
+                  typeof $steps["fecharMenuComEscape"].then === "function"
+                ) {
+                  $steps["fecharMenuComEscape"] =
+                    await $steps["fecharMenuComEscape"];
+                }
+              }}
+              role={"presentation"}
+              tabIndex={0}
             >
               <div
                 data-plasmic-name={"menuMobile"}
                 data-plasmic-override={overrides.menuMobile}
+                aria-modal={"true"}
                 className={classNames("all", sty.menuMobile)}
+                onClick={async event => {
+                  const $steps = {};
+
+                  $steps["manterMenuAbertoAoClicarNoConteudo"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          customFunction: async () => {
+                            return (() => {
+                              return event.stopPropagation();
+                            })();
+                          }
+                        };
+                        return (({ customFunction }) => {
+                          return customFunction();
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["manterMenuAbertoAoClicarNoConteudo"] != null &&
+                    typeof $steps["manterMenuAbertoAoClicarNoConteudo"] ===
+                      "object" &&
+                    typeof $steps["manterMenuAbertoAoClicarNoConteudo"].then ===
+                      "function"
+                  ) {
+                    $steps["manterMenuAbertoAoClicarNoConteudo"] =
+                      await $steps["manterMenuAbertoAoClicarNoConteudo"];
+                  }
+                }}
+                role={"dialog"}
               >
                 <button
                   data-plasmic-name={"closeMobileMenu"}
@@ -1273,346 +1371,339 @@ function PlasmicHomepage__RenderFunc(props: {
                   }
                 </div>
               </div>
-              <div className={classNames("all", sty.freeBox__ndYsY)}>
-                {(() => {
-                  const child$Props = {
-                    beforeChange: async (...eventArgs: any) => {
-                      generateStateOnChangePropForCodeComponents(
-                        $state,
-                        "currentSlide",
-                        ["sliderCarousel", "currentSlide"],
-                        SliderWrapper_Helpers
-                      ).apply(null, eventArgs);
-                    },
-                    className: classNames("__wab_instance", sty.sliderCarousel),
-                    initialSlide: generateStateValueProp($state, [
-                      "sliderCarousel",
-                      "currentSlide"
-                    ]),
-                    ref: ref => {
-                      $refs["sliderCarousel"] = ref;
-                    },
-                    sliderScopeClassName: sty["sliderCarousel__slider"],
-                    swipeToSlide: true,
-                    variableWidth: true
-                  };
-                  initializeCodeComponentStates(
-                    $state,
-                    [
-                      {
-                        name: "currentSlide",
-                        plasmicStateName: "sliderCarousel.currentSlide"
-                      }
-                    ],
-                    [],
-                    SliderWrapper_Helpers ?? {},
-                    child$Props
-                  );
+              {(() => {
+                const child$Props = {
+                  arrowColor: "#004D9C",
+                  beforeChange: async (...eventArgs: any) => {
+                    generateStateOnChangePropForCodeComponents(
+                      $state,
+                      "currentSlide",
+                      ["sliderCarousel", "currentSlide"],
+                      SliderWrapper_Helpers
+                    ).apply(null, eventArgs);
+                  },
+                  className: classNames("__wab_instance", sty.sliderCarousel),
+                  initialSlide: generateStateValueProp($state, [
+                    "sliderCarousel",
+                    "currentSlide"
+                  ]),
+                  ref: ref => {
+                    $refs["sliderCarousel"] = ref;
+                  },
+                  sliderScopeClassName: sty["sliderCarousel__slider"],
+                  swipeToSlide: true,
+                  variableWidth: true
+                };
+                initializeCodeComponentStates(
+                  $state,
+                  [
+                    {
+                      name: "currentSlide",
+                      plasmicStateName: "sliderCarousel.currentSlide"
+                    }
+                  ],
+                  [],
+                  SliderWrapper_Helpers ?? {},
+                  child$Props
+                );
 
-                  return (
-                    <SliderWrapper
-                      data-plasmic-name={"sliderCarousel"}
-                      data-plasmic-override={overrides.sliderCarousel}
-                      {...child$Props}
-                    >
-                      <div className={classNames("all", sty.freeBox__xSCmZ)}>
-                        <CardAtuacao
-                          data-plasmic-name={"cardAtuacao"}
-                          data-plasmic-override={overrides.cardAtuacao}
-                          className={classNames(
-                            "__wab_instance",
-                            sty.cardAtuacao
-                          )}
-                          onClick={async event => {
-                            const $steps = {};
+                return (
+                  <SliderWrapper
+                    data-plasmic-name={"sliderCarousel"}
+                    data-plasmic-override={overrides.sliderCarousel}
+                    {...child$Props}
+                  >
+                    <div className={classNames("all", sty.freeBox__xSCmZ)}>
+                      <CardAtuacao
+                        data-plasmic-name={"cardAtuacao"}
+                        data-plasmic-override={overrides.cardAtuacao}
+                        className={classNames(
+                          "__wab_instance",
+                          sty.cardAtuacao
+                        )}
+                        onClick={async event => {
+                          const $steps = {};
 
-                            $steps["selecionarArea0"] = true
-                              ? (() => {
-                                  const actionArgs = {
-                                    variable: {
-                                      objRoot: $state,
-                                      variablePath: ["selectedAreaIndex"]
-                                    },
-                                    operation: 0,
-                                    value: "0"
-                                  };
-                                  return (({
-                                    variable,
-                                    value,
-                                    startIndex,
-                                    deleteCount
-                                  }) => {
-                                    if (!variable) {
-                                      return;
-                                    }
-                                    const { objRoot, variablePath } = variable;
+                          $steps["selecionarArea0"] = true
+                            ? (() => {
+                                const actionArgs = {
+                                  variable: {
+                                    objRoot: $state,
+                                    variablePath: ["selectedAreaIndex"]
+                                  },
+                                  operation: 0,
+                                  value: "0"
+                                };
+                                return (({
+                                  variable,
+                                  value,
+                                  startIndex,
+                                  deleteCount
+                                }) => {
+                                  if (!variable) {
+                                    return;
+                                  }
+                                  const { objRoot, variablePath } = variable;
 
-                                    $stateSet(objRoot, variablePath, value);
-                                    return value;
-                                  })?.apply(null, [actionArgs]);
-                                })()
-                              : undefined;
-                            if (
-                              $steps["selecionarArea0"] != null &&
-                              typeof $steps["selecionarArea0"] === "object" &&
-                              typeof $steps["selecionarArea0"].then ===
-                                "function"
-                            ) {
-                              $steps["selecionarArea0"] =
-                                await $steps["selecionarArea0"];
-                            }
-                          }}
-                        />
-                      </div>
-                      <div className={classNames("all", sty.freeBox__bnn7S)}>
-                        <CardAtuacao2
-                          data-plasmic-name={"cardAtuacao2"}
-                          data-plasmic-override={overrides.cardAtuacao2}
-                          className={classNames(
-                            "__wab_instance",
-                            sty.cardAtuacao2
-                          )}
-                          onClick={async event => {
-                            const $steps = {};
+                                  $stateSet(objRoot, variablePath, value);
+                                  return value;
+                                })?.apply(null, [actionArgs]);
+                              })()
+                            : undefined;
+                          if (
+                            $steps["selecionarArea0"] != null &&
+                            typeof $steps["selecionarArea0"] === "object" &&
+                            typeof $steps["selecionarArea0"].then === "function"
+                          ) {
+                            $steps["selecionarArea0"] =
+                              await $steps["selecionarArea0"];
+                          }
+                        }}
+                      />
+                    </div>
+                    <div className={classNames("all", sty.freeBox__bnn7S)}>
+                      <CardAtuacao2
+                        data-plasmic-name={"cardAtuacao2"}
+                        data-plasmic-override={overrides.cardAtuacao2}
+                        className={classNames(
+                          "__wab_instance",
+                          sty.cardAtuacao2
+                        )}
+                        onClick={async event => {
+                          const $steps = {};
 
-                            $steps["selecionarArea1"] = true
-                              ? (() => {
-                                  const actionArgs = {
-                                    variable: {
-                                      objRoot: $state,
-                                      variablePath: ["selectedAreaIndex"]
-                                    },
-                                    operation: 0,
-                                    value: "1"
-                                  };
-                                  return (({
-                                    variable,
-                                    value,
-                                    startIndex,
-                                    deleteCount
-                                  }) => {
-                                    if (!variable) {
-                                      return;
-                                    }
-                                    const { objRoot, variablePath } = variable;
+                          $steps["selecionarArea1"] = true
+                            ? (() => {
+                                const actionArgs = {
+                                  variable: {
+                                    objRoot: $state,
+                                    variablePath: ["selectedAreaIndex"]
+                                  },
+                                  operation: 0,
+                                  value: "1"
+                                };
+                                return (({
+                                  variable,
+                                  value,
+                                  startIndex,
+                                  deleteCount
+                                }) => {
+                                  if (!variable) {
+                                    return;
+                                  }
+                                  const { objRoot, variablePath } = variable;
 
-                                    $stateSet(objRoot, variablePath, value);
-                                    return value;
-                                  })?.apply(null, [actionArgs]);
-                                })()
-                              : undefined;
-                            if (
-                              $steps["selecionarArea1"] != null &&
-                              typeof $steps["selecionarArea1"] === "object" &&
-                              typeof $steps["selecionarArea1"].then ===
-                                "function"
-                            ) {
-                              $steps["selecionarArea1"] =
-                                await $steps["selecionarArea1"];
-                            }
-                          }}
-                        />
-                      </div>
-                      <div className={classNames("all", sty.freeBox__r2WoQ)}>
-                        <CardAtuacao3
-                          data-plasmic-name={"cardAtuacao3"}
-                          data-plasmic-override={overrides.cardAtuacao3}
-                          className={classNames(
-                            "__wab_instance",
-                            sty.cardAtuacao3
-                          )}
-                          onClick={async event => {
-                            const $steps = {};
+                                  $stateSet(objRoot, variablePath, value);
+                                  return value;
+                                })?.apply(null, [actionArgs]);
+                              })()
+                            : undefined;
+                          if (
+                            $steps["selecionarArea1"] != null &&
+                            typeof $steps["selecionarArea1"] === "object" &&
+                            typeof $steps["selecionarArea1"].then === "function"
+                          ) {
+                            $steps["selecionarArea1"] =
+                              await $steps["selecionarArea1"];
+                          }
+                        }}
+                      />
+                    </div>
+                    <div className={classNames("all", sty.freeBox__r2WoQ)}>
+                      <CardAtuacao3
+                        data-plasmic-name={"cardAtuacao3"}
+                        data-plasmic-override={overrides.cardAtuacao3}
+                        className={classNames(
+                          "__wab_instance",
+                          sty.cardAtuacao3
+                        )}
+                        onClick={async event => {
+                          const $steps = {};
 
-                            $steps["selecionarArea2"] = true
-                              ? (() => {
-                                  const actionArgs = {
-                                    variable: {
-                                      objRoot: $state,
-                                      variablePath: ["selectedAreaIndex"]
-                                    },
-                                    operation: 0,
-                                    value: "2"
-                                  };
-                                  return (({
-                                    variable,
-                                    value,
-                                    startIndex,
-                                    deleteCount
-                                  }) => {
-                                    if (!variable) {
-                                      return;
-                                    }
-                                    const { objRoot, variablePath } = variable;
+                          $steps["selecionarArea2"] = true
+                            ? (() => {
+                                const actionArgs = {
+                                  variable: {
+                                    objRoot: $state,
+                                    variablePath: ["selectedAreaIndex"]
+                                  },
+                                  operation: 0,
+                                  value: "2"
+                                };
+                                return (({
+                                  variable,
+                                  value,
+                                  startIndex,
+                                  deleteCount
+                                }) => {
+                                  if (!variable) {
+                                    return;
+                                  }
+                                  const { objRoot, variablePath } = variable;
 
-                                    $stateSet(objRoot, variablePath, value);
-                                    return value;
-                                  })?.apply(null, [actionArgs]);
-                                })()
-                              : undefined;
-                            if (
-                              $steps["selecionarArea2"] != null &&
-                              typeof $steps["selecionarArea2"] === "object" &&
-                              typeof $steps["selecionarArea2"].then ===
-                                "function"
-                            ) {
-                              $steps["selecionarArea2"] =
-                                await $steps["selecionarArea2"];
-                            }
-                          }}
-                        />
-                      </div>
-                      <div className={classNames("all", sty.freeBox__z0SlQ)}>
-                        <CardAtuacao4
-                          data-plasmic-name={"cardAtuacao4"}
-                          data-plasmic-override={overrides.cardAtuacao4}
-                          className={classNames(
-                            "__wab_instance",
-                            sty.cardAtuacao4
-                          )}
-                          onClick={async event => {
-                            const $steps = {};
+                                  $stateSet(objRoot, variablePath, value);
+                                  return value;
+                                })?.apply(null, [actionArgs]);
+                              })()
+                            : undefined;
+                          if (
+                            $steps["selecionarArea2"] != null &&
+                            typeof $steps["selecionarArea2"] === "object" &&
+                            typeof $steps["selecionarArea2"].then === "function"
+                          ) {
+                            $steps["selecionarArea2"] =
+                              await $steps["selecionarArea2"];
+                          }
+                        }}
+                      />
+                    </div>
+                    <div className={classNames("all", sty.freeBox__z0SlQ)}>
+                      <CardAtuacao4
+                        data-plasmic-name={"cardAtuacao4"}
+                        data-plasmic-override={overrides.cardAtuacao4}
+                        className={classNames(
+                          "__wab_instance",
+                          sty.cardAtuacao4
+                        )}
+                        onClick={async event => {
+                          const $steps = {};
 
-                            $steps["selecionarArea3"] = true
-                              ? (() => {
-                                  const actionArgs = {
-                                    variable: {
-                                      objRoot: $state,
-                                      variablePath: ["selectedAreaIndex"]
-                                    },
-                                    operation: 0,
-                                    value: "3"
-                                  };
-                                  return (({
-                                    variable,
-                                    value,
-                                    startIndex,
-                                    deleteCount
-                                  }) => {
-                                    if (!variable) {
-                                      return;
-                                    }
-                                    const { objRoot, variablePath } = variable;
+                          $steps["selecionarArea3"] = true
+                            ? (() => {
+                                const actionArgs = {
+                                  variable: {
+                                    objRoot: $state,
+                                    variablePath: ["selectedAreaIndex"]
+                                  },
+                                  operation: 0,
+                                  value: "3"
+                                };
+                                return (({
+                                  variable,
+                                  value,
+                                  startIndex,
+                                  deleteCount
+                                }) => {
+                                  if (!variable) {
+                                    return;
+                                  }
+                                  const { objRoot, variablePath } = variable;
 
-                                    $stateSet(objRoot, variablePath, value);
-                                    return value;
-                                  })?.apply(null, [actionArgs]);
-                                })()
-                              : undefined;
-                            if (
-                              $steps["selecionarArea3"] != null &&
-                              typeof $steps["selecionarArea3"] === "object" &&
-                              typeof $steps["selecionarArea3"].then ===
-                                "function"
-                            ) {
-                              $steps["selecionarArea3"] =
-                                await $steps["selecionarArea3"];
-                            }
-                          }}
-                        />
-                      </div>
-                      <div className={classNames("all", sty.freeBox__vZkB9)}>
-                        <CardAtuacao5
-                          data-plasmic-name={"cardAtuacao5"}
-                          data-plasmic-override={overrides.cardAtuacao5}
-                          className={classNames(
-                            "__wab_instance",
-                            sty.cardAtuacao5
-                          )}
-                          onClick={async event => {
-                            const $steps = {};
+                                  $stateSet(objRoot, variablePath, value);
+                                  return value;
+                                })?.apply(null, [actionArgs]);
+                              })()
+                            : undefined;
+                          if (
+                            $steps["selecionarArea3"] != null &&
+                            typeof $steps["selecionarArea3"] === "object" &&
+                            typeof $steps["selecionarArea3"].then === "function"
+                          ) {
+                            $steps["selecionarArea3"] =
+                              await $steps["selecionarArea3"];
+                          }
+                        }}
+                      />
+                    </div>
+                    <div className={classNames("all", sty.freeBox__vZkB9)}>
+                      <CardAtuacao5
+                        data-plasmic-name={"cardAtuacao5"}
+                        data-plasmic-override={overrides.cardAtuacao5}
+                        className={classNames(
+                          "__wab_instance",
+                          sty.cardAtuacao5
+                        )}
+                        onClick={async event => {
+                          const $steps = {};
 
-                            $steps["selecionarArea4"] = true
-                              ? (() => {
-                                  const actionArgs = {
-                                    variable: {
-                                      objRoot: $state,
-                                      variablePath: ["selectedAreaIndex"]
-                                    },
-                                    operation: 0,
-                                    value: "4"
-                                  };
-                                  return (({
-                                    variable,
-                                    value,
-                                    startIndex,
-                                    deleteCount
-                                  }) => {
-                                    if (!variable) {
-                                      return;
-                                    }
-                                    const { objRoot, variablePath } = variable;
+                          $steps["selecionarArea4"] = true
+                            ? (() => {
+                                const actionArgs = {
+                                  variable: {
+                                    objRoot: $state,
+                                    variablePath: ["selectedAreaIndex"]
+                                  },
+                                  operation: 0,
+                                  value: "4"
+                                };
+                                return (({
+                                  variable,
+                                  value,
+                                  startIndex,
+                                  deleteCount
+                                }) => {
+                                  if (!variable) {
+                                    return;
+                                  }
+                                  const { objRoot, variablePath } = variable;
 
-                                    $stateSet(objRoot, variablePath, value);
-                                    return value;
-                                  })?.apply(null, [actionArgs]);
-                                })()
-                              : undefined;
-                            if (
-                              $steps["selecionarArea4"] != null &&
-                              typeof $steps["selecionarArea4"] === "object" &&
-                              typeof $steps["selecionarArea4"].then ===
-                                "function"
-                            ) {
-                              $steps["selecionarArea4"] =
-                                await $steps["selecionarArea4"];
-                            }
-                          }}
-                        />
-                      </div>
-                      <div className={classNames("all", sty.freeBox__aX07J)}>
-                        <CardAtuacao6
-                          data-plasmic-name={"cardAtuacao6"}
-                          data-plasmic-override={overrides.cardAtuacao6}
-                          className={classNames(
-                            "__wab_instance",
-                            sty.cardAtuacao6
-                          )}
-                          onClick={async event => {
-                            const $steps = {};
+                                  $stateSet(objRoot, variablePath, value);
+                                  return value;
+                                })?.apply(null, [actionArgs]);
+                              })()
+                            : undefined;
+                          if (
+                            $steps["selecionarArea4"] != null &&
+                            typeof $steps["selecionarArea4"] === "object" &&
+                            typeof $steps["selecionarArea4"].then === "function"
+                          ) {
+                            $steps["selecionarArea4"] =
+                              await $steps["selecionarArea4"];
+                          }
+                        }}
+                      />
+                    </div>
+                    <div className={classNames("all", sty.freeBox__aX07J)}>
+                      <CardAtuacao6
+                        data-plasmic-name={"cardAtuacao6"}
+                        data-plasmic-override={overrides.cardAtuacao6}
+                        className={classNames(
+                          "__wab_instance",
+                          sty.cardAtuacao6
+                        )}
+                        onClick={async event => {
+                          const $steps = {};
 
-                            $steps["selecionarArea5"] = true
-                              ? (() => {
-                                  const actionArgs = {
-                                    variable: {
-                                      objRoot: $state,
-                                      variablePath: ["selectedAreaIndex"]
-                                    },
-                                    operation: 0,
-                                    value: "5"
-                                  };
-                                  return (({
-                                    variable,
-                                    value,
-                                    startIndex,
-                                    deleteCount
-                                  }) => {
-                                    if (!variable) {
-                                      return;
-                                    }
-                                    const { objRoot, variablePath } = variable;
+                          $steps["selecionarArea5"] = true
+                            ? (() => {
+                                const actionArgs = {
+                                  variable: {
+                                    objRoot: $state,
+                                    variablePath: ["selectedAreaIndex"]
+                                  },
+                                  operation: 0,
+                                  value: "5"
+                                };
+                                return (({
+                                  variable,
+                                  value,
+                                  startIndex,
+                                  deleteCount
+                                }) => {
+                                  if (!variable) {
+                                    return;
+                                  }
+                                  const { objRoot, variablePath } = variable;
 
-                                    $stateSet(objRoot, variablePath, value);
-                                    return value;
-                                  })?.apply(null, [actionArgs]);
-                                })()
-                              : undefined;
-                            if (
-                              $steps["selecionarArea5"] != null &&
-                              typeof $steps["selecionarArea5"] === "object" &&
-                              typeof $steps["selecionarArea5"].then ===
-                                "function"
-                            ) {
-                              $steps["selecionarArea5"] =
-                                await $steps["selecionarArea5"];
-                            }
-                          }}
-                        />
-                      </div>
-                    </SliderWrapper>
-                  );
-                })()}
-              </div>
+                                  $stateSet(objRoot, variablePath, value);
+                                  return value;
+                                })?.apply(null, [actionArgs]);
+                              })()
+                            : undefined;
+                          if (
+                            $steps["selecionarArea5"] != null &&
+                            typeof $steps["selecionarArea5"] === "object" &&
+                            typeof $steps["selecionarArea5"].then === "function"
+                          ) {
+                            $steps["selecionarArea5"] =
+                              await $steps["selecionarArea5"];
+                          }
+                        }}
+                      />
+                    </div>
+                  </SliderWrapper>
+                );
+              })()}
             </div>
             <div
               data-plasmic-name={"conheca"}
@@ -1679,6 +1770,10 @@ function PlasmicHomepage__RenderFunc(props: {
                 </div>
               </div>
             </div>
+            <Ellipse28Icon
+              className={classNames("all", sty.svg__iLbhO)}
+              role={"img"}
+            />
           </div>
           <div
             data-plasmic-name={"projetosInovadores"}
@@ -1862,9 +1957,9 @@ function PlasmicHomepage__RenderFunc(props: {
                         src={
                           hasVariant(globalVariants, "screen", "mobileOnly")
                             ? {
-                                src: "/plasmic/nocs_lab_site/images/vector19.png",
-                                fullWidth: 224,
-                                fullHeight: 182,
+                                src: "/plasmic/nocs_lab_site/images/vector15.svg",
+                                fullWidth: 207,
+                                fullHeight: 210,
                                 aspectRatio: undefined
                               }
                             : {
@@ -2105,7 +2200,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "Visualiza\u00e7\u00e3o de dados para apoio \u00e0 tomada de ecis\u00e3o"
+                        "Visualiza\u00e7\u00e3o de dados para apoio \u00e0 tomada decis\u00e3o"
                       }
                     </div>
                     <div className={classNames("all", sty.freeBox__pudxc)}>
@@ -2175,9 +2270,9 @@ function PlasmicHomepage__RenderFunc(props: {
                         src={
                           hasVariant(globalVariants, "screen", "mobileOnly")
                             ? {
-                                src: "/plasmic/nocs_lab_site/images/vector20.png",
-                                fullWidth: 214,
-                                fullHeight: 182,
+                                src: "/plasmic/nocs_lab_site/images/vector16.svg",
+                                fullWidth: 207,
+                                fullHeight: 210,
                                 aspectRatio: undefined
                               }
                             : {
@@ -2292,9 +2387,9 @@ function PlasmicHomepage__RenderFunc(props: {
                         src={
                           hasVariant(globalVariants, "screen", "mobileOnly")
                             ? {
-                                src: "/plasmic/nocs_lab_site/images/vector21.png",
-                                fullWidth: 214,
-                                fullHeight: 182,
+                                src: "/plasmic/nocs_lab_site/images/vector17.svg",
+                                fullWidth: 207,
+                                fullHeight: 210,
                                 aspectRatio: undefined
                               }
                             : {
@@ -2563,6 +2658,10 @@ function PlasmicHomepage__RenderFunc(props: {
                 </div>
               </div>
             </div>
+            <Ellipse28Icon
+              className={classNames("all", sty.svg__qipuT)}
+              role={"img"}
+            />
           </div>
           <div
             data-plasmic-name={"equipePessoas"}
@@ -2576,142 +2675,163 @@ function PlasmicHomepage__RenderFunc(props: {
             />
 
             <div
-              className={classNames("all", sty.freeBox__khU0V)}
-              style={
-                hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? { order: "1" }
-                  : undefined
-              }
+              data-plasmic-name={"textoEFoto"}
+              data-plasmic-override={overrides.textoEFoto}
+              className={classNames("all", sty.textoEFoto)}
             >
               <div
-                className={classNames("all", sty.freeBox__iVmJ)}
+                className={classNames("all", sty.freeBox__khU0V)}
                 style={
                   hasVariant(globalVariants, "screen", "mobileOnly")
                     ? { order: "1" }
                     : undefined
                 }
               >
-                <Line1Icon
-                  className={classNames("all", sty.svg__z8S1K)}
-                  role={"img"}
-                />
-
                 <div
-                  className={classNames("all", "__wab_text", sty.text___3ClHg)}
+                  className={classNames("all", sty.freeBox__iVmJ)}
+                  style={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? { order: "1" }
+                      : undefined
+                  }
                 >
-                  {"NOSSA EQUIPE"}
+                  <Line1Icon
+                    className={classNames("all", sty.svg__z8S1K)}
+                    role={"img"}
+                  />
+
+                  <div
+                    className={classNames(
+                      "all",
+                      "__wab_text",
+                      sty.text___3ClHg
+                    )}
+                  >
+                    {"NOSSA EQUIPE"}
+                  </div>
                 </div>
+                <div
+                  className={classNames("all", "__wab_text", sty.text__m1IdN)}
+                  style={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? { order: "2" }
+                      : undefined
+                  }
+                >
+                  <React.Fragment>
+                    <span
+                      className={
+                        "plasmic_default__all plasmic_default__span plasmic_default__span__q2bNA"
+                      }
+                      style={{ color: "#004D9C" }}
+                    >
+                      {"Pessoas que movem o "}
+                    </span>
+                    <React.Fragment>{""}</React.Fragment>
+                    <span
+                      className={
+                        "plasmic_default__all plasmic_default__span plasmic_default__span__q2bNA"
+                      }
+                      style={{ color: "#FD6601" }}
+                    >
+                      {"NOCS"}
+                    </span>
+                  </React.Fragment>
+                </div>
+                <div
+                  className={classNames("all", "__wab_text", sty.text___9TZov)}
+                  style={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? { order: "3" }
+                      : undefined
+                  }
+                >
+                  {
+                    "Conhe\u00e7a os pesquisadores, profissionais e estudantes que transformam ideias em solu\u00e7\u00f5es inovadoras todos os dias."
+                  }
+                </div>
+                <Button
+                  className={classNames("__wab_instance", sty.button__gjTW)}
+                  color={"nocsColor"}
+                  end={
+                    <ArrowRightIcon
+                      className={classNames("all", sty.svg__fIsXu)}
+                      role={"img"}
+                    />
+                  }
+                  iconEnd={true}
+                  label={
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text__hc4YM
+                      )}
+                      style={
+                        hasVariant(globalVariants, "screen", "tablet")
+                          ? { overflowWrap: "break-word" }
+                          : undefined
+                      }
+                    >
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span plasmic_default__span__q2bNA"
+                          }
+                          style={{ fontWeight: 700 }}
+                        >
+                          {"Conhe\u00e7a nossa equipe"}
+                        </span>
+                      </React.Fragment>
+                    </div>
+                  }
+                  size={"large"}
+                />
               </div>
-              <div
-                className={classNames("all", "__wab_text", sty.text__m1IdN)}
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__hacGc)}
+                displayHeight={
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? "auto"
+                    : hasVariant(globalVariants, "screen", "tablet")
+                      ? "340px"
+                      : "clamp(320px, 36vw, 480px)"
+                }
+                displayMaxHeight={"none"}
+                displayMaxWidth={
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? "100%"
+                    : hasVariant(globalVariants, "screen", "tablet")
+                      ? "480px"
+                      : "none"
+                }
+                displayMinHeight={"0"}
+                displayMinWidth={
+                  hasVariant(globalVariants, "screen", "tablet") ? "0px" : "0px"
+                }
+                displayWidth={
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? "100%"
+                    : hasVariant(globalVariants, "screen", "tablet")
+                      ? "48%"
+                      : "48%"
+                }
+                src={{
+                  src: "/plasmic/nocs_lab_site/images/image5.png",
+                  fullWidth: 1024,
+                  fullHeight: 738,
+                  aspectRatio: undefined
+                }}
                 style={
                   hasVariant(globalVariants, "screen", "mobileOnly")
                     ? { order: "2" }
-                    : undefined
+                    : hasVariant(globalVariants, "screen", "tablet")
+                      ? { order: "0" }
+                      : undefined
                 }
-              >
-                <React.Fragment>
-                  <span
-                    className={
-                      "plasmic_default__all plasmic_default__span plasmic_default__span__q2bNA"
-                    }
-                    style={{ color: "#004D9C" }}
-                  >
-                    {"Pessoas que movem o "}
-                  </span>
-                  <React.Fragment>{""}</React.Fragment>
-                  <span
-                    className={
-                      "plasmic_default__all plasmic_default__span plasmic_default__span__q2bNA"
-                    }
-                    style={{ color: "#FD6601" }}
-                  >
-                    {"NOCS"}
-                  </span>
-                </React.Fragment>
-              </div>
-              <div
-                className={classNames("all", "__wab_text", sty.text___9TZov)}
-                style={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? { order: "3" }
-                    : undefined
-                }
-              >
-                {
-                  "Conhe\u00e7a os pesquisadores, profissionais e estudantes que transformam ideias em solu\u00e7\u00f5es inovadoras todos os dias."
-                }
-              </div>
-              <Button
-                className={classNames("__wab_instance", sty.button__gjTW)}
-                color={"nocsColor"}
-                end={
-                  <ArrowRightIcon
-                    className={classNames("all", sty.svg__fIsXu)}
-                    role={"img"}
-                  />
-                }
-                iconEnd={true}
-                label={
-                  <div
-                    className={classNames("all", "__wab_text", sty.text__hc4YM)}
-                  >
-                    <React.Fragment>
-                      <span
-                        className={
-                          "plasmic_default__all plasmic_default__span plasmic_default__span__q2bNA"
-                        }
-                        style={{ fontWeight: 700 }}
-                      >
-                        {"Conhe\u00e7a nossa equipe"}
-                      </span>
-                    </React.Fragment>
-                  </div>
-                }
-                size={"large"}
               />
             </div>
-            <PlasmicImg__
-              alt={""}
-              className={classNames(sty.img__hacGc)}
-              displayHeight={
-                hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? "auto"
-                  : hasVariant(globalVariants, "screen", "tablet")
-                    ? "auto"
-                    : "auto"
-              }
-              displayMaxHeight={"none"}
-              displayMaxWidth={
-                hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? "100%"
-                  : hasVariant(globalVariants, "screen", "tablet")
-                    ? "none"
-                    : "100%"
-              }
-              displayMinHeight={"0"}
-              displayMinWidth={"0"}
-              displayWidth={
-                hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? "100%"
-                  : hasVariant(globalVariants, "screen", "tablet")
-                    ? "calc(58% - 16px)"
-                    : "min(42vw, 624px)"
-              }
-              loading={"lazy"}
-              src={{
-                src: "/plasmic/nocs_lab_site/images/image5.png",
-                fullWidth: 1024,
-                fullHeight: 738,
-                aspectRatio: undefined
-              }}
-              style={
-                hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? { order: "4" }
-                  : undefined
-              }
-            />
-
             <Button
               data-plasmic-name={"buttonEquipeMobile"}
               data-plasmic-override={overrides.buttonEquipeMobile}
@@ -2752,8 +2872,8 @@ function PlasmicHomepage__RenderFunc(props: {
               className={classNames("all", sty.freeBox__fJt31)}
               style={
                 hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? { order: "6" }
-                  : undefined
+                  ? { order: "3" }
+                  : { order: "2" }
               }
             >
               <div className={classNames("all", sty.freeBox__zU2RL)}>
@@ -2814,252 +2934,346 @@ function PlasmicHomepage__RenderFunc(props: {
                 </div>
               </div>
             </div>
+            <PlasmicImg__
+              alt={""}
+              className={classNames(sty.img__tltyV)}
+              displayHeight={"739px"}
+              displayMaxHeight={"none"}
+              displayMaxWidth={"none"}
+              displayMinHeight={"0"}
+              displayMinWidth={"0"}
+              displayWidth={"1134px"}
+              src={{
+                src: "/plasmic/nocs_lab_site/images/govdata.png",
+                fullWidth: 1224,
+                fullHeight: 798,
+                aspectRatio: undefined
+              }}
+            />
+          </div>
+          <section
+            data-plasmic-name={"instalacoes"}
+            data-plasmic-override={overrides.instalacoes}
+            className={classNames("all", sty.instalacoes)}
+          >
             <div
               data-plasmic-name={"rectangle62"}
               data-plasmic-override={overrides.rectangle62}
               className={classNames("all", sty.rectangle62)}
             />
 
-            <div
-              data-plasmic-name={"govdata241"}
-              data-plasmic-override={overrides.govdata241}
-              className={classNames("all", sty.govdata241)}
-            />
-
-            <div
-              data-plasmic-name={"govdata242"}
-              data-plasmic-override={overrides.govdata242}
-              className={classNames("all", sty.govdata242)}
-            />
-          </div>
-          <div className={classNames("all", sty.freeBox__zsWrw)}>
-            <div
-              data-plasmic-name={"frame427321657"}
-              data-plasmic-override={overrides.frame427321657}
-              className={classNames("all", sty.frame427321657)}
-            >
-              <div
-                data-plasmic-name={"frame427321637"}
-                data-plasmic-override={overrides.frame427321637}
-                className={classNames("all", sty.frame427321637)}
-              >
-                <Line1Icon
-                  className={classNames("all", sty.svg__foBk)}
-                  role={"img"}
-                />
-
-                <div
-                  data-plasmic-name={"recursosE"}
-                  data-plasmic-override={overrides.recursosE}
-                  className={classNames("all", "__wab_text", sty.recursosE)}
-                >
-                  {"RECURSOS E "}
-                </div>
-                <Line1Icon
-                  className={classNames("all", sty.svg__oFHO)}
-                  role={"img"}
-                />
-              </div>
-              <div className={classNames("all", "__wab_text", sty.text__r9L9H)}>
-                {"Instala\u00e7\u00f5es"}
-              </div>
-              <div className={classNames("all", "__wab_text", sty.text__cqMOy)}>
-                {
-                  "Infraestrutura moderna e equipamentos de ponta para apoiar o desenvolvimento de pesquisas de alta qualidade."
-                }
-              </div>
-            </div>
-            <div
-              data-plasmic-name={"frame427321659"}
-              data-plasmic-override={overrides.frame427321659}
-              className={classNames("all", sty.frame427321659)}
-            >
-              <div
-                data-plasmic-name={"frame427321658"}
-                data-plasmic-override={overrides.frame427321658}
-                className={classNames("all", sty.frame427321658)}
-              >
-                <div
-                  data-plasmic-name={"group2"}
-                  data-plasmic-override={overrides.group2}
-                  className={classNames("all", sty.group2)}
-                >
-                  <div
-                    data-plasmic-name={"image6"}
-                    data-plasmic-override={overrides.image6}
-                    className={classNames("all", sty.image6)}
-                  />
-
-                  <div
-                    data-plasmic-name={"rectangle58"}
-                    data-plasmic-override={overrides.rectangle58}
-                    className={classNames("all", sty.rectangle58)}
-                  />
-
-                  <div
-                    className={classNames("all", "__wab_text", sty.text__odZk)}
-                  >
-                    {"Laborat\u00f3rio Espa\u00e7o 4.0"}
-                  </div>
-                </div>
-                <div
-                  data-plasmic-name={"group3"}
-                  data-plasmic-override={overrides.group3}
-                  className={classNames("all", sty.group3)}
-                >
-                  <div
-                    data-plasmic-name={"image7"}
-                    data-plasmic-override={overrides.image7}
-                    className={classNames("all", sty.image7)}
-                  />
-
-                  <div
-                    data-plasmic-name={"rectangle59"}
-                    data-plasmic-override={overrides.rectangle59}
-                    className={classNames("all", sty.rectangle59)}
-                  />
-
-                  <div
-                    className={classNames("all", "__wab_text", sty.text__ecDVe)}
-                  >
-                    {"Laborat\u00f3rio de Sistemas Operacionais de Redes"}
-                  </div>
-                </div>
-                <div
-                  data-plasmic-name={"group4"}
-                  data-plasmic-override={overrides.group4}
-                  className={classNames("all", sty.group4)}
-                >
-                  <div
-                    data-plasmic-name={"image8"}
-                    data-plasmic-override={overrides.image8}
-                    className={classNames("all", sty.image8)}
-                  />
-
-                  <div
-                    data-plasmic-name={"rectangle60"}
-                    data-plasmic-override={overrides.rectangle60}
-                    className={classNames("all", sty.rectangle60)}
-                  />
-
-                  <div
-                    className={classNames("all", "__wab_text", sty.text__tZUl)}
-                  >
-                    {"Laborat\u00f3rio de Rob\u00f3tica"}
-                  </div>
-                </div>
-                <div
-                  data-plasmic-name={"group5"}
-                  data-plasmic-override={overrides.group5}
-                  className={classNames("all", sty.group5)}
-                >
-                  <div
-                    data-plasmic-name={"image9"}
-                    data-plasmic-override={overrides.image9}
-                    className={classNames("all", sty.image9)}
-                  />
-
-                  <div
-                    data-plasmic-name={"rectangle63"}
-                    data-plasmic-override={overrides.rectangle63}
-                    className={classNames("all", sty.rectangle63)}
-                  />
-
-                  <div
-                    className={classNames("all", "__wab_text", sty.text__et0O0)}
-                  >
-                    {"Laborat\u00f3rio de Desenvolvimento de Software"}
-                  </div>
-                </div>
-              </div>
-              <div
-                data-plasmic-name={"button4"}
-                data-plasmic-override={overrides.button4}
-                className={classNames("all", sty.button4)}
-              >
-                {false ? (
-                  <ArrowLeftIcon
-                    className={classNames("all", sty.svg__d2PBi)}
+            <div className={classNames("all", sty.freeBox__zsWrw)}>
+              <div className={classNames("all", sty.freeBox__syPLj)}>
+                <div className={classNames("all", sty.freeBox__ucOs7)}>
+                  <Line1Icon
+                    className={classNames("all", sty.svg__foBk)}
                     role={"img"}
                   />
-                ) : null}
-                <div
-                  data-plasmic-name={"text"}
-                  data-plasmic-override={overrides.text}
-                  className={classNames("all", "__wab_text", sty.text)}
-                >
-                  {"Conhe\u00e7a as instala\u00e7\u00f5es"}
-                </div>
-                {false ? (
-                  <ArrowRightIcon
-                    className={classNames("all", sty.svg__geLVf)}
+
+                  <div
+                    data-plasmic-name={"recursosE"}
+                    data-plasmic-override={overrides.recursosE}
+                    className={classNames("all", "__wab_text", sty.recursosE)}
+                  >
+                    {"RECURSOS E "}
+                  </div>
+                  <Line1Icon
+                    className={classNames("all", sty.svg__oFHO)}
                     role={"img"}
                   />
-                ) : null}
-              </div>
-              <div
-                data-plasmic-name={"frame427321712"}
-                data-plasmic-override={overrides.frame427321712}
-                className={classNames("all", sty.frame427321712)}
-              >
+                </div>
                 <div
-                  className={classNames("all", "__wab_text", sty.text__ukl0L)}
+                  className={classNames("all", "__wab_text", sty.text__r9L9H)}
+                >
+                  {"Instala\u00e7\u00f5es"}
+                </div>
+                <div
+                  className={classNames("all", "__wab_text", sty.text__cqMOy)}
+                  style={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? { overflowWrap: "break-word", wordBreak: "normal" }
+                      : hasVariant(globalVariants, "screen", "tablet")
+                        ? { overflowWrap: "break-word", wordBreak: "normal" }
+                        : { overflowWrap: "break-word", wordBreak: "normal" }
+                  }
                 >
                   {
-                    "Quer transformar seu neg\u00f3cio? Podemos fazer muito mais juntos."
+                    "Infraestrutura moderna e equipamentos de ponta para apoiar o desenvolvimento de pesquisas de alta qualidade."
                   }
                 </div>
-                {false ? (
-                  <div
-                    data-plasmic-name={
-                      "loremIpsumDolorSitAmetConsecteturAdipiscingElitDonecNecPulvinarNuncQuisFringillaEstProinPulvina"
-                    }
-                    data-plasmic-override={
-                      overrides.loremIpsumDolorSitAmetConsecteturAdipiscingElitDonecNecPulvinarNuncQuisFringillaEstProinPulvina
-                    }
-                    className={classNames(
-                      "all",
-                      "__wab_text",
-                      sty.loremIpsumDolorSitAmetConsecteturAdipiscingElitDonecNecPulvinarNuncQuisFringillaEstProinPulvina
-                    )}
-                  >
-                    {
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec pulvinar nunc, quis fringilla est. Proin pulvina "
-                    }
-                  </div>
-                ) : null}
+              </div>
+              <div className={classNames("all", sty.freeBox___3WQwN)}>
+                {(() => {
+                  const child$Props = {
+                    arrowColor: "#004D9C",
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    beforeChange: async (...eventArgs: any) => {
+                      generateStateOnChangePropForCodeComponents(
+                        $state,
+                        "currentSlide",
+                        ["sliderCarousel2", "currentSlide"],
+                        SliderWrapper_Helpers
+                      ).apply(null, eventArgs);
+                    },
+                    className: classNames(
+                      "__wab_instance",
+                      sty.sliderCarousel2
+                    ),
+                    initialSlide: generateStateValueProp($state, [
+                      "sliderCarousel2",
+                      "currentSlide"
+                    ]),
+                    ref: ref => {
+                      $refs["sliderCarousel2"] = ref;
+                    },
+                    sliderScopeClassName: sty["sliderCarousel2__slider"],
+                    swipeToSlide: true,
+                    variableWidth: true
+                  };
+                  initializeCodeComponentStates(
+                    $state,
+                    [
+                      {
+                        name: "currentSlide",
+                        plasmicStateName: "sliderCarousel2.currentSlide"
+                      }
+                    ],
+                    [],
+                    SliderWrapper_Helpers ?? {},
+                    child$Props
+                  );
+
+                  return (
+                    <SliderWrapper
+                      data-plasmic-name={"sliderCarousel2"}
+                      data-plasmic-override={overrides.sliderCarousel2}
+                      {...child$Props}
+                    >
+                      <div className={classNames("all", sty.freeBox__opzWp)}>
+                        <div className={classNames("all", sty.freeBox__wPZd5)}>
+                          <div
+                            data-plasmic-name={"image11"}
+                            data-plasmic-override={overrides.image11}
+                            className={classNames("all", sty.image11)}
+                          />
+
+                          <div
+                            data-plasmic-name={"rectangle64"}
+                            data-plasmic-override={overrides.rectangle64}
+                            className={classNames("all", sty.rectangle64)}
+                          />
+
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__bpI3
+                            )}
+                          >
+                            {"Laborat\u00f3rio Espa\u00e7o 4.0"}
+                          </div>
+                        </div>
+                      </div>
+                      <div className={classNames("all", sty.freeBox__sFu1W)}>
+                        <div className={classNames("all", sty.freeBox__xVy6Y)}>
+                          <div
+                            data-plasmic-name={"image12"}
+                            data-plasmic-override={overrides.image12}
+                            className={classNames("all", sty.image12)}
+                          />
+
+                          <div
+                            data-plasmic-name={"rectangle65"}
+                            data-plasmic-override={overrides.rectangle65}
+                            className={classNames("all", sty.rectangle65)}
+                          />
+
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__woSxY
+                            )}
+                          >
+                            {
+                              "Laborat\u00f3rio de Sistemas Operacionais de Redes"
+                            }
+                          </div>
+                        </div>
+                      </div>
+                      <div className={classNames("all", sty.freeBox__o1DfR)}>
+                        <div className={classNames("all", sty.freeBox___7Vfda)}>
+                          <div
+                            data-plasmic-name={"image13"}
+                            data-plasmic-override={overrides.image13}
+                            className={classNames("all", sty.image13)}
+                          />
+
+                          <div
+                            data-plasmic-name={"rectangle66"}
+                            data-plasmic-override={overrides.rectangle66}
+                            className={classNames("all", sty.rectangle66)}
+                          />
+
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__ffwfa
+                            )}
+                          >
+                            {"Laborat\u00f3rio de Rob\u00f3tica"}
+                          </div>
+                        </div>
+                      </div>
+                      <div className={classNames("all", sty.freeBox___0O7A)}>
+                        <div className={classNames("all", sty.freeBox__w1RGr)}>
+                          <div
+                            data-plasmic-name={"image14"}
+                            data-plasmic-override={overrides.image14}
+                            className={classNames("all", sty.image14)}
+                          />
+
+                          <div
+                            data-plasmic-name={"rectangle67"}
+                            data-plasmic-override={overrides.rectangle67}
+                            className={classNames("all", sty.rectangle67)}
+                          />
+
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__bmXw1
+                            )}
+                          >
+                            {"Laborat\u00f3rio de Desenvolvimento de Software"}
+                          </div>
+                        </div>
+                      </div>
+                      <div className={classNames("all", sty.freeBox__nnuzd)}>
+                        <div className={classNames("all", sty.freeBox__yLddB)}>
+                          <div
+                            data-plasmic-name={"image10"}
+                            data-plasmic-override={overrides.image10}
+                            className={classNames("all", sty.image10)}
+                          />
+
+                          <div
+                            data-plasmic-name={"rectangle68"}
+                            data-plasmic-override={overrides.rectangle68}
+                            className={classNames("all", sty.rectangle68)}
+                          />
+
+                          <div
+                            className={classNames(
+                              "all",
+                              "__wab_text",
+                              sty.text__tbvC
+                            )}
+                          >
+                            {"Laborat\u00f3rio de Cabeamento Estruturado"}
+                          </div>
+                        </div>
+                      </div>
+                    </SliderWrapper>
+                  );
+                })()}
                 <Button
-                  data-plasmic-name={"button3"}
-                  data-plasmic-override={overrides.button3}
-                  className={classNames("__wab_instance", sty.button3)}
+                  className={classNames("__wab_instance", sty.button__pU3HE)}
+                  color={"nocsColor"}
+                  label={
+                    <div
+                      className={classNames(
+                        "all",
+                        "__wab_text",
+                        sty.text__wZs2T
+                      )}
+                    >
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span plasmic_default__span__q2bNA"
+                          }
+                          style={{ fontWeight: 700 }}
+                        >
+                          {"Conhe\u00e7a as instala\u00e7\u00f5es"}
+                        </span>
+                      </React.Fragment>
+                    </div>
+                  }
+                  size={"large"}
                 />
 
-                <div
-                  data-plasmic-name={"button5"}
-                  data-plasmic-override={overrides.button5}
-                  className={classNames("all", sty.button5)}
-                >
-                  {false ? (
-                    <ArrowLeftIcon
-                      className={classNames("all", sty.svg__geICg)}
-                      role={"img"}
-                    />
-                  ) : null}
+                <div className={classNames("all", sty.freeBox___5UgI4)}>
                   <div
-                    data-plasmic-name={"text2"}
-                    data-plasmic-override={overrides.text2}
-                    className={classNames("all", "__wab_text", sty.text2)}
+                    className={classNames("all", "__wab_text", sty.text__ukl0L)}
+                    style={
+                      hasVariant(globalVariants, "screen", "tablet")
+                        ? { overflowWrap: "anywhere" }
+                        : undefined
+                    }
                   >
-                    {"Vamos conversar?"}
+                    {hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? "Quer transformar seu neg\u00f3cio? Podemos fazer muito mais juntos."
+                      : hasVariant(globalVariants, "screen", "tablet")
+                        ? "Quer transformar seu neg\u00f3cio? Podemos fazer muito mais juntos."
+                        : "Quer transformar seu neg\u00f3cio? Podemos fazer muito mais juntos."}
                   </div>
-                  <ArrowRightIcon
-                    className={classNames("all", sty.svg__purql)}
-                    role={"img"}
+                  <Button
+                    className={classNames("__wab_instance", sty.button__yl3S0)}
+                    color={"branco"}
+                    end={
+                      <ArrowRightIcon
+                        className={classNames("all", sty.svg___0Mf0D)}
+                        role={"img"}
+                      />
+                    }
+                    iconEnd={true}
+                    label={
+                      <div
+                        className={classNames(
+                          "all",
+                          "__wab_text",
+                          sty.text__udlsf
+                        )}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span plasmic_default__span__q2bNA"
+                            }
+                            style={{ fontWeight: 700 }}
+                          >
+                            {"Vamos Conversar?"}
+                          </span>
+                        </React.Fragment>
+                      </div>
+                    }
+                    size={
+                      hasVariant(globalVariants, "screen", "mobileOnly")
+                        ? "large"
+                        : "large"
+                    }
                   />
                 </div>
+                <Ellipse11Icon
+                  className={classNames("all", sty.svg__bf7Mr)}
+                  role={"img"}
+                />
+
+                <Ellipse12Icon
+                  className={classNames("all", sty.svg__abrjd)}
+                  role={"img"}
+                />
               </div>
             </div>
-          </div>
+            <Ellipse11Icon
+              className={classNames("all", sty.svg___3Dys7)}
+              role={"img"}
+            />
+          </section>
         </div>
       </div>
     </React.Fragment>
@@ -3117,34 +3331,22 @@ const PlasmicDescendants = {
     "projetos",
     "equipePessoas",
     "rectangle61",
+    "textoEFoto",
     "buttonEquipeMobile",
+    "instalacoes",
     "rectangle62",
-    "govdata241",
-    "govdata242",
-    "frame427321657",
-    "frame427321637",
     "recursosE",
-    "frame427321659",
-    "frame427321658",
-    "group2",
-    "image6",
-    "rectangle58",
-    "group3",
-    "image7",
-    "rectangle59",
-    "group4",
-    "image8",
-    "rectangle60",
-    "group5",
-    "image9",
-    "rectangle63",
-    "button4",
-    "text",
-    "frame427321712",
-    "loremIpsumDolorSitAmetConsecteturAdipiscingElitDonecNecPulvinarNuncQuisFringillaEstProinPulvina",
-    "button3",
-    "button5",
-    "text2"
+    "sliderCarousel2",
+    "image11",
+    "rectangle64",
+    "image12",
+    "rectangle65",
+    "image13",
+    "rectangle66",
+    "image14",
+    "rectangle67",
+    "image10",
+    "rectangle68"
   ],
   header: [
     "header",
@@ -3272,85 +3474,53 @@ const PlasmicDescendants = {
   equipePessoas: [
     "equipePessoas",
     "rectangle61",
-    "buttonEquipeMobile",
-    "rectangle62",
-    "govdata241",
-    "govdata242"
+    "textoEFoto",
+    "buttonEquipeMobile"
   ],
   rectangle61: ["rectangle61"],
+  textoEFoto: ["textoEFoto"],
   buttonEquipeMobile: ["buttonEquipeMobile"],
+  instalacoes: [
+    "instalacoes",
+    "rectangle62",
+    "recursosE",
+    "sliderCarousel2",
+    "image11",
+    "rectangle64",
+    "image12",
+    "rectangle65",
+    "image13",
+    "rectangle66",
+    "image14",
+    "rectangle67",
+    "image10",
+    "rectangle68"
+  ],
   rectangle62: ["rectangle62"],
-  govdata241: ["govdata241"],
-  govdata242: ["govdata242"],
-  frame427321657: ["frame427321657", "frame427321637", "recursosE"],
-  frame427321637: ["frame427321637", "recursosE"],
   recursosE: ["recursosE"],
-  frame427321659: [
-    "frame427321659",
-    "frame427321658",
-    "group2",
-    "image6",
-    "rectangle58",
-    "group3",
-    "image7",
-    "rectangle59",
-    "group4",
-    "image8",
-    "rectangle60",
-    "group5",
-    "image9",
-    "rectangle63",
-    "button4",
-    "text",
-    "frame427321712",
-    "loremIpsumDolorSitAmetConsecteturAdipiscingElitDonecNecPulvinarNuncQuisFringillaEstProinPulvina",
-    "button3",
-    "button5",
-    "text2"
+  sliderCarousel2: [
+    "sliderCarousel2",
+    "image11",
+    "rectangle64",
+    "image12",
+    "rectangle65",
+    "image13",
+    "rectangle66",
+    "image14",
+    "rectangle67",
+    "image10",
+    "rectangle68"
   ],
-  frame427321658: [
-    "frame427321658",
-    "group2",
-    "image6",
-    "rectangle58",
-    "group3",
-    "image7",
-    "rectangle59",
-    "group4",
-    "image8",
-    "rectangle60",
-    "group5",
-    "image9",
-    "rectangle63"
-  ],
-  group2: ["group2", "image6", "rectangle58"],
-  image6: ["image6"],
-  rectangle58: ["rectangle58"],
-  group3: ["group3", "image7", "rectangle59"],
-  image7: ["image7"],
-  rectangle59: ["rectangle59"],
-  group4: ["group4", "image8", "rectangle60"],
-  image8: ["image8"],
-  rectangle60: ["rectangle60"],
-  group5: ["group5", "image9", "rectangle63"],
-  image9: ["image9"],
-  rectangle63: ["rectangle63"],
-  button4: ["button4", "text"],
-  text: ["text"],
-  frame427321712: [
-    "frame427321712",
-    "loremIpsumDolorSitAmetConsecteturAdipiscingElitDonecNecPulvinarNuncQuisFringillaEstProinPulvina",
-    "button3",
-    "button5",
-    "text2"
-  ],
-  loremIpsumDolorSitAmetConsecteturAdipiscingElitDonecNecPulvinarNuncQuisFringillaEstProinPulvina:
-    [
-      "loremIpsumDolorSitAmetConsecteturAdipiscingElitDonecNecPulvinarNuncQuisFringillaEstProinPulvina"
-    ],
-  button3: ["button3"],
-  button5: ["button5", "text2"],
-  text2: ["text2"]
+  image11: ["image11"],
+  rectangle64: ["rectangle64"],
+  image12: ["image12"],
+  rectangle65: ["rectangle65"],
+  image13: ["image13"],
+  rectangle66: ["rectangle66"],
+  image14: ["image14"],
+  rectangle67: ["rectangle67"],
+  image10: ["image10"],
+  rectangle68: ["rectangle68"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -3405,34 +3575,22 @@ type NodeDefaultElementType = {
   projetos: "div";
   equipePessoas: "div";
   rectangle61: "div";
+  textoEFoto: "div";
   buttonEquipeMobile: typeof Button;
+  instalacoes: "section";
   rectangle62: "div";
-  govdata241: "div";
-  govdata242: "div";
-  frame427321657: "div";
-  frame427321637: "div";
   recursosE: "div";
-  frame427321659: "div";
-  frame427321658: "div";
-  group2: "div";
-  image6: "div";
-  rectangle58: "div";
-  group3: "div";
-  image7: "div";
-  rectangle59: "div";
-  group4: "div";
-  image8: "div";
-  rectangle60: "div";
-  group5: "div";
-  image9: "div";
-  rectangle63: "div";
-  button4: "div";
-  text: "div";
-  frame427321712: "div";
-  loremIpsumDolorSitAmetConsecteturAdipiscingElitDonecNecPulvinarNuncQuisFringillaEstProinPulvina: "div";
-  button3: typeof Button;
-  button5: "div";
-  text2: "div";
+  sliderCarousel2: typeof SliderWrapper;
+  image11: "div";
+  rectangle64: "div";
+  image12: "div";
+  rectangle65: "div";
+  image13: "div";
+  rectangle66: "div";
+  image14: "div";
+  rectangle67: "div";
+  image10: "div";
+  rectangle68: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -3547,37 +3705,22 @@ export const PlasmicHomepage = Object.assign(
     projetos: makeNodeComponent("projetos"),
     equipePessoas: makeNodeComponent("equipePessoas"),
     rectangle61: makeNodeComponent("rectangle61"),
+    textoEFoto: makeNodeComponent("textoEFoto"),
     buttonEquipeMobile: makeNodeComponent("buttonEquipeMobile"),
+    instalacoes: makeNodeComponent("instalacoes"),
     rectangle62: makeNodeComponent("rectangle62"),
-    govdata241: makeNodeComponent("govdata241"),
-    govdata242: makeNodeComponent("govdata242"),
-    frame427321657: makeNodeComponent("frame427321657"),
-    frame427321637: makeNodeComponent("frame427321637"),
     recursosE: makeNodeComponent("recursosE"),
-    frame427321659: makeNodeComponent("frame427321659"),
-    frame427321658: makeNodeComponent("frame427321658"),
-    group2: makeNodeComponent("group2"),
-    image6: makeNodeComponent("image6"),
-    rectangle58: makeNodeComponent("rectangle58"),
-    group3: makeNodeComponent("group3"),
-    image7: makeNodeComponent("image7"),
-    rectangle59: makeNodeComponent("rectangle59"),
-    group4: makeNodeComponent("group4"),
-    image8: makeNodeComponent("image8"),
-    rectangle60: makeNodeComponent("rectangle60"),
-    group5: makeNodeComponent("group5"),
-    image9: makeNodeComponent("image9"),
-    rectangle63: makeNodeComponent("rectangle63"),
-    button4: makeNodeComponent("button4"),
-    text: makeNodeComponent("text"),
-    frame427321712: makeNodeComponent("frame427321712"),
-    loremIpsumDolorSitAmetConsecteturAdipiscingElitDonecNecPulvinarNuncQuisFringillaEstProinPulvina:
-      makeNodeComponent(
-        "loremIpsumDolorSitAmetConsecteturAdipiscingElitDonecNecPulvinarNuncQuisFringillaEstProinPulvina"
-      ),
-    button3: makeNodeComponent("button3"),
-    button5: makeNodeComponent("button5"),
-    text2: makeNodeComponent("text2"),
+    sliderCarousel2: makeNodeComponent("sliderCarousel2"),
+    image11: makeNodeComponent("image11"),
+    rectangle64: makeNodeComponent("rectangle64"),
+    image12: makeNodeComponent("image12"),
+    rectangle65: makeNodeComponent("rectangle65"),
+    image13: makeNodeComponent("image13"),
+    rectangle66: makeNodeComponent("rectangle66"),
+    image14: makeNodeComponent("image14"),
+    rectangle67: makeNodeComponent("rectangle67"),
+    image10: makeNodeComponent("image10"),
+    rectangle68: makeNodeComponent("rectangle68"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

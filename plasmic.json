@@ -27169,31 +27169,6 @@
           "filePath": "../public/plasmic/nocs_lab_site/images/ellipse3.svg"
         },
         {
-          "id": "C-7fMn8_-Amc",
-          "name": "Frame 427321649.png",
-          "filePath": "../public/plasmic/nocs_lab_site/images/frame427321649Png.png"
-        },
-        {
-          "id": "m2GmJ-V-WL27",
-          "name": "Vector 18",
-          "filePath": "../public/plasmic/nocs_lab_site/images/vector18.png"
-        },
-        {
-          "id": "v1A_lhbfQE_V",
-          "name": "Vector 19",
-          "filePath": "../public/plasmic/nocs_lab_site/images/vector19.png"
-        },
-        {
-          "id": "8hLk3vjP5ePw",
-          "name": "Vector 20",
-          "filePath": "../public/plasmic/nocs_lab_site/images/vector20.png"
-        },
-        {
-          "id": "YSSilmqL6uAO",
-          "name": "Vector 21",
-          "filePath": "../public/plasmic/nocs_lab_site/images/vector21.png"
-        },
-        {
           "id": "-ZaOr6HXj9Cb",
           "name": "Vector 14",
           "filePath": "../public/plasmic/nocs_lab_site/images/vector14.svg"
@@ -27214,14 +27189,9 @@
           "filePath": "../public/plasmic/nocs_lab_site/images/vector17.svg"
         },
         {
-          "id": "vhOYLWRg3lJ4",
-          "name": "foto_circuito_nocs",
-          "filePath": "../public/plasmic/nocs_lab_site/images/fotoCircuitoNocs.png"
-        },
-        {
           "id": "RRVU8X0HC6AO",
-          "name": "GOVDATA (24) 2",
-          "filePath": "../public/plasmic/nocs_lab_site/images/govdata242.png"
+          "name": "GOVDATA",
+          "filePath": "../public/plasmic/nocs_lab_site/images/govdata.png"
         },
         {
           "id": "uaWWxMq5orYi",
@@ -27252,6 +27222,11 @@
           "id": "vyS4T9WLNs67",
           "name": "image 10",
           "filePath": "../public/plasmic/nocs_lab_site/images/image10.png"
+        },
+        {
+          "id": "S6-bucq7rrfC",
+          "name": "bg.png",
+          "filePath": "../public/plasmic/nocs_lab_site/images/bgPng.png"
         }
       ],
       "indirect": false,
